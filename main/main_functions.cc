@@ -127,18 +127,20 @@ esp_err_t camera_handler(httpd_req_t *req) {
             res = httpd_resp_send(req, (const char *) fb->buf, fb->len);
         } else {
             jpg_chunking_t jchunk = {req, 0};
-            res = frame2jpg_cb(fb, 80, jpg_encode_stream, &jchunk) ? ESP_OK : ESP_FAIL;
+            uint8_t * _jpg_buf;
+            size_t _jpg_buf_len;
+            res = frame2jpg(fb, 80, &_jpg_buf, &_jpg_buf_len) ? ESP_OK : ESP_FAIL;
             //fb_len = jchunk.len;
-            httpd_resp_send_chunk(req, NULL, 0);
-            //httpd_resp_send_chunk(req, (const char *)jpg_encode_stream, jchunk);
-            
+            //httpd_resp_send_chunk(req, NULL, 0);
+            //httpd_resp_send_chunk(req, (const char *)_jpg_buf, _jpg_buf_len);
+            httpd_resp_send(req, (const char *)_jpg_buf, _jpg_buf_len);
         }
     }
 
     //return the frame buffer back to the driver for reuse
     esp_camera_fb_return(fb);
     int64_t fr_end = esp_timer_get_time();
-    //ESP_LOGI(TAG, "JPEG Captured: %ukB %ums", (uint32_t) (fb_len/1024), (uint32_t) ((fr_end - fr_start)/1000));
+    ESP_LOGI(TAG, "JPEG Captured: %ukB %ums", (uint32_t) (fb_len/1024), (uint32_t) ((fr_end - fr_start)/1000));
     return res;
 }
 
@@ -171,6 +173,12 @@ httpd_uri_t mpu_uri = {
     .uri      = "/mpu",
     .method   = HTTP_GET,
     .handler  = mpu_handler,
+    .user_ctx = NULL
+};
+httpd_uri_t image_uri = {
+    .uri      = "/image",
+    .method   = HTTP_GET,
+    .handler  = camera_handler,
     .user_ctx = NULL
 };
 
@@ -230,7 +238,7 @@ void setup() {
 
     if (httpd_start(&server, &config) == ESP_OK) {
         httpd_register_uri_handler(server, &mpu_uri);
-        //httpd_register_uri_handler(server, &test_uri);
+        httpd_register_uri_handler(server, &image_uri);
     }
 
 
