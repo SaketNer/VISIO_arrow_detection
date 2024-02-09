@@ -1,0 +1,46 @@
+[0;33m--- esp-idf-monitor 1.3.3 on /dev/cu.usbmodem1101 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40056f60: memcpy in ROM
+[0m
+[0;33m0x40375754: call_start_cpu1 at /Users/saket/esp/esp-idf/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x4037bbe6: esp_cpu_wait_for_intr at /Users/saket/esp/esp-idf/components/esp_hw_support/cpu.c:121
+[0m
+[0;33m0x4037bbe3: xt_utils_wait_for_intr at /Users/saket/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /Users/saket/esp/esp-idf/components/esp_hw_support/cpu.c:111
+[0m
+[0;33m0x4200438d: esp_vApplicationIdleHook at /Users/saket/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+[0m
+[0;33m0x4037f9a9: prvIdleTask at /Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4327
+[0m
+[0;33m0x40375c3f: esp_restart_noos_dig at /Users/saket/esp/esp-idf/components/esp_system/port/esp_system_chip.c:57 (discriminator 1)
+[0m
+[0;33m0x40375754: call_start_cpu1 at /Users/saket/esp/esp-idf/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x4037bbe6: esp_cpu_wait_for_intr at /Users/saket/esp/esp-idf/components/esp_hw_support/cpu.c:121
+[0m
+[0;33m0x4037bbe3: xt_utils_wait_for_intr at /Users/saket/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /Users/saket/esp/esp-idf/components/esp_hw_support/cpu.c:111
+[0m
+[0;33m0x4200438d: esp_vApplicationIdleHook at /Users/saket/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+[0m
+[0;33m0x4037f9a9: prvIdleTask at /Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4327
+[0m
+[0;33m0x40375c3f: esp_restart_noos_dig at /Users/saket/esp/esp-idf/components/esp_system/port/esp_system_chip.c:57 (discriminator 1)
+[0m
+[0;33m0x40375754: call_start_cpu1 at /Users/saket/esp/esp-idf/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x4037bbe6: esp_cpu_wait_for_intr at /Users/saket/esp/esp-idf/components/esp_hw_support/cpu.c:121
+[0m
+[0;33m0x4037bbe3: xt_utils_wait_for_intr at /Users/saket/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /Users/saket/esp/esp-idf/components/esp_hw_support/cpu.c:111
+[0m
+[0;33m0x4200438d: esp_vApplicationIdleHook at /Users/saket/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+[0m
+[0;33m0x4037f9a9: prvIdleTask at /Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4327
+[0m
+[0;33m0x40375c3f: esp_restart_noos_dig at /Users/saket/esp/esp-idf/components/esp_system/port/esp_system_chip.c:57 (discriminator 1)
+[0m
+[0;33m0x40375754: call_start_cpu1 at /Users/saket/esp/esp-idf/components/esp_system/port/cpu_start.c:154
+[0m
+[0m

@@ -12,17 +12,17 @@ dependencies:
       path: /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro
       type: local
     version: '*'
-  espressif/esp32-camera:
-    component_hash: 53dbe0900ca98c0ad91a83491297f7d60c776c6dbc34c79b5ae536562818fd52
+  espressif__esp32-camera:
+    component_hash: null
     source:
-      service_url: https://api.components.espressif.com/
-      type: service
+      path: /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera
+      type: local
     version: 2.0.7
   idf:
     component_hash: null
     source:
       type: idf
     version: 5.1.1
-manifest_hash: 9201eead7f031191b96ef3fa00f3d8fec0ba5f9115ad03ee3a36248113b56d51
+manifest_hash: 02e13a9d2e36dae7453e8d753847a473af7597a860f1363b0bad6e54976f7715
 target: esp32s3
 version: 1.0.0

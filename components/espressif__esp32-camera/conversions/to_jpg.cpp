@@ -212,9 +212,9 @@ bool fmt2jpg(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
     int jpg_buf_len = 128*1024;
 
 
-    uint8_t * jpg_buf = (uint8_t *)_malloc(jpg_buf_len);
+    uint8_t * jpg_buf = (uint8_t *)heap_caps_malloc(jpg_buf_len,MALLOC_CAP_8BIT);
     if(jpg_buf == NULL) {
-        ESP_LOGE(TAG, "JPG buffer malloc failed");
+        ESP_LOGE(TAG, "JPG buffer malloc failed here");
         return false;
     }
     memory_stream dst_stream(jpg_buf, jpg_buf_len);

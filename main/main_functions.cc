@@ -120,19 +120,26 @@ esp_err_t camera_handler(httpd_req_t *req) {
     if (res == ESP_OK) {
         res = httpd_resp_set_hdr(req, "Content-Disposition", "inline; filename=capture.jpg");
     }
-
+     printf("here1");
     if (res == ESP_OK) {
         if (fb-> format == PIXFORMAT_JPEG) {
             fb_len = fb->len;
             res = httpd_resp_send(req, (const char *) fb->buf, fb->len);
+             printf("here2");
         } else {
             jpg_chunking_t jchunk = {req, 0};
-            uint8_t * _jpg_buf;
             size_t _jpg_buf_len;
+            uint8_t * _jpg_buf;
+            char * part_buf[129*1024];
+            static int64_t last_frame = 0;
+            
+             printf("here3");
             res = frame2jpg(fb, 80, &_jpg_buf, &_jpg_buf_len) ? ESP_OK : ESP_FAIL;
+            //printf("\n\n&u\n\n",_jpg_buf_len);
             //fb_len = jchunk.len;
             //httpd_resp_send_chunk(req, NULL, 0);
             //httpd_resp_send_chunk(req, (const char *)_jpg_buf, _jpg_buf_len);
+            printf("here4");
             httpd_resp_send(req, (const char *)_jpg_buf, _jpg_buf_len);
         }
     }
@@ -140,7 +147,7 @@ esp_err_t camera_handler(httpd_req_t *req) {
     //return the frame buffer back to the driver for reuse
     esp_camera_fb_return(fb);
     int64_t fr_end = esp_timer_get_time();
-    ESP_LOGI(TAG, "JPEG Captured: %ukB %ums", (uint32_t) (fb_len/1024), (uint32_t) ((fr_end - fr_start)/1000));
+    //ESP_LOGI(TAG, "JPEG Captured: %ukB %ums", (uint32_t) (fb_len/1024), (uint32_t) ((fr_end - fr_start)/1000));
     return res;
 }
 

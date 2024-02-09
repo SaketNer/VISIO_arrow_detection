@@ -1,0 +1,301 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Skipping optional dependency: espressif/esp32_s3_eye
+NOTICE: Skipping optional dependency: espressif/esp32_s3_korvo_2
+NOTICE: Skipping optional dependency: espressif/esp32_s2_kaluga_kit
+Manifest files have changed, solving dependencies.
+Using component placed at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro for dependency espressif/esp-tflite-micro(*), specified in /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/idf_component.yml
+Using component placed at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera for dependency espressif/esp32-camera(~2.0.5), specified in /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/idf_component.yml
+.....Updating lock file at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/dependencies.lock
+Processing 3 dependencies:
+[1/3] espressif/esp-nn (1.0.2)
+[2/3] espressif/esp-tflite-micro (*)
+[3/3] idf (5.1.1)
+NOTICE: Skipping optional dependency: espressif/esp32_s3_eye
+NOTICE: Skipping optional dependency: espressif/esp32_s3_korvo_2
+NOTICE: Skipping optional dependency: espressif/esp32_s2_kaluga_kit
+-- Project sdkconfig file /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/sdkconfig
+Loading defaults file /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/sdkconfig.defaults...
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/sdkconfig.defaults:16 CONFIG_FLASHMODE_QIO was replaced with CONFIG_ESPTOOLPY_FLASHMODE_QIO
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/sdkconfig.defaults:26 CONFIG_MONITOR_BAUD was replaced with CONFIG_ESPTOOLPY_MONITOR_BAUD
+/var/folders/7b/kwymgqcn1ps2_kljlnwkqv7m0000gn/T/kconfgen_tmpe2njmtwy:32 line was updated to CONFIG_ENABLE_TEST_PATTERN=n
+/var/folders/7b/kwymgqcn1ps2_kljlnwkqv7m0000gn/T/kconfgen_tmpe2njmtwy:34 line was updated to CONFIG_OV7725_SUPPORT=n
+/var/folders/7b/kwymgqcn1ps2_kljlnwkqv7m0000gn/T/kconfgen_tmpe2njmtwy:49 line was updated to CONFIG_SPIRAM_USE_MALLOC=n
+Loading defaults file /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/sdkconfig.defaults.esp32s3...
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/sdkconfig.defaults.esp32s3:5 CONFIG_ESP32S3_DEFAULT_CPU_FREQ_240 was replaced with CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/sdkconfig.defaults.esp32s3:6 CONFIG_ESP32S3_SPIRAM_SUPPORT was replaced with CONFIG_SPIRAM
+-- App "person_detection" version: 560f463-dirty
+-- Adding linker script /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /Users/saket/esp/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+-- Adding linker script /Users/saket/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /Users/saket/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /Users/saket/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /Users/saket/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /Users/saket/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /Users/saket/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tflite-micro esp-tls esp32-camera2 esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__esp-nn espressif__esp32-camera esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs static_images tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /Users/saket/esp/esp-idf/components/app_trace /Users/saket/esp/esp-idf/components/app_update /Users/saket/esp/esp-idf/components/bootloader /Users/saket/esp/esp-idf/components/bootloader_support /Users/saket/esp/esp-idf/components/bt /Users/saket/esp/esp-idf/components/cmock /Users/saket/esp/esp-idf/components/console /Users/saket/esp/esp-idf/components/cxx /Users/saket/esp/esp-idf/components/driver /Users/saket/esp/esp-idf/components/efuse /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro /Users/saket/esp/esp-idf/components/esp-tls /Users/saket/esp/esp-idf/components/esp32-camera2 /Users/saket/esp/esp-idf/components/esp_adc /Users/saket/esp/esp-idf/components/esp_app_format /Users/saket/esp/esp-idf/components/esp_coex /Users/saket/esp/esp-idf/components/esp_common /Users/saket/esp/esp-idf/components/esp_eth /Users/saket/esp/esp-idf/components/esp_event /Users/saket/esp/esp-idf/components/esp_gdbstub /Users/saket/esp/esp-idf/components/esp_hid /Users/saket/esp/esp-idf/components/esp_http_client /Users/saket/esp/esp-idf/components/esp_http_server /Users/saket/esp/esp-idf/components/esp_https_ota /Users/saket/esp/esp-idf/components/esp_https_server /Users/saket/esp/esp-idf/components/esp_hw_support /Users/saket/esp/esp-idf/components/esp_lcd /Users/saket/esp/esp-idf/components/esp_local_ctrl /Users/saket/esp/esp-idf/components/esp_mm /Users/saket/esp/esp-idf/components/esp_netif /Users/saket/esp/esp-idf/components/esp_netif_stack /Users/saket/esp/esp-idf/components/esp_partition /Users/saket/esp/esp-idf/components/esp_phy /Users/saket/esp/esp-idf/components/esp_pm /Users/saket/esp/esp-idf/components/esp_psram /Users/saket/esp/esp-idf/components/esp_ringbuf /Users/saket/esp/esp-idf/components/esp_rom /Users/saket/esp/esp-idf/components/esp_system /Users/saket/esp/esp-idf/components/esp_timer /Users/saket/esp/esp-idf/components/esp_wifi /Users/saket/esp/esp-idf/components/espcoredump /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/managed_components/espressif__esp-nn /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera /Users/saket/esp/esp-idf/components/esptool_py /Users/saket/esp/esp-idf/components/fatfs /Users/saket/esp/esp-idf/components/freertos /Users/saket/esp/esp-idf/components/hal /Users/saket/esp/esp-idf/components/heap /Users/saket/esp/esp-idf/components/http_parser /Users/saket/esp/esp-idf/components/idf_test /Users/saket/esp/esp-idf/components/ieee802154 /Users/saket/esp/esp-idf/components/json /Users/saket/esp/esp-idf/components/log /Users/saket/esp/esp-idf/components/lwip /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main /Users/saket/esp/esp-idf/components/mbedtls /Users/saket/esp/esp-idf/components/mqtt /Users/saket/esp/esp-idf/components/newlib /Users/saket/esp/esp-idf/components/nvs_flash /Users/saket/esp/esp-idf/components/openthread /Users/saket/esp/esp-idf/components/partition_table /Users/saket/esp/esp-idf/components/perfmon /Users/saket/esp/esp-idf/components/protobuf-c /Users/saket/esp/esp-idf/components/protocomm /Users/saket/esp/esp-idf/components/pthread /Users/saket/esp/esp-idf/components/sdmmc /Users/saket/esp/esp-idf/components/soc /Users/saket/esp/esp-idf/components/spi_flash /Users/saket/esp/esp-idf/components/spiffs /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/static_images /Users/saket/esp/esp-idf/components/tcp_transport /Users/saket/esp/esp-idf/components/touch_element /Users/saket/esp/esp-idf/components/ulp /Users/saket/esp/esp-idf/components/unity /Users/saket/esp/esp-idf/components/usb /Users/saket/esp/esp-idf/components/vfs /Users/saket/esp/esp-idf/components/wear_levelling /Users/saket/esp/esp-idf/components/wifi_provisioning /Users/saket/esp/esp-idf/components/wpa_supplicant /Users/saket/esp/esp-idf/components/xtensa
+-- Configuring done (3.3s)
+-- Generating done (0.4s)
+-- Build files have been written to: /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build
+[1/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/yuv.c.obj
+[2/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/driver/sensor.c.obj
+[3/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/esp_jpg_decode.c.obj
+[4/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/driver/sccb.c.obj
+[5/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/ov7670.c.obj
+[6/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/driver/esp_camera.c.obj
+[7/45] Building CXX object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/to_jpg.cpp.obj
+[8/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/to_bmp.c.obj
+[9/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/gc2145.c.obj
+[10/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/gc0308.c.obj
+[11/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/driver/cam_hal.c.obj
+[12/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/gc032a.c.obj
+[13/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/ov7725.c.obj
+[14/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/ov2640.c.obj
+[15/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/bf20a6.c.obj
+[16/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/sc030iot.c.obj
+[17/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/sc031gs.c.obj
+[18/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/bf3005.c.obj
+[19/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/sc101iot.c.obj
+[20/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/nt99141.c.obj
+[21/45] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj
+[22/45] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_camera_esp.c.obj
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.c: In function 'app_camera_init':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.c:62:3: warning: 'pin_sscb_sda' is deprecated: please use pin_sccb_sda instead [-Wdeprecated-declarations]
+   62 |   config.pin_sscb_sda = CAMERA_PIN_SIOD;
+      |   ^~~~~~
+In file included from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.h:20,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.c:16:
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera/driver/include/esp_camera.h:123:13: note: declared here
+  123 |         int pin_sscb_sda __attribute__((deprecated("please use pin_sccb_sda instead")));           /*!< GPIO pin for camera SDA line (legacy name) */
+      |             ^~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.c:63:3: warning: 'pin_sscb_scl' is deprecated: please use pin_sccb_scl instead [-Wdeprecated-declarations]
+   63 |   config.pin_sscb_scl = CAMERA_PIN_SIOC;
+      |   ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera/driver/include/esp_camera.h:127:13: note: declared here
+  127 |         int pin_sscb_scl __attribute__((deprecated("please use pin_sccb_scl instead")));           /*!< GPIO pin for camera SCL line (legacy name) */
+      |             ^~~~~~~~~~~~
+[23/45] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/esp_cli.c.obj
+[24/45] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/model_settings.cc.obj
+[25/45] Building CXX object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/jpge.cpp.obj
+[26/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/ov5640.c.obj
+[27/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/target/esp32s3/ll_cam.c.obj
+[28/45] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/person_detect_model_data.cc.obj
+[29/45] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/sensors/ov3660.c.obj
+[30/45] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/detection_responder.cc.obj
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/detection_responder.cc: In function 'void RespondToDetection(float, float)':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/detection_responder.cc:62:7: warning: unused variable 'person_score_int' [-Wunused-variable]
+   62 |   int person_score_int = (person_score) * 100 + 0.5;
+      |       ^~~~~~~~~~~~~~~~
+[31/45] Generating ../../partition_table/partition-table.bin
+Partition table binary generated. Contents:
+*******************************************************************************
+# ESP-IDF Partition Table
+# Name, Type, SubType, Offset, Size, Flags
+nvs,data,nvs,0x9000,24K,
+phy_init,data,phy,0xf000,4K,
+factory,app,factory,0x10000,3712K,
+*******************************************************************************
+[32/45] Linking C static library esp-idf/espressif__esp32-camera/libespressif__esp32-camera.a
+[33/45] Performing build step for 'bootloader'
+[1/1] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x57a0 bytes. 0x2860 bytes (32%) free.
+[34/45] No install step for 'bootloader'
+[35/45] Completed 'bootloader'
+[36/45] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/image_provider.cc.obj
+In file included from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/image_provider.cc:23:
+/Users/saket/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:6:2: warning: #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead [-Wcpp]
+    6 | #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead
+      |  ^~~~~~~
+[37/45] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/arrow_classification.cc.obj
+[38/45] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main_functions.cc.obj
+In file included from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/micro/tflite_bridge/flatbuffer_conversions_bridge.h:19,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/micro/micro_allocator.h:26,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.h:26,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:23:
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h: In member function 'T* tflite::BuiltinDataAllocator::AllocatePOD()':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h:46:24: warning: 'template<class _Tp> struct std::is_pod' is deprecated: use is_standard_layout && is_trivial instead [-Wdeprecated-declarations]
+   46 |     static_assert(std::is_pod<T>::value, "Builtin data structure must be POD.");
+      |                        ^~~~~~
+In file included from /Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/bits/stl_pair.h:60,
+                 from /Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/utility:69,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/core/c/common.h:1460,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/c/common.h:31,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/detection_responder.h:22,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:18:
+/Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/type_traits:757:5: note: declared here
+  757 |     is_pod
+      |     ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'esp_err_t camera_handler(httpd_req_t*)':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:130:28: warning: unused variable 'jchunk' [-Wunused-variable]
+  130 |             jpg_chunking_t jchunk = {req, 0};
+      |                            ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:133:20: warning: unused variable 'part_buf' [-Wunused-variable]
+  133 |             char * part_buf[129*1024];
+      |                    ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:134:28: warning: unused variable 'last_frame' [-Wunused-variable]
+  134 |             static int64_t last_frame = 0;
+      |                            ^~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:109:12: warning: variable 'fb_len' set but not used [-Wunused-but-set-variable]
+  109 |     size_t fb_len = 0;
+      |            ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:110:13: warning: unused variable 'fr_str' [-Wunused-variable]
+  110 |     int64_t fr_str = esp_timer_get_time();
+      |             ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:149:13: warning: unused variable 'fr_end' [-Wunused-variable]
+  149 |     int64_t fr_end = esp_timer_get_time();
+      |             ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void wifi_event_handler(void*, esp_event_base_t, int32_t, void*)':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:158:39: warning: unused variable 'event' [-Wunused-variable]
+  158 |         wifi_event_ap_staconnected_t* event = (wifi_event_ap_staconnected_t*) event_data;
+      |                                       ^~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:161:42: warning: unused variable 'event' [-Wunused-variable]
+  161 |         wifi_event_ap_stadisconnected_t* event = (wifi_event_ap_stadisconnected_t*) event_data;
+      |                                          ^~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void setup()':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:208:5: warning: missing initializer for member 'wifi_ap_config_t::ssid_hidden' [-Wmissing-field-initializers]
+  208 |     };
+      |     ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:208:5: warning: missing initializer for member 'wifi_ap_config_t::beacon_interval' [-Wmissing-field-initializers]
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:208:5: warning: missing initializer for member 'wifi_ap_config_t::pairwise_cipher' [-Wmissing-field-initializers]
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:208:5: warning: missing initializer for member 'wifi_ap_config_t::ftm_responder' [-Wmissing-field-initializers]
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:208:5: warning: missing initializer for member 'wifi_ap_config_t::pmf_cfg' [-Wmissing-field-initializers]
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:208:5: warning: missing initializer for member 'wifi_ap_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void loop()':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:373:7: warning: unused variable 'x_cordi' [-Wunused-variable]
+  373 |   int x_cordi = 48;
+      |       ^~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:374:7: warning: unused variable 'y_cordi' [-Wunused-variable]
+  374 |   int y_cordi = 48;
+      |       ^~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:376:8: warning: unused variable 'possible_arrow' [-Wunused-variable]
+  376 |   bool possible_arrow = false;
+      |        ^~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc: At global scope:
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:134:28: warning: 'last_frame' defined but not used [-Wunused-variable]
+  134 |             static int64_t last_frame = 0;
+      |                            ^~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:68:15: warning: 'size_t {anonymous}::jpg_encode_stream(void*, size_t, const void*, size_t)' defined but not used [-Wunused-function]
+   68 | static size_t jpg_encode_stream(void * arg, size_t index, const void* data, size_t len){
+      |               ^~~~~~~~~~~~~~~~~
+[39/45] Linking C static library esp-idf/main/libmain.a
+[40/45] Generating ld/sections.ld
+[41/45] Building C object CMakeFiles/person_detection.elf.dir/project_elf_src_esp32s3.c.obj
+[42/45] Linking CXX executable person_detection.elf
+[43/45] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+[44/45] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/partition_table/partition-table.bin /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+person_detection.bin binary size 0x1d2050 bytes. Smallest app partition is 0x3a0000 bytes. 0x1cdfb0 bytes (50%) free.
+[44/45] cd /Users/saket/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/saket/esp/esp-idf -D "SERIAL_TOOL=/Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/Users/saket/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build -P /Users/saket/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem1101 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev3
+Serial port /dev/cu.usbmodem1101
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:27:e2:f0:32:a0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x001e2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 22432 bytes to 14252...
+Writing at 0x00000000... (100 %)
+Wrote 22432 bytes (14252 compressed) at 0x00000000 in 0.4 seconds (effective 471.9 kbit/s)...
+Hash of data verified.
+Compressed 1908816 bytes to 1248166...
+Writing at 0x00010000... (1 %)
+Writing at 0x00018c15... (2 %)
+Writing at 0x0001d939... (3 %)
+Writing at 0x00026f69... (5 %)
+Writing at 0x0002b396... (6 %)
+Writing at 0x0002f88b... (7 %)
+Writing at 0x00033d8b... (9 %)
+Writing at 0x000381b1... (10 %)
+Writing at 0x0003c5c7... (11 %)
+Writing at 0x00040a48... (12 %)
+Writing at 0x00044c93... (14 %)
+Writing at 0x0004926b... (15 %)
+Writing at 0x0004d601... (16 %)
+Writing at 0x00051ae1... (18 %)
+Writing at 0x00055f6b... (19 %)
+Writing at 0x0005a1db... (20 %)
+Writing at 0x0005e65f... (22 %)
+Writing at 0x00062aff... (23 %)
+Writing at 0x00066f77... (24 %)
+Writing at 0x0006b2ef... (25 %)
+Writing at 0x0006f5d0... (27 %)
+Writing at 0x0007393c... (28 %)
+Writing at 0x00077c75... (29 %)
+Writing at 0x0007bf8c... (31 %)
+Writing at 0x000802a0... (32 %)
+Writing at 0x0008462f... (33 %)
+Writing at 0x00088a6c... (35 %)
+Writing at 0x0008d827... (36 %)
+Writing at 0x00099545... (37 %)
+Writing at 0x000a6c29... (38 %)
+Writing at 0x000b396c... (40 %)
+Writing at 0x000c05b4... (41 %)
+Writing at 0x000c989b... (42 %)
+Writing at 0x000d58c0... (44 %)
+Writing at 0x000dbd2a... (45 %)
+Writing at 0x000e26d1... (46 %)
+Writing at 0x000f5216... (48 %)
+Writing at 0x000fdc76... (49 %)
+Writing at 0x001038b9... (50 %)
+Writing at 0x0010917d... (51 %)
+Writing at 0x0010e608... (53 %)
+Writing at 0x00113591... (54 %)
+Writing at 0x001186f0... (55 %)
+Writing at 0x0011d780... (57 %)
+Writing at 0x0012302f... (58 %)
+Writing at 0x00129c79... (59 %)
+Writing at 0x0012f8e6... (61 %)
+Writing at 0x00134f87... (62 %)
+Writing at 0x0013a48c... (63 %)
+Writing at 0x0013f84c... (64 %)
+Writing at 0x001447bc... (66 %)
+Writing at 0x001498bc... (67 %)
+Writing at 0x0014e93a... (68 %)
+Writing at 0x00153bf5... (70 %)
+Writing at 0x001590bd... (71 %)
+Writing at 0x0015ee31... (72 %)
+Writing at 0x0016416b... (74 %)
+Writing at 0x00169071... (75 %)
+Writing at 0x0016e080... (76 %)
+Writing at 0x00172ff5... (77 %)
+Writing at 0x00177fc8... (79 %)
+Writing at 0x0017cf3d... (80 %)
+Writing at 0x00181f64... (81 %)
+Writing at 0x00187497... (83 %)
+Writing at 0x0018cfc6... (84 %)
+Writing at 0x00194ae4... (85 %)
+Writing at 0x0019d5f4... (87 %)
+Writing at 0x001a5554... (88 %)
+Writing at 0x001acc8e... (89 %)
+Writing at 0x001b2489... (90 %)
+Writing at 0x001b8dee... (92 %)
+Writing at 0x001c06b8... (93 %)
+Writing at 0x001c9480... (94 %)
+Writing at 0x001d0814... (96 %)
+Writing at 0x001d62c8... (97 %)
+Writing at 0x001db8d8... (98 %)
+Writing at 0x001e0c11... (100 %)
+Wrote 1908816 bytes (1248166 compressed) at 0x00010000 in 13.0 seconds (effective 1174.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.0 seconds (effective 492.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
