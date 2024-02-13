@@ -33,7 +33,14 @@ limitations under the License.
 static const char* TAG = "app_camera";
 
 static uint16_t *display_buf; // buffer to hold data to be sent to display
+
+//code for jpg buffer
+size_t copy_jpg_buf_len;
+int jpg_buf_len = 128*1024;
+uint8_t * copy_jpg_buf = (uint8_t *)heap_caps_malloc(jpg_buf_len,MALLOC_CAP_8BIT | MALLOC_CAP_SPIRAM);
+
 int x_cordi=0,y_cordi=0;
+
 void Get_cordi(int x,int y)
 {
   x_cordi = x;
@@ -135,6 +142,18 @@ TfLiteStatus GetImage(int image_width, int image_height, int channels, int8_t* i
   for (int i = 0; i < image_width * image_height; i++) {
     image_data[i] = ((uint8_t *) fb->buf)[i] ^ 0x80;
   }
+  size_t _jpg_buf_len;
+  uint8_t * _jpg_buf;
+            //char * part_buf[129*1024];
+  static int64_t last_frame = 0;         
+  frame2jpg(fb, 80, &_jpg_buf, &_jpg_buf_len);
+  copy_jpg_buf_len = _jpg_buf_len;
+  for(int i =0 ; i < _jpg_buf_len; i++)
+  {
+    copy_jpg_buf[i] = _jpg_buf[i]; 
+  }
+  free(_jpg_buf);
+  MicroPrintf("coverted Image to jpg %d \n",copy_jpg_buf_len);
 #endif // DISPLAY_SUPPORT
 
   esp_camera_fb_return(fb);
