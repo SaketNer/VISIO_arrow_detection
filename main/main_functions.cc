@@ -65,6 +65,14 @@ TfLiteTensor* input_classification = nullptr;
 
 int64_t fr_start;
 
+int FomoDetConfidence =-1, FomoPosX =-1, FomoPosY =-1;
+int classRight = -1; int classLeft = -1;
+
+size_t prev_jpg_buf_len;
+int temp = 128*1024;
+uint8_t * prev_jpg_buf = (uint8_t *)heap_caps_malloc(temp,MALLOC_CAP_8BIT | MALLOC_CAP_SPIRAM);
+
+
 static size_t jpg_encode_stream(void * arg, size_t index, const void* data, size_t len){
     jpg_chunking_t *j = (jpg_chunking_t *)arg;
     if(!index){
@@ -109,12 +117,12 @@ esp_err_t camera_handler(httpd_req_t *req) {
     size_t fb_len = 0;
     int64_t fr_str = esp_timer_get_time();
 
-    fb = esp_camera_fb_get();
-    if (!fb) {
+    //fb = esp_camera_fb_get();
+    /*if (!fb) {
         ESP_LOGE(TAG, "Camera Capture Failed");
         httpd_resp_send_500(req);
         return ESP_FAIL;
-    }
+    }*/
 
     res = httpd_resp_set_type(req, "image/jpeg");
     if (res == ESP_OK) {
@@ -122,26 +130,26 @@ esp_err_t camera_handler(httpd_req_t *req) {
     }
      printf("here1");
     if (res == ESP_OK) {
-        if (fb-> format == PIXFORMAT_JPEG) {
+        /*if (fb-> format == PIXFORMAT_JPEG) {
             fb_len = fb->len;
             res = httpd_resp_send(req, (const char *) fb->buf, fb->len);
              printf("here2");
-        } else {
+        } else {*/
             jpg_chunking_t jchunk = {req, 0};
-            size_t _jpg_buf_len;
-            uint8_t * _jpg_buf;
-            char * part_buf[129*1024];
-            static int64_t last_frame = 0;
+            //size_t _jpg_buf_len;
+            //uint8_t * _jpg_buf;
+            //char * part_buf[129*1024];
+            //static int64_t last_frame = 0;
             
-             printf("here3");
-            res = frame2jpg(fb, 80, &_jpg_buf, &_jpg_buf_len) ? ESP_OK : ESP_FAIL;
+             //printf("here3");
+            //res = frame2jpg(fb, 80, &_jpg_buf, &_jpg_buf_len) ? ESP_OK : ESP_FAIL;
             //printf("\n\n&u\n\n",_jpg_buf_len);
             //fb_len = jchunk.len;
             //httpd_resp_send_chunk(req, NULL, 0);
             //httpd_resp_send_chunk(req, (const char *)_jpg_buf, _jpg_buf_len);
-            printf("here4");
-            httpd_resp_send(req, (const char *)_jpg_buf, _jpg_buf_len);
-        }
+            MicroPrintf("sedning image with buf len %d",prev_jpg_buf_len);
+            httpd_resp_send(req, (const char *)prev_jpg_buf, prev_jpg_buf_len);
+        //}
     }
 
     //return the frame buffer back to the driver for reuse
@@ -163,13 +171,18 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base,
     }
 }
 
+/*
+int FomoDetConfidence =-1, FomoPosX =-1, FomoPosY =-1;
+int classRight = -1; int classLeft = -1;
+*/
+
 esp_err_t mpu_handler(httpd_req_t *req) {
     httpd_resp_set_type(req, "text/csv");
     printf("mpu found ______________\n");
     //mpu6050_read();
 
     char resp[512];
-    sprintf(resp, "hellp %d \n",turn);
+    sprintf(resp, "%d,%d,%d,%d,%d \n",FomoDetConfidence,FomoPosX,FomoPosY,classRight,classLeft);
     //sprintf(resp, "hellp \n");
     httpd_resp_send(req, resp, HTTPD_RESP_USE_STRLEN);
 
@@ -189,6 +202,25 @@ httpd_uri_t image_uri = {
     .user_ctx = NULL
 };
 
+/*
+int FomoDetConfidence =-1, FomoPosX =-1, FomoPosY =-1;
+int classRight = -1; int classLeft = -1;
+*/
+
+void storeDetection(int Fomocon, int Fomox, int Fomoy, int classR, int classL){
+  prev_jpg_buf_len = copy_jpg_buf_len;
+  MicroPrintf("storing image with buf len %d",prev_jpg_buf_len);
+  for(int i =0 ; i < copy_jpg_buf_len; i++)
+  {
+    prev_jpg_buf[i] = copy_jpg_buf[i]; 
+  }
+  FomoDetConfidence = Fomocon;
+  FomoPosX = Fomox;
+  FomoPosY = Fomoy;
+  classRight = classR;
+  classLeft = classL;
+
+}
 
 // The name of this function is important for Arduino compatibility.
 void setup() {
@@ -354,7 +386,12 @@ void setup() {
 
 #ifndef CLI_ONLY_INFERENCE
 // The name of this function is important for Arduino compatibility.
+
+
+
 void loop() {
+  int tempFomoDetConfidence =-1, tempFomoPosX =-1, tempFomoPosY =-1;
+  int tempclassRight = -1; int tempclassLeft = -1;
   MicroPrintf("size of int %d",sizeof(int));
   MicroPrintf("size of float %d",sizeof(float));
 
@@ -384,16 +421,19 @@ void loop() {
       tostop = true;
       MicroPrintf("arrow detected at %d :%f%%",i,
               person_score_int);
+      tempFomoDetConfidence = person_score_int;
       int pos = (i-1)/2;
       int y = pos/12;
       int x = pos%12;
+      tempFomoPosX = x;
+      tempFomoPosY = y;
       Get_cordi(x*8,y*8);
     }
   }
   
   float arrow_score_right_int = 0;
   float arrow_score_left_int = 0;
-  if(tostop || true ){
+  if(tostop ){
     MicroPrintf("arrow detected ");
     //trying
     if (kTfLiteOk != GetImage(kNumCols, kNumRows, kNumChannels, input_classification->data.int8)) {
@@ -425,6 +465,10 @@ void loop() {
     if(arrow_score_right_int>60){
       turn--;
     }
+    
+    tempclassRight = arrow_score_right_int;
+    tempclassLeft = arrow_score_left_int;
+
     if(turn>5){
       MicroPrintf(" left");
       turn = 0;
@@ -442,7 +486,7 @@ void loop() {
   }
    MicroPrintf(" ");
   vTaskDelay(100);
-
+  storeDetection(tempFomoDetConfidence,tempFomoPosX,tempFomoPosY,tempclassRight,tempclassLeft);
   // Respond to detection
   RespondToDetection(arrow_score_left_int, arrow_score_right_int);
   vTaskDelay(10); // to avoid watchdog trigger

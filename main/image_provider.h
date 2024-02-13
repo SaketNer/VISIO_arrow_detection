@@ -36,6 +36,10 @@ limitations under the License.
 #ifndef CONFIG_PERSON_DETECTION_STATIC
 
 // Returns buffer to be displayed
+
+extern uint8_t * copy_jpg_buf ;
+extern size_t copy_jpg_buf_len;
+
 void *image_provider_get_display_buf();
 
 TfLiteStatus GetImage(int image_width, int image_height, int channels, int8_t* image_data);
