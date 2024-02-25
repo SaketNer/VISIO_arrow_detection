@@ -1,0 +1,47 @@
+[0;33m--- esp-idf-monitor 1.3.3 on /dev/cu.usbmodem11301 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375860: call_start_cpu1 at /Users/saket/esp/esp-idf/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x4037a5a6: esp_crosscore_isr at /Users/saket/esp/esp-idf/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40377475: _xt_lowint1 at /Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x42035530: lv_timer_time_remaining at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/managed_components/lvgl__lvgl/src/misc/lv_timer.c:337
+ (inlined by) lv_timer_handler at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/managed_components/lvgl__lvgl/src/misc/lv_timer.c:125
+[0m
+[0;33m0x4202742a: lvgl_port_task at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c:691
+[0m
+[0;33m0x4037a5a6: esp_crosscore_isr at /Users/saket/esp/esp-idf/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40377475: _xt_lowint1 at /Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4202746d: lvgl_port_task at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c:699
+[0m
+[0;33m0x4037a5a6: esp_crosscore_isr at /Users/saket/esp/esp-idf/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40377475: _xt_lowint1 at /Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4201db76: esp_nn_multiply_by_quantized_mult_asm_esp32s3 at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/managed_components/espressif__esp-nn/src/common/esp_nn_multiply_by_quantized_mult_esp32s3.S:59
+[0m
+[0;33m0x4201c60f: esp_nn_conv_s8_mult8_1x1_esp32s3 at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_s8_mult8_1x1_esp32s3.S:233
+[0m
+[0;33m0x4201b21a: esp_nn_conv_s8_esp32s3 at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/managed_components/espressif__esp-nn/src/convolution/esp_nn_conv_esp32s3.c:223
+[0m
+[0;33m0x42011fb1: tflite::(anonymous namespace)::Eval(TfLiteContext*, TfLiteNode*) at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:231
+ (inlined by) Eval at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:294
+[0m
+[0;33m0x4200bf8a: tflite::MicroInterpreterGraph::InvokeSubgraph(int) at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter_graph.cc:194
+[0m
+[0;33m0x4200bc72: tflite::MicroInterpreter::Invoke() at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.cc:294
+[0m
+[0;33m0x4200aeb2: loop at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main_functions.cc:420
+[0m
+[0;33m0x4200a3a2: tf_main() at /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:35 (discriminator 1)
+[0m
+[0;33m0x4037a5a6: esp_crosscore_isr at /Users/saket/esp/esp-idf/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x40377475: _xt_lowint1 at /Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400559dd: _xtos_set_intlevel in ROM
+[0m
+[0m

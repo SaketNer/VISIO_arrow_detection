@@ -1,4 +1,16 @@
 dependencies:
+  espressif/button:
+    component_hash: 1f5297fe16f0ee988dbb14b6f4c91782fe2baf85025bb15cc1e0093edd3fb2ee
+    source:
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 3.2.0
+  espressif/cmake_utilities:
+    component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
+    source:
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 0.5.3
   espressif/esp-nn:
     component_hash: b32869798bdb40dec6bc99caca48cd65d42f8a9f506b9ab9c598a076f891ede9
     source:
@@ -12,6 +24,24 @@ dependencies:
       path: /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro
       type: local
     version: '*'
+  espressif/esp32_s3_eye:
+    component_hash: d0a57075768f6ab8fe7f92bafb4717fc6994c1c9fa336ecfa5acfade08a2f06c
+    source:
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 3.0.4
+  espressif/esp_codec_dev:
+    component_hash: 1a3a2e518cd8b52e8796ec393a4050977f8f113599056faf085a02a57e194f86
+    source:
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 1.1.0
+  espressif/esp_lvgl_port:
+    component_hash: b43dc04720d126cbfe14d53a84787e4c24b7bd7f15468e224c930ad3ffb32258
+    source:
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 1.4.0
   espressif__esp32-camera:
     component_hash: null
     source:
@@ -23,6 +53,12 @@ dependencies:
     source:
       type: idf
     version: 5.1.1
-manifest_hash: 02e13a9d2e36dae7453e8d753847a473af7597a860f1363b0bad6e54976f7715
+  lvgl/lvgl:
+    component_hash: 948bff879a345149b83065535bbc4a026ce9f47498a22881e432a264b9098015
+    source:
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 8.3.11
+manifest_hash: 3f8547718c2861638bcad7d6b94d9b86834084d1fdb463d18dbb78b81ff2bb7f
 target: esp32s3
 version: 1.0.0

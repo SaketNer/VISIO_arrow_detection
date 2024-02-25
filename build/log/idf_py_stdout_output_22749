@@ -1,0 +1,7 @@
+[1/4] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/partition_table/partition-table.bin /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+person_detection.bin binary size 0x20a8f0 bytes. Smallest app partition is 0x3a0000 bytes. 0x195710 bytes (44%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x57a0 bytes. 0x2860 bytes (32%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'

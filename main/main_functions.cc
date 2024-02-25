@@ -44,6 +44,7 @@ limitations under the License.
 #include "esp_camera.h"
 #include "esp_http_server.h"
 #include "esp_timer.h"
+
 typedef struct {
         httpd_req_t *req;
         size_t len;
@@ -388,17 +389,25 @@ void setup() {
 // The name of this function is important for Arduino compatibility.
 
 
-
+int loopno = 0;
 void loop() {
+  long long start_time = esp_timer_get_time();
   int tempFomoDetConfidence =-1, tempFomoPosX =-1, tempFomoPosY =-1;
   int tempclassRight = -1; int tempclassLeft = -1;
   MicroPrintf("size of int %d",sizeof(int));
   MicroPrintf("size of float %d",sizeof(float));
-
+  loopno++;
+  
   // Get image from provider.
   if (kTfLiteOk != GetImage(kNumCols, kNumRows, kNumChannels, input->data.int8)) {
     MicroPrintf("Image capture failed.");
   }
+  if(loopno%5!=0){
+    MicroPrintf("loop no %d",loopno); 
+    vTaskDelay(1);
+    return;
+  }
+  loopno=0;
 
   // Run the model on this input and make sure it succeeds.
   if (kTfLiteOk != interpreter->Invoke()) {
@@ -409,7 +418,7 @@ void loop() {
   //MicroPrintf("output type %d", (output->bytes));
   int x_cordi = 48;
   int y_cordi = 48;
-  
+  vTaskDelay(5); // to avoid watchdog trigger
   bool possible_arrow = false;
   for(int i = 1; i <288  ;i=i+2){
     int8_t person_score = output->data.uint8[i];
@@ -430,6 +439,8 @@ void loop() {
       Get_cordi(x*8,y*8);
     }
   }
+  vTaskDelay(5); // to avoid watchdog trigger
+  //vTaskDelay(10);
   
   float arrow_score_right_int = 0;
   float arrow_score_left_int = 0;
@@ -485,11 +496,13 @@ void loop() {
     //RespondToDetection(arrow_score_left_int, arrow_score_right_int);
   }
    MicroPrintf(" ");
-  vTaskDelay(100);
+  vTaskDelay(10);
   storeDetection(tempFomoDetConfidence,tempFomoPosX,tempFomoPosY,tempclassRight,tempclassLeft);
   // Respond to detection
   RespondToDetection(arrow_score_left_int, arrow_score_right_int);
   vTaskDelay(10); // to avoid watchdog trigger
+  long long total_time = (esp_timer_get_time() - start_time);
+  printf("Total time = %lld\n", total_time / 1000);
 }
 #endif
 
