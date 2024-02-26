@@ -1,0 +1,493 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x57a0 bytes. 0x2860 bytes (32%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj 
+/Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v5.1.1\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/config -I/Users/saket/esp/esp-idf/components/newlib/platform_include -I/Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/Users/saket/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/Users/saket/esp/esp-idf/components/freertos/esp_additions/include/freertos -I/Users/saket/esp/esp-idf/components/freertos/esp_additions/include -I/Users/saket/esp/esp-idf/components/freertos/esp_additions/arch/xtensa/include -I/Users/saket/esp/esp-idf/components/esp_hw_support/include -I/Users/saket/esp/esp-idf/components/esp_hw_support/include/soc -I/Users/saket/esp/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/Users/saket/esp/esp-idf/components/esp_hw_support/port/esp32s3/. -I/Users/saket/esp/esp-idf/components/esp_hw_support/port/esp32s3/private_include -I/Users/saket/esp/esp-idf/components/heap/include -I/Users/saket/esp/esp-idf/components/log/include -I/Users/saket/esp/esp-idf/components/soc/include -I/Users/saket/esp/esp-idf/components/soc/esp32s3 -I/Users/saket/esp/esp-idf/components/soc/esp32s3/include -I/Users/saket/esp/esp-idf/components/hal/esp32s3/include -I/Users/saket/esp/esp-idf/components/hal/include -I/Users/saket/esp/esp-idf/components/hal/platform_port/include -I/Users/saket/esp/esp-idf/components/esp_rom/include -I/Users/saket/esp/esp-idf/components/esp_rom/include/esp32s3 -I/Users/saket/esp/esp-idf/components/esp_rom/esp32s3 -I/Users/saket/esp/esp-idf/components/esp_common/include -I/Users/saket/esp/esp-idf/components/esp_system/include -I/Users/saket/esp/esp-idf/components/esp_system/port/soc -I/Users/saket/esp/esp-idf/components/esp_system/port/include/private -I/Users/saket/esp/esp-idf/components/xtensa/include -I/Users/saket/esp/esp-idf/components/xtensa/esp32s3/include -I/Users/saket/esp/esp-idf/components/esp_timer/include -I/Users/saket/esp/esp-idf/components/lwip/include -I/Users/saket/esp/esp-idf/components/lwip/include/apps -I/Users/saket/esp/esp-idf/components/lwip/include/apps/sntp -I/Users/saket/esp/esp-idf/components/lwip/lwip/src/include -I/Users/saket/esp/esp-idf/components/lwip/port/include -I/Users/saket/esp/esp-idf/components/lwip/port/freertos/include -I/Users/saket/esp/esp-idf/components/lwip/port/esp32xx/include -I/Users/saket/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/Users/saket/esp/esp-idf/components/console -I/Users/saket/esp/esp-idf/components/vfs/include -I/Users/saket/esp/esp-idf/components/spi_flash/include -I/Users/saket/esp/esp-idf/components/esp_wifi/include -I/Users/saket/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/Users/saket/esp/esp-idf/components/esp_event/include -I/Users/saket/esp/esp-idf/components/esp_phy/include -I/Users/saket/esp/esp-idf/components/esp_phy/esp32s3/include -I/Users/saket/esp/esp-idf/components/esp_netif/include -I/Users/saket/esp/esp-idf/components/esp_http_server/include -I/Users/saket/esp/esp-idf/components/http_parser -I/Users/saket/esp/esp-idf/components/nvs_flash/include -I/Users/saket/esp/esp-idf/components/esp_partition/include -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/third_party/gemmlowp -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/third_party/flatbuffers/include -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/third_party/ruy -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/third_party/kissfft -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/signal/micro/kernels -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/signal/src -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/signal/src/kiss_fft_wrappers -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera/driver/include -I/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera/conversions/include -I/Users/saket/esp/esp-idf/components/driver/include -I/Users/saket/esp/esp-idf/components/driver/deprecated -I/Users/saket/esp/esp-idf/components/driver/analog_comparator/include -I/Users/saket/esp/esp-idf/components/driver/dac/include -I/Users/saket/esp/esp-idf/components/driver/gpio/include -I/Users/saket/esp/esp-idf/components/driver/gptimer/include -I/Users/saket/esp/esp-idf/components/driver/i2c/include -I/Users/saket/esp/esp-idf/components/driver/i2s/include -I/Users/saket/esp/esp-idf/components/driver/ledc/include -I/Users/saket/esp/esp-idf/components/driver/mcpwm/include -I/Users/saket/esp/esp-idf/components/driver/parlio/include -I/Users/saket/esp/esp-idf/components/driver/pcnt/include -I/Users/saket/esp/esp-idf/components/driver/rmt/include -I/Users/saket/esp/esp-idf/components/driver/sdio_slave/include -I/Users/saket/esp/esp-idf/components/driver/sdmmc/include -I/Users/saket/esp/esp-idf/components/driver/sigma_delta/include -I/Users/saket/esp/esp-idf/components/driver/spi/include -I/Users/saket/esp/esp-idf/components/driver/temperature_sensor/include -I/Users/saket/esp/esp-idf/components/driver/touch_sensor/include -I/Users/saket/esp/esp-idf/components/driver/twai/include -I/Users/saket/esp/esp-idf/components/driver/uart/include -I/Users/saket/esp/esp-idf/components/driver/usb_serial_jtag/include -I/Users/saket/esp/esp-idf/components/driver/touch_sensor/esp32s3/include -I/Users/saket/esp/esp-idf/components/esp_pm/include -I/Users/saket/esp/esp-idf/components/esp_ringbuf/include -mlongcalls  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -O2 -fmacro-prefix-map=/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection=. -fmacro-prefix-map=/Users/saket/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu++2b -fno-exceptions -fno-rtti -DTF_LITE_STATIC_MEMORY -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj -c /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc: In function 'void wifi_server()':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:40:2: error: 'wifi_config_t' was not declared in this scope
+   40 |  wifi_config_t wifi_config = {
+      |  ^~~~~~~~~~~~~
+In file included from /Users/saket/esp/esp-idf/components/esp_system/include/esp_system.h:12,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:18:
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:52:21: error: 'nvs_flash_init' was not declared in this scope
+   52 |     ESP_ERROR_CHECK(nvs_flash_init());
+      |                     ^~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:53:21: error: 'esp_netif_init' was not declared in this scope; did you mean 'esp_newlib_init'?
+   53 |     ESP_ERROR_CHECK(esp_netif_init());
+      |                     ^~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:54:21: error: 'esp_event_loop_create_default' was not declared in this scope
+   54 |     ESP_ERROR_CHECK(esp_event_loop_create_default());
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:55:5: error: 'esp_netif_t' was not declared in this scope; did you mean 'esp_err_t'?
+   55 |     esp_netif_t * p_netif = esp_netif_create_default_wifi_ap();
+      |     ^~~~~~~~~~~
+      |     esp_err_t
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:55:19: error: 'p_netif' was not declared in this scope
+   55 |     esp_netif_t * p_netif = esp_netif_create_default_wifi_ap();
+      |                   ^~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:55:29: error: 'esp_netif_create_default_wifi_ap' was not declared in this scope
+   55 |     esp_netif_t * p_netif = esp_netif_create_default_wifi_ap();
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:56:57: error: 'WIFI_EVENT' was not declared in this scope
+   56 |     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
+      |                                                         ^~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:57:57: error: 'ESP_EVENT_ANY_ID' was not declared in this scope
+   57 |                                                         ESP_EVENT_ANY_ID,
+      |                                                         ^~~~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:58:58: error: 'wifi_event_handler' was not declared in this scope
+   58 |                                                         &wifi_event_handler,
+      |                                                          ^~~~~~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:56:21: error: 'esp_event_handler_instance_register' was not declared in this scope
+   56 |     ESP_ERROR_CHECK(esp_event_handler_instance_register(WIFI_EVENT,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:62:5: error: 'wifi_init_config_t' was not declared in this scope
+   62 |     wifi_init_config_t wifi_init_config = WIFI_INIT_CONFIG_DEFAULT();
+      |     ^~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:64:36: error: 'wifi_init_config' was not declared in this scope
+   64 |     ESP_ERROR_CHECK(esp_wifi_init(&wifi_init_config));
+      |                                    ^~~~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:64:21: error: 'esp_wifi_init' was not declared in this scope; did you mean 'esp_timer_init'?
+   64 |     ESP_ERROR_CHECK(esp_wifi_init(&wifi_init_config));
+      |                     ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:66:39: error: 'WIFI_MODE_AP' was not declared in this scope
+   66 |     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_AP));
+      |                                       ^~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:66:21: error: 'esp_wifi_set_mode' was not declared in this scope
+   66 |     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_AP));
+      |                     ^~~~~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:67:41: error: 'WIFI_IF_AP' was not declared in this scope
+   67 |     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &wifi_config));
+      |                                         ^~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:67:54: error: 'wifi_config' was not declared in this scope
+   67 |     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &wifi_config));
+      |                                                      ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:67:21: error: 'esp_wifi_set_config' was not declared in this scope
+   67 |     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_AP, &wifi_config));
+      |                     ^~~~~~~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:69:21: error: 'esp_wifi_start' was not declared in this scope; did you mean 'esp_restart'?
+   69 |     ESP_ERROR_CHECK(esp_wifi_start());
+      |                     ^~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:73:5: error: 'esp_netif_ip_info_t' was not declared in this scope
+   73 |     esp_netif_ip_info_t if_info;
+      |     ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:74:53: error: 'if_info' was not declared in this scope
+   74 |     ESP_ERROR_CHECK(esp_netif_get_ip_info(p_netif, &if_info));
+      |                                                     ^~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:74:21: error: 'esp_netif_get_ip_info' was not declared in this scope
+   74 |     ESP_ERROR_CHECK(esp_netif_get_ip_info(p_netif, &if_info));
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/esp_common/include/esp_err.h:117:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  117 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+In file included from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:17:
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:14: error: 'TAG' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |              ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:392:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  392 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                 ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:31: error: expected ')' before 'IPSTR'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                               ^~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:282:88: note: in definition of macro 'LOG_FORMAT'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:392:60: note: to match this '('
+  392 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                            ^
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:46: error: 'if_info' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                              ^~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:392:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  392 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:38: error: 'IP2STR' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                      ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:392:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  392 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:14: error: 'TAG' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |              ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:393:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  393 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                 ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:31: error: expected ')' before 'IPSTR'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                               ^~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:282:88: note: in definition of macro 'LOG_FORMAT'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:393:60: note: to match this '('
+  393 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                            ^
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:46: error: 'if_info' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                              ^~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:393:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  393 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:38: error: 'IP2STR' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                      ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:393:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  393 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:14: error: 'TAG' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |              ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:394:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  394 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                 ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:31: error: expected ')' before 'IPSTR'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                               ^~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:282:88: note: in definition of macro 'LOG_FORMAT'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:394:60: note: to match this '('
+  394 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                            ^
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:46: error: 'if_info' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                              ^~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:394:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  394 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:38: error: 'IP2STR' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                      ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:394:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  394 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:14: error: 'TAG' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |              ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:395:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  395 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                 ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:31: error: expected ')' before 'IPSTR'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                               ^~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:282:88: note: in definition of macro 'LOG_FORMAT'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:395:60: note: to match this '('
+  395 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                            ^
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:46: error: 'if_info' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                              ^~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:395:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  395 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:38: error: 'IP2STR' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                      ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:395:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  395 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:14: error: 'TAG' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |              ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:396:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  396 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                 ^~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:31: error: expected ')' before 'IPSTR'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                               ^~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:282:88: note: in definition of macro 'LOG_FORMAT'
+  282 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:396:60: note: to match this '('
+  396 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                            ^
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:432:41: note: in expansion of macro 'ESP_LOG_LEVEL'
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                         ^~~~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:46: error: 'if_info' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                              ^~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:396:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  396 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:38: error: 'IP2STR' was not declared in this scope
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |                                      ^~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:396:148: note: in definition of macro 'ESP_LOG_LEVEL'
+  396 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                                                                    ^~~~~~~~~~~
+/Users/saket/esp/esp-idf/components/log/include/esp_log.h:336:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  336 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format __VA_OPT__(,) __VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:75:5: note: in expansion of macro 'ESP_LOGI'
+   75 |     ESP_LOGI(TAG, "ESP32 IP:" IPSTR, IP2STR(&if_info.ip));
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:77:24: error: expected ';' before 'ipInfo'
+   77 |     esp_netif_ip_info_t ipInfo;
+      |                        ^~~~~~~
+      |                        ;
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:78:15: error: 'ipInfo' was not declared in this scope
+   78 |     IP4_ADDR(&ipInfo.ip, 192,168,1,1);
+      |               ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:78:5: error: 'IP4_ADDR' was not declared in this scope
+   78 |     IP4_ADDR(&ipInfo.ip, 192,168,1,1);
+      |     ^~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:81:5: error: 'esp_netif_dhcps_stop' was not declared in this scope
+   81 |     esp_netif_dhcps_stop(p_netif);
+      |     ^~~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:82:5: error: 'esp_netif_set_ip_info' was not declared in this scope
+   82 |     esp_netif_set_ip_info(p_netif, &ipInfo);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:83:5: error: 'esp_netif_dhcps_start' was not declared in this scope
+   83 |     esp_netif_dhcps_start(p_netif);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:85:5: error: 'httpd_config_t' was not declared in this scope
+   85 |     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
+      |     ^~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:86:5: error: 'httpd_handle_t' was not declared in this scope; did you mean 'intr_handle_t'?
+   86 |     httpd_handle_t server = NULL;
+      |     ^~~~~~~~~~~~~~
+      |     intr_handle_t
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:88:22: error: 'server' was not declared in this scope
+   88 |     if (httpd_start(&server, &config) == ESP_OK) {
+      |                      ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:88:31: error: 'config' was not declared in this scope
+   88 |     if (httpd_start(&server, &config) == ESP_OK) {
+      |                               ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:88:9: error: 'httpd_start' was not declared in this scope
+   88 |     if (httpd_start(&server, &config) == ESP_OK) {
+      |         ^~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:89:45: error: 'mpu_uri' was not declared in this scope
+   89 |         httpd_register_uri_handler(server, &mpu_uri);
+      |                                             ^~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:89:9: error: 'httpd_register_uri_handler' was not declared in this scope
+   89 |         httpd_register_uri_handler(server, &mpu_uri);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:90:45: error: 'image_uri' was not declared in this scope
+   90 |         httpd_register_uri_handler(server, &image_uri);
+      |                                             ^~~~~~~~~
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,2001 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40056f6f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x186c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3130
+entry 0x403c9934
+[0;32mI (27) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb 27 2024 01:54:59[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c070020 size=cdd88h (843144) map[0m
+[0;32mI (232) esp_image: segment 1: paddr=000dddb0 vaddr=3fc93600 size=02268h (  8808) load[0m
+[0;32mI (234) esp_image: segment 2: paddr=000e0020 vaddr=42000020 size=6aeb4h (437940) map[0m
+[0;32mI (304) esp_image: segment 3: paddr=0014aedc vaddr=3fc95868 size=01b0ch (  6924) load[0m
+[0;32mI (306) esp_image: segment 4: paddr=0014c9f0 vaddr=40374000 size=0f5ech ( 62956) load[0m
+[0;32mI (329) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (329) boot: Disabling RNG early entropy source...[0m
+[0;32mI (341) cpu_start: Multicore app[0m
+[0;32mI (341) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (341) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (344) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (350) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (355) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (360) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (365) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (371) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (377) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (382) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (389) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (394) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (399) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (404) esp_psram: Speed: 80MHz[0m
+[0;32mI (408) cpu_start: Pro cpu up.[0m
+[0;32mI (411) cpu_start: Starting app cpu, entry point is 0x403755a8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (703) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (713) cpu_start: Pro cpu start user code[0m
+[0;32mI (713) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (713) cpu_start: Application information:[0m
+[0;32mI (716) cpu_start: Project name:     person_detection[0m
+[0;32mI (721) cpu_start: App version:      612642c-dirty[0m
+[0;32mI (727) cpu_start: Compile time:     Feb 27 2024 01:54:51[0m
+[0;32mI (733) cpu_start: ELF file SHA256:  d1c87ac52ce54ab0...[0m
+[0;32mI (739) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (744) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (748) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (753) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (758) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (765) heap_init: At 3FC9B560 len 0004E1B0 (312 KiB): DRAM[0m
+[0;32mI (771) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (778) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (784) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (792) spi_flash: detected chip: gd[0m
+[0;32mI (796) spi_flash: flash io: qio[0m
+[0;32mI (801) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (807) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (814) app_start: Starting scheduler on CPU0[0m
+[0;32mI (819) app_start: Starting scheduler on CPU1[0m
+[0;32mI (819) main_task: Started on CPU0[0m
+[0;32mI (829) main_task: Calling app_main()[0m
+PSRAM size: 8738988 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (889) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (889) cam_hal: cam init ok[0m
+[0;32mI (889) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (889) sccb: sccb_i2c_port=1[0m
+[0;32mI (899) camera: Detected camera at address=0x30[0m
+[0;32mI (899) camera: Detected OV2640 camera[0m
+[0;32mI (899) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (979) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (979) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (989) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (999) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1009) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1009) cam_hal: cam config ok[0m
+[0;32mI (1019) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1559 
+
+ 
+storing image with buf len 1559
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1618 
+
+ 
+storing image with buf len 1618
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1625 
+
+ 
+storing image with buf len 1625
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1867 
+
+arrow detected at 151 :91.406250%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1898 
+
+output classification type 4
+arrow left prob at :5.078125%
+arrow right prob at :92.968750%
+ 
+storing image with buf len 1898
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1876 
+
+ 
+storing image with buf len 1876
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1830 
+
+ 
+storing image with buf len 1830
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1703 
+
+arrow detected at 151 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1708 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :99.218750%
+ 
+storing image with buf len 1708
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1649 
+
+ 
+storing image with buf len 1649
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1734 
+
+ 
+storing image with buf len 1734
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1740 
+
+ 
+storing image with buf len 1740
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1729 
+
+arrow detected at 177 :91.406250%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1681 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :99.609375%
+ 
+storing image with buf len 1681
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1730 
+
+arrow detected at 177 :94.140625%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1771 
+
+output classification type 4
+arrow left prob at :11.718750%
+arrow right prob at :88.281250%
+ 
+storing image with buf len 1771
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1715 
+
+arrow detected at 175 :93.359375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1710 
+
+output classification type 4
+arrow left prob at :0.781250%
+arrow right prob at :99.218750%
+ 
+storing image with buf len 1710
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1577 
+
+arrow detected at 177 :96.484375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1637 
+
+output classification type 4
+arrow left prob at :0.781250%
+arrow right prob at :99.218750%
+ right
+ 
+storing image with buf len 1637
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1622 
+
+arrow detected at 177 :96.875000%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1581 
+
+output classification type 4
+arrow left prob at :10.546875%
+arrow right prob at :89.062500%
+ 
+storing image with buf len 1581
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1551 
+
+arrow detected at 177 :96.484375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1460 
+
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :99.609375%
+ 
+storing image with buf len 1460
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1627 
+
+arrow detected at 177 :90.625000%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1634 
+
+output classification type 4
+arrow left prob at :0.781250%
+arrow right prob at :99.218750%
+ 
+storing image with buf len 1634
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1457 
+
+ 
+storing image with buf len 1457
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1098 
+
+ 
+storing image with buf len 1098
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 991 
+
+ 
+storing image with buf len 991
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1001 
+
+ 
+storing image with buf len 1001
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1010 
+
+ 
+storing image with buf len 1010
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1014 
+
+ 
+storing image with buf len 1014
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1024 
+
+ 
+storing image with buf len 1024
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1009 
+
+ 
+storing image with buf len 1009
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1000 
+
+ 
+storing image with buf len 1000
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1787 
+
+ 
+storing image with buf len 1787
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1769 
+
+ 
+storing image with buf len 1769
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1656 
+
+arrow detected at 179 :91.406250%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1667 
+
+output classification type 4
+arrow left prob at :9.765625%
+arrow right prob at :90.234375%
+ 
+storing image with buf len 1667
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1629 
+
+ 
+storing image with buf len 1629
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1620 
+
+ 
+storing image with buf len 1620
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1613 
+
+ 
+storing image with buf len 1613
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1653 
+
+ 
+storing image with buf len 1653
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1579 
+
+ 
+storing image with buf len 1579
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1553 
+
+ 
+storing image with buf len 1553
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1574 
+
+ 
+storing image with buf len 1574
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1563 
+
+ 
+storing image with buf len 1563
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1526 
+
+arrow detected at 179 :96.484375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1527 
+
+output classification type 4
+arrow left prob at :12.890625%
+arrow right prob at :87.109375%
+ 
+storing image with buf len 1527
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1602 
+
+arrow detected at 131 :95.312500%
+arrow detected at 157 :95.703125%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1597 
+
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :99.609375%
+ right
+ 
+storing image with buf len 1597
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1790 
+
+arrow detected at 131 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1738 
+
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :98.828125%
+ 
+storing image with buf len 1738
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1776 
+
+ 
+storing image with buf len 1776
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1721 
+
+arrow detected at 131 :99.609375%
+arrow detected at 133 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1834 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :99.218750%
+ 
+storing image with buf len 1834
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1115 
+
+ 
+storing image with buf len 1115
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 979 
+
+ 
+storing image with buf len 979
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 972 
+
+ 
+storing image with buf len 972
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1000 
+
+ 
+storing image with buf len 1000
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1018 
+
+ 
+storing image with buf len 1018
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1013 
+
+ 
+storing image with buf len 1013
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1017 
+
+ 
+storing image with buf len 1017
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1838 
+
+arrow detected at 155 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1948 
+
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :78.125000%
+ 
+storing image with buf len 1948
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1838 
+
+arrow detected at 157 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1853 
+
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :94.531250%
+ 
+storing image with buf len 1853
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1815 
+
+arrow detected at 157 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1837 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :89.843750%
+ 
+storing image with buf len 1837
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1849 
+
+arrow detected at 157 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1815 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :92.578125%
+ right
+ 
+storing image with buf len 1815
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1777 
+
+arrow detected at 157 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1782 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :75.781250%
+ 
+storing image with buf len 1782
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1823 
+
+arrow detected at 157 :99.609375%
+arrow detected at 181 :94.531250%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1828 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :98.828125%
+ 
+storing image with buf len 1828
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1840 
+
+arrow detected at 157 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1801 
+
+output classification type 4
+arrow left prob at :1.171875%
+arrow right prob at :96.093750%
+ 
+storing image with buf len 1801
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1818 
+
+arrow detected at 157 :99.609375%
+arrow detected at 181 :94.531250%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1820 
+
+output classification type 4
+arrow left prob at :1.953125%
+arrow right prob at :94.140625%
+ 
+storing image with buf len 1820
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1823 
+
+arrow detected at 157 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1836 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :99.609375%
+ 
+storing image with buf len 1836
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1016 
+
+ 
+storing image with buf len 1016
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 969 
+
+ 
+storing image with buf len 969
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 984 
+
+ 
+storing image with buf len 984
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 978 
+
+ 
+storing image with buf len 978
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 991 
+
+ 
+storing image with buf len 991
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 969 
+
+ 
+storing image with buf len 969
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 969 
+
+ 
+storing image with buf len 969
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 995 
+
+ 
+storing image with buf len 995
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1847 
+
+arrow detected at 181 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1828 
+
+output classification type 4
+arrow left prob at :1.171875%
+arrow right prob at :98.828125%
+ right
+ 
+storing image with buf len 1828
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1805 
+
+arrow detected at 181 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1801 
+
+output classification type 4
+arrow left prob at :1.562500%
+arrow right prob at :98.437500%
+ 
+storing image with buf len 1801
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1774 
+
+arrow detected at 181 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1711 
+
+output classification type 4
+arrow left prob at :1.562500%
+arrow right prob at :98.437500%
+ 
+storing image with buf len 1711
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1762 
+
+arrow detected at 181 :99.218750%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1771 
+
+output classification type 4
+arrow left prob at :1.562500%
+arrow right prob at :98.437500%
+ 
+storing image with buf len 1771
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1719 
+
+arrow detected at 181 :99.609375%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1743 
+
+output classification type 4
+arrow left prob at :0.390625%
+arrow right prob at :99.609375%
+ 
+storing image with buf len 1743
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1724 
+
+arrow detected at 181 :98.828125%
+arrow detected at 183 :96.875000%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1704 
+
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :99.609375%
+ 
+storing image with buf len 1704
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1720 
+
+arrow detected at 181 :99.609375%
+arrow detected at 183 :98.828125%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 972 
+
+output classification type 4
+arrow left prob at :16.796875%
+arrow right prob at :83.203125%
+ right
+ 
+storing image with buf len 972
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 992 
+
+ 
+storing image with buf len 992
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 990 
+
+ 
+storing image with buf len 990
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1005 
+
+ 
+storing image with buf len 1005
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1016 
+
+ 
+storing image with buf len 1016
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1010 
+
+ 
+storing image with buf len 1010
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1127 
+
+ 
+storing image with buf len 1127
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 999 
+
+ 
+storing image with buf len 999
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1021 
+
+ 
+storing image with buf len 1021
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1472 
+
+ 
+storing image with buf len 1472
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1583 
+
+ 
+storing image with buf len 1583
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1402 
+
+ 
+storing image with buf len 1402
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1333 
+
+ 
+storing image with buf len 1333
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1249 
+
+ 
+storing image with buf len 1249
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1296 
+
+ 
+storing image with buf len 1296
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1469 
+
+ 
+storing image with buf len 1469
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1470 
+
+ 
+storing image with buf len 1470
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1440 
+
+ 
+storing image with buf len 1440
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1435 
+
+ 
+storing image with buf len 1435
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1471 
+
+ 
+storing image with buf len 1471
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1415 
+
+ 
+storing image with buf len 1415
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1422 
+
+ 
+storing image with buf len 1422
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1417 
+
+ 
+storing image with buf len 1417
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1386 
+
+ 
+storing image with buf len 1386
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1383 
+
+ 
+storing image with buf len 1383
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1359 
+
+ 
+storing image with buf len 1359
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1352 
+
+ 
+storing image with buf len 1352
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1368 
+
+ 
+storing image with buf len 1368
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1370 
+
+ 
+storing image with buf len 1370
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1308 
+
+ 
+storing image with buf len 1308
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1353 
+
+ 
+storing image with buf len 1353
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1331 
+
+ 
+storing image with buf len 1331
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1330 
+
+ 
+storing image with buf len 1330
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1322 
+
+ 
+storing image with buf len 1322
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1333 
+
+ 
+storing image with buf len 1333
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1322 
+
+ 
+storing image with buf len 1322
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1320 
+
+ 
+storing image with buf len 1320
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1305 
+
+ 
+storing image with buf len 1305
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1325 
+
+ 
+storing image with buf len 1325
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1319 
+
+ 
+storing image with buf len 1319
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1306 
+
+ 
+storing image with buf len 1306
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1317 
+
+ 
+storing image with buf len 1317
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1309 
+
+ 
+storing image with buf len 1309
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1277 
+
+ 
+storing image with buf len 1277
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1301 
+
+ 
+storing image with buf len 1301
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1320 
+
+ 
+storing image with buf len 1320
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1320 
+
+ 
+storing image with buf len 1320
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1312 
+
+ 
+storing image with buf len 1312
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1321 
+
+ 
+storing image with buf len 1321
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1332 
+
+ 
+storing image with buf len 1332
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1300 
+
+ 
+storing image with buf len 1300
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1316 
+
+ 
+storing image with buf len 1316
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1311 
+
+ 
+storing image with buf len 1311
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1293 
+
+ 
+storing image with buf len 1293
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1296 
+
+ 
+storing image with buf len 1296
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1307 
+
+ 
+storing image with buf len 1307
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1288 
+
+ 
+storing image with buf len 1288
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1296 
+
+ 
+storing image with buf len 1296
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1286 
+
+ 
+storing image with buf len 1286
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1286 
+
+ 
+storing image with buf len 1286
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1274 
+
+ 
+storing image with buf len 1274
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1273 
+
+ 
+storing image with buf len 1273
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1287 
+
+ 
+storing image with buf len 1287
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1296 
+
+ 
+storing image with buf len 1296
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1287 
+
+ 
+storing image with buf len 1287
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1273 
+
+ 
+storing image with buf len 1273
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1286 
+
+ 
+storing image with buf len 1286
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1291 
+
+ 
+storing image with buf len 1291
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1282 
+
+ 
+storing image with buf len 1282
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1281 
+
+ 
+storing image with buf len 1281
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1301 
+
+ 
+storing image with buf len 1301
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1277 
+
+ 
+storing image with buf len 1277
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1270 
+
+ 
+storing image with buf len 1270
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1290 
+
+ 
+storing image with buf len 1290
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1278 
+
+ 
+storing image with buf len 1278
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1275 
+
+ 
+storing image with buf len 1275
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1293 
+
+ 
+storing image with buf len 1293
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1260 
+
+ 
+storing image with buf len 1260
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1285 
+
+ 
+storing image with buf len 1285
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1288 
+
+ 
+storing image with buf len 1288
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1294 
+
+ 
+storing image with buf len 1294
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1297 
+
+ 
+storing image with buf len 1297
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1282 
+
+ 
+storing image with buf len 1282
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1303 
+
+ 
+storing image with buf len 1303
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1279 
+
+ 
+storing image with buf len 1279
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1295 
+
+ 
+storing image with buf len 1295
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1288 
+
+ 
+storing image with buf len 1288
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1283 
+
+arrow detected at 237 :94.921875%
+arrow detected 
+Image Captured
+
+coverted Image to jpg 1269 
+
+output classification type 4
+arrow left prob at :20.703125%
+arrow right prob at :74.218750%
+ 
+storing image with buf len 1269
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1307 
+
+ 
+storing image with buf len 1307
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1288 
+
+ 
+storing image with buf len 1288
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1263 
+
+ 
+storing image with buf len 1263
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1288 
+
+ 
+storing image with buf len 1288
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1289 
+
+ 
+storing image with buf len 1289
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1261 
+
+ 
+storing image with buf len 1261
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1281 
+
+ 
+storing image with buf len 1281
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1279 
+
+ 
+storing image with buf len 1279
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1266 
+
+ 
+storing image with buf len 1266
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1249 
+
+ 
+storing image with buf len 1249
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1268 
+
+ 
+storing image with buf len 1268
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1261 
+
+ 
+storing image with buf len 1261
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1256 
+
+ 
+storing image with buf len 1256
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1274 
+
+ 
+storing image with buf len 1274
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1273 
+
+ 
+storing image with buf len 1273
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1264 
+
+ 
+storing image with buf len 1264
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1285 
+
+ 
+storing image with buf len 1285
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1283 
+
+ 
+storing image with buf len 1283
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1273 
+
+ 
+storing image with buf len 1273
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1271 
+
+ 
+storing image with buf len 1271
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1277 
+
+ 
+storing image with buf len 1277
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1280 
+
+ 
+storing image with buf len 1280
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1276 
+
+ 
+storing image with buf len 1276
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1277 
+
+ 
+storing image with buf len 1277
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1270 
+
+ 
+storing image with buf len 1270
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1279 
+
+ 
+storing image with buf len 1279
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1264 
+
+ 
+storing image with buf len 1264
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1277 
+
+ 
+storing image with buf len 1277
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1271 
+
+ 
+storing image with buf len 1271
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1246 
+
+ 
+storing image with buf len 1246
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1277 
+
+ 
+storing image with buf len 1277
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1266 
+
+ 
+storing image with buf len 1266
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1276 
+
+ 
+storing image with buf len 1276
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1246 
+
+ 
+storing image with buf len 1246
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1255 
+
+ 
+storing image with buf len 1255
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1257 
+
+ 
+storing image with buf len 1257
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1261 
+
+ 
+storing image with buf len 1261
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1251 
+
+ 
+storing image with buf len 1251
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1259 
+
+ 
+storing image with buf len 1259
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1251 
+
+ 
+storing image with buf len 1251
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1258 
+
+ 
+storing image with buf len 1258
+size of int 4
+size of float 4
+Image Captured
+
+coverted Image to jpg 1260 
+

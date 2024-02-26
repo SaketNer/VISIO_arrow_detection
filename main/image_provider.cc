@@ -136,7 +136,7 @@ TfLiteStatus GetImage(int image_width, int image_height, int channels, int8_t* i
       display_buf[(2 * y_cordi + 1) * kNumCols * 2 + 2 * x_cordi] = 1111100000000000;
       display_buf[(2 * y_cordi + 1) * kNumCols * 2 + 2 * x_cordi + 1] = 1111100000000000;
 #else // DISPLAY_SUPPORT
-  MicroPrintf("Image Captured\n");
+  MicroPrintf("Image Captured");
   // We have initialised camera to grayscale
   // Just quantize to int8_t
   for (int i = 0; i < image_width * image_height; i++) {
@@ -153,7 +153,7 @@ TfLiteStatus GetImage(int image_width, int image_height, int channels, int8_t* i
     copy_jpg_buf[i] = _jpg_buf[i]; 
   }
   free(_jpg_buf);
-  MicroPrintf("coverted Image to jpg %d \n",copy_jpg_buf_len);
+  MicroPrintf("coverted Image to jpg %d ",copy_jpg_buf_len);
 #endif // DISPLAY_SUPPORT
 
   esp_camera_fb_return(fb);

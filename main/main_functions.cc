@@ -388,18 +388,23 @@ void setup() {
 // The name of this function is important for Arduino compatibility.
 
 
-
+int loopno = 0;
 void loop() {
   int tempFomoDetConfidence =-1, tempFomoPosX =-1, tempFomoPosY =-1;
   int tempclassRight = -1; int tempclassLeft = -1;
-  MicroPrintf("size of int %d",sizeof(int));
-  MicroPrintf("size of float %d",sizeof(float));
+ // MicroPrintf("size of int %d",sizeof(int));
+  //MicroPrintf("size of float %d",sizeof(float));
 
   // Get image from provider.
   if (kTfLiteOk != GetImage(kNumCols, kNumRows, kNumChannels, input->data.int8)) {
     MicroPrintf("Image capture failed.");
   }
-
+  loopno++;
+  if(loopno%5!=0){
+    return;
+  }
+  loopno = 0;
+  vTaskDelay(10);
   // Run the model on this input and make sure it succeeds.
   if (kTfLiteOk != interpreter->Invoke()) {
     MicroPrintf("Invoke failed.");
@@ -472,12 +477,12 @@ void loop() {
     if(turn>5){
       MicroPrintf(" left");
       turn = 0;
-      sleep(1);
+      //sleep(1);
     }
     else if(turn<-5){
       MicroPrintf(" right");
       turn = 0;
-      sleep(1);
+      //sleep(1);
     }
     //trying ends
     tostop = false;
@@ -485,7 +490,7 @@ void loop() {
     //RespondToDetection(arrow_score_left_int, arrow_score_right_int);
   }
    MicroPrintf(" ");
-  vTaskDelay(100);
+  vTaskDelay(10);
   storeDetection(tempFomoDetConfidence,tempFomoPosX,tempFomoPosY,tempclassRight,tempclassLeft);
   // Respond to detection
   RespondToDetection(arrow_score_left_int, arrow_score_right_int);

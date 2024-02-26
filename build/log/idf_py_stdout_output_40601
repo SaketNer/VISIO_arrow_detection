@@ -1,0 +1,141 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x57a0 bytes. 0x2860 bytes (32%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc: In function 'void test()':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/main.cc:47:18: warning: unused variable 'fbimg' [-Wunused-variable]
+   47 |     camera_fb_t* fbimg = esp_camera_fb_get();
+      |                  ^~~~~
+[5/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/image_provider.cc.obj
+In file included from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/image_provider.cc:23:
+/Users/saket/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:6:2: warning: #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead [-Wcpp]
+    6 | #warning esp_spi_flash.h is deprecated, please use spi_flash_mmap.h instead
+      |  ^~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/image_provider.cc: In function 'TfLiteStatus GetImage(int, int, int, int8_t*)':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/image_provider.cc:150:18: warning: unused variable 'last_frame' [-Wunused-variable]
+  150 |   static int64_t last_frame = 0;
+      |                  ^~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/image_provider.cc: At global scope:
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/image_provider.cc:150:18: warning: 'last_frame' defined but not used [-Wunused-variable]
+[6/11] Linking C static library esp-idf/main/libmain.a
+[7/11] Generating ld/sections.ld
+[8/11] Linking CXX executable person_detection.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+[10/11] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/partition_table/partition-table.bin /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+person_detection.bin binary size 0x1d21d0 bytes. Smallest app partition is 0x3a0000 bytes. 0x1cde30 bytes (50%) free.
+[10/11] cd /Users/saket/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/saket/esp/esp-idf -D "SERIAL_TOOL=/Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/Users/saket/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build -P /Users/saket/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem11301 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev3
+Serial port /dev/cu.usbmodem11301
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:27:e2:f0:32:a0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x001e2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 22432 bytes to 14249...
+Writing at 0x00000000... (100 %)
+Wrote 22432 bytes (14249 compressed) at 0x00000000 in 0.4 seconds (effective 465.1 kbit/s)...
+Hash of data verified.
+Compressed 1909200 bytes to 1248396...
+Writing at 0x00010000... (1 %)
+Writing at 0x00018c23... (2 %)
+Writing at 0x0001d945... (3 %)
+Writing at 0x00026f7a... (5 %)
+Writing at 0x0002b3a6... (6 %)
+Writing at 0x0002f89b... (7 %)
+Writing at 0x00033d9b... (9 %)
+Writing at 0x000381c1... (10 %)
+Writing at 0x0003c5d8... (11 %)
+Writing at 0x00040a59... (12 %)
+Writing at 0x00044ca2... (14 %)
+Writing at 0x00049279... (15 %)
+Writing at 0x0004d611... (16 %)
+Writing at 0x00051af2... (18 %)
+Writing at 0x00055f7d... (19 %)
+Writing at 0x0005a1ec... (20 %)
+Writing at 0x0005e671... (22 %)
+Writing at 0x00062b11... (23 %)
+Writing at 0x00066f89... (24 %)
+Writing at 0x0006b300... (25 %)
+Writing at 0x0006f5e4... (27 %)
+Writing at 0x00073950... (28 %)
+Writing at 0x00077c89... (29 %)
+Writing at 0x0007bfa1... (31 %)
+Writing at 0x000802b5... (32 %)
+Writing at 0x00084643... (33 %)
+Writing at 0x00088a7d... (35 %)
+Writing at 0x0008d83d... (36 %)
+Writing at 0x0009955e... (37 %)
+Writing at 0x000a6c42... (38 %)
+Writing at 0x000b3986... (40 %)
+Writing at 0x000c05d0... (41 %)
+Writing at 0x000c989f... (42 %)
+Writing at 0x000d58bb... (44 %)
+Writing at 0x000dbd4e... (45 %)
+Writing at 0x000e26ed... (46 %)
+Writing at 0x000f5290... (48 %)
+Writing at 0x000fdcb4... (49 %)
+Writing at 0x00103941... (50 %)
+Writing at 0x001091fa... (51 %)
+Writing at 0x0010e69a... (53 %)
+Writing at 0x00113606... (54 %)
+Writing at 0x00118767... (55 %)
+Writing at 0x0011d7da... (57 %)
+Writing at 0x00123095... (58 %)
+Writing at 0x00129c89... (59 %)
+Writing at 0x0012f908... (61 %)
+Writing at 0x00134f9c... (62 %)
+Writing at 0x0013a4c9... (63 %)
+Writing at 0x0013f885... (64 %)
+Writing at 0x001447a6... (66 %)
+Writing at 0x00149907... (67 %)
+Writing at 0x0014e97d... (68 %)
+Writing at 0x00153c26... (70 %)
+Writing at 0x001590e3... (71 %)
+Writing at 0x0015ee6e... (72 %)
+Writing at 0x001641b1... (74 %)
+Writing at 0x001690c9... (75 %)
+Writing at 0x0016e0e2... (76 %)
+Writing at 0x0017302b... (77 %)
+Writing at 0x0017802b... (79 %)
+Writing at 0x0017cf8f... (80 %)
+Writing at 0x00181f96... (81 %)
+Writing at 0x001874de... (83 %)
+Writing at 0x0018cffa... (84 %)
+Writing at 0x001949c5... (85 %)
+Writing at 0x0019d631... (87 %)
+Writing at 0x001a5468... (88 %)
+Writing at 0x001acd04... (89 %)
+Writing at 0x001b24d6... (90 %)
+Writing at 0x001b8e3b... (92 %)
+Writing at 0x001c0714... (93 %)
+Writing at 0x001c9376... (94 %)
+Writing at 0x001d087a... (96 %)
+Writing at 0x001d62f1... (97 %)
+Writing at 0x001db8dc... (98 %)
+Writing at 0x001e0c35... (100 %)
+Wrote 1909200 bytes (1248396 compressed) at 0x00010000 in 13.2 seconds (effective 1158.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.1 seconds (effective 481.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

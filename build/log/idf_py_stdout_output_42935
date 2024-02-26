@@ -1,0 +1,126 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x57a0 bytes. 0x2860 bytes (32%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cc.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable person_detection.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+[9/10] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/partition_table/partition-table.bin /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+person_detection.bin binary size 0x1d2200 bytes. Smallest app partition is 0x3a0000 bytes. 0x1cde00 bytes (50%) free.
+[9/10] cd /Users/saket/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/saket/esp/esp-idf -D "SERIAL_TOOL=/Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/Users/saket/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build -P /Users/saket/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem11301 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev3
+Serial port /dev/cu.usbmodem11301
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:27:e2:f0:32:a0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x001e2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 22432 bytes to 14249...
+Writing at 0x00000000... (100 %)
+Wrote 22432 bytes (14249 compressed) at 0x00000000 in 0.4 seconds (effective 462.7 kbit/s)...
+Hash of data verified.
+Compressed 1909248 bytes to 1248487...
+Writing at 0x00010000... (1 %)
+Writing at 0x00018c37... (2 %)
+Writing at 0x0001d8e5... (3 %)
+Writing at 0x00026f8e... (5 %)
+Writing at 0x0002b3ba... (6 %)
+Writing at 0x0002f8b0... (7 %)
+Writing at 0x00033db0... (9 %)
+Writing at 0x000381d6... (10 %)
+Writing at 0x0003c5ec... (11 %)
+Writing at 0x00040a6c... (12 %)
+Writing at 0x00044cb5... (14 %)
+Writing at 0x0004928e... (15 %)
+Writing at 0x0004d626... (16 %)
+Writing at 0x00051b06... (18 %)
+Writing at 0x00055f91... (19 %)
+Writing at 0x0005a200... (20 %)
+Writing at 0x0005e684... (22 %)
+Writing at 0x00062b25... (23 %)
+Writing at 0x00066f9c... (24 %)
+Writing at 0x0006b314... (25 %)
+Writing at 0x0006f5f9... (27 %)
+Writing at 0x00073964... (28 %)
+Writing at 0x00077c9e... (29 %)
+Writing at 0x0007bfb7... (31 %)
+Writing at 0x000802cb... (32 %)
+Writing at 0x00084659... (33 %)
+Writing at 0x00088a8d... (35 %)
+Writing at 0x0008d852... (36 %)
+Writing at 0x00099574... (37 %)
+Writing at 0x000a6c59... (38 %)
+Writing at 0x000b399a... (40 %)
+Writing at 0x000c05ea... (41 %)
+Writing at 0x000c9881... (42 %)
+Writing at 0x000d58a7... (44 %)
+Writing at 0x000dbd50... (45 %)
+Writing at 0x000e2644... (46 %)
+Writing at 0x000f5225... (48 %)
+Writing at 0x000fdc96... (49 %)
+Writing at 0x0010392b... (50 %)
+Writing at 0x001091d7... (51 %)
+Writing at 0x0010e653... (53 %)
+Writing at 0x001135ca... (54 %)
+Writing at 0x00118728... (55 %)
+Writing at 0x0011d798... (57 %)
+Writing at 0x0012305f... (58 %)
+Writing at 0x00129c23... (59 %)
+Writing at 0x0012f8e1... (61 %)
+Writing at 0x00134f67... (62 %)
+Writing at 0x0013a4a0... (63 %)
+Writing at 0x0013f858... (64 %)
+Writing at 0x00144771... (66 %)
+Writing at 0x001498e8... (67 %)
+Writing at 0x0014e95e... (68 %)
+Writing at 0x00153c05... (70 %)
+Writing at 0x001590b8... (71 %)
+Writing at 0x0015ee21... (72 %)
+Writing at 0x00164172... (74 %)
+Writing at 0x00169093... (75 %)
+Writing at 0x0016e0ad... (76 %)
+Writing at 0x00172ff7... (77 %)
+Writing at 0x00177ff3... (79 %)
+Writing at 0x0017cf62... (80 %)
+Writing at 0x00181f87... (81 %)
+Writing at 0x0018748b... (83 %)
+Writing at 0x0018cf87... (84 %)
+Writing at 0x00194928... (85 %)
+Writing at 0x0019d5fd... (87 %)
+Writing at 0x001a53a7... (88 %)
+Writing at 0x001accc8... (89 %)
+Writing at 0x001b249b... (90 %)
+Writing at 0x001b8ded... (92 %)
+Writing at 0x001c06e4... (93 %)
+Writing at 0x001c92bd... (94 %)
+Writing at 0x001d0838... (96 %)
+Writing at 0x001d62a2... (97 %)
+Writing at 0x001db87e... (98 %)
+Writing at 0x001e0bef... (100 %)
+Wrote 1909248 bytes (1248487 compressed) at 0x00010000 in 13.3 seconds (effective 1152.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.0 seconds (effective 491.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
