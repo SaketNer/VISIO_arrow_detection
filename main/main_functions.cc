@@ -275,6 +275,7 @@ void setup() {
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
     httpd_handle_t server = NULL;
     config.core_id =1;
+    config.send_wait_timeout=1;
 
     if (httpd_start(&server, &config) == ESP_OK) {
         httpd_register_uri_handler(server, &mpu_uri);
