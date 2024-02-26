@@ -1,0 +1,1587 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403ce7cd
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x186c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3130
+entry 0x403c9934
+[0;32mI (27) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb 27 2024 01:54:59[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=e54b0h (939184) map[0m
+[0;32mI (247) esp_image: segment 1: paddr=000f54d8 vaddr=3fc99200 size=05960h ( 22880) load[0m
+[0;32mI (251) esp_image: segment 2: paddr=000fae40 vaddr=40374000 size=051d8h ( 20952) load[0m
+[0;32mI (257) esp_image: segment 3: paddr=00100020 vaddr=42000020 size=d2134h (860468) map[0m
+[0;32mI (391) esp_image: segment 4: paddr=001d215c vaddr=403791d8 size=0ffa0h ( 65440) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (414) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (426) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (426) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (429) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (434) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (439) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (445) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (450) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (456) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (462) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (467) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (473) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (479) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (484) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (488) esp_psram: Speed: 80MHz[0m
+[0;32mI (492) cpu_start: Pro cpu up.[0m
+[0;32mI (496) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (788) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (797) cpu_start: Pro cpu start user code[0m
+[0;32mI (797) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (797) cpu_start: Application information:[0m
+[0;32mI (800) cpu_start: Project name:     person_detection[0m
+[0;32mI (806) cpu_start: App version:      e319458-dirty[0m
+[0;32mI (811) cpu_start: Compile time:     Feb 27 2024 02:51:02[0m
+[0;32mI (818) cpu_start: ELF file SHA256:  0b9772eaf81fcb3b...[0m
+[0;32mI (824) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (828) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (833) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (838) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (843) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (850) heap_init: At 3FCA6000 len 00043710 (269 KiB): DRAM[0m
+[0;32mI (856) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (863) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (869) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (877) spi_flash: detected chip: gd[0m
+[0;32mI (881) spi_flash: flash io: qio[0m
+[0;32mI (886) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (892) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (899) app_start: Starting scheduler on CPU0[0m
+[0;32mI (904) app_start: Starting scheduler on CPU1[0m
+[0;32mI (904) main_task: Started on CPU0[0m
+[0;32mI (914) main_task: Calling app_main()[0m
+[0;32mI (934) pp: pp rom version: e7ae62f[0m
+[0;32mI (934) net80211: net80211 rom version: e7ae62f[0m
+I (944) wifi:wifi driver task: 3fcb1db4, prio:23, stack:6656, core=0
+I (944) wifi:wifi firmware version: ce9244d
+I (944) wifi:wifi certification version: v7.0
+I (944) wifi:config NVS flash: enabled
+I (944) wifi:config nano formating: disabled
+I (954) wifi:Init data frame dynamic rx buffer num: 32
+I (954) wifi:Init management frame dynamic rx buffer num: 32
+I (964) wifi:Init management short buffer num: 32
+I (964) wifi:Init dynamic tx buffer num: 32
+I (974) wifi:Init tx cache buffer num: 32
+I (974) wifi:Init static tx FG buffer num: 2
+I (974) wifi:Init static rx buffer size: 1600
+I (984) wifi:Init static rx buffer num: 10
+I (984) wifi:Init dynamic rx buffer num: 32
+[0;32mI (994) wifi_init: rx ba win: 6[0m
+[0;32mI (994) wifi_init: tcpip mbox: 32[0m
+[0;32mI (994) wifi_init: udp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1004) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1014) wifi_init: tcp mss: 1440[0m
+[0;32mI (1014) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1024) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1034) phy_init: phy_version 601,98f2a71,Jun 29 2023,09:58:12[0m
+I (1064) wifi:mode : softAP (48:27:e2:f0:32:a1)
+I (1094) wifi:Total power save buffer number: 16
+I (1094) wifi:Init max length of beacon: 752/752
+I (1094) wifi:Init max length of beacon: 752/752
+[0;32mI (1094) VISIO: ESP32 IP:192.168.4.1[0m
+[0;32mI (1094) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+PSRAM size: 8695308 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (1164) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (1164) cam_hal: cam init ok[0m
+[0;32mI (1164) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (1164) sccb: sccb_i2c_port=1[0m
+[0;32mI (1184) camera: Detected camera at address=0x30[0m
+[0;32mI (1184) camera: Detected OV2640 camera[0m
+[0;32mI (1184) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1254) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (1254) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (1264) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (1274) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1284) cam_hal: cam config ok[0m
+[0;32mI (1284) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+coverted Image to jpg 2037 
+Image Captured
+coverted Image to jpg 2081 
+Image Captured
+coverted Image to jpg 2616 
+Image Captured
+coverted Image to jpg 2607 
+Image Captured
+coverted Image to jpg 2641 
+ 
+storing image with buf len 2641
+Image Captured
+coverted Image to jpg 2590 
+Image Captured
+coverted Image to jpg 2588 
+Image Captured
+coverted Image to jpg 2587 
+Image Captured
+coverted Image to jpg 2588 
+Image Captured
+coverted Image to jpg 2592 
+ 
+storing image with buf len 2592
+Image Captured
+coverted Image to jpg 2521 
+Image Captured
+coverted Image to jpg 2559 
+Image Captured
+coverted Image to jpg 2488 
+Image Captured
+coverted Image to jpg 2456 
+Image Captured
+coverted Image to jpg 2452 
+ 
+storing image with buf len 2452
+Image Captured
+coverted Image to jpg 2476 
+Image Captured
+coverted Image to jpg 2431 
+Image Captured
+coverted Image to jpg 2410 
+Image Captured
+coverted Image to jpg 2420 
+Image Captured
+coverted Image to jpg 2361 
+ 
+storing image with buf len 2361
+Image Captured
+coverted Image to jpg 2338 
+Image Captured
+coverted Image to jpg 2416 
+Image Captured
+coverted Image to jpg 2405 
+Image Captured
+coverted Image to jpg 2402 
+Image Captured
+coverted Image to jpg 2385 
+ 
+storing image with buf len 2385
+Image Captured
+coverted Image to jpg 2313 
+Image Captured
+coverted Image to jpg 2321 
+Image Captured
+coverted Image to jpg 2343 
+Image Captured
+coverted Image to jpg 2332 
+Image Captured
+coverted Image to jpg 2341 
+ 
+storing image with buf len 2341
+Image Captured
+coverted Image to jpg 2380 
+Image Captured
+coverted Image to jpg 2395 
+Image Captured
+coverted Image to jpg 2340 
+Image Captured
+coverted Image to jpg 2325 
+Image Captured
+coverted Image to jpg 2351 
+ 
+storing image with buf len 2351
+Image Captured
+coverted Image to jpg 2410 
+Image Captured
+coverted Image to jpg 2382 
+Image Captured
+coverted Image to jpg 2350 
+Image Captured
+coverted Image to jpg 2398 
+Image Captured
+coverted Image to jpg 2471 
+ 
+storing image with buf len 2471
+Image Captured
+coverted Image to jpg 2397 
+Image Captured
+coverted Image to jpg 2360 
+Image Captured
+coverted Image to jpg 2391 
+Image Captured
+coverted Image to jpg 2386 
+Image Captured
+coverted Image to jpg 2343 
+ 
+storing image with buf len 2343
+Image Captured
+coverted Image to jpg 2360 
+Image Captured
+coverted Image to jpg 2435 
+Image Captured
+coverted Image to jpg 2402 
+Image Captured
+coverted Image to jpg 2413 
+Image Captured
+coverted Image to jpg 2391 
+ 
+storing image with buf len 2391
+Image Captured
+coverted Image to jpg 2384 
+Image Captured
+coverted Image to jpg 2346 
+Image Captured
+coverted Image to jpg 2391 
+Image Captured
+coverted Image to jpg 2403 
+Image Captured
+coverted Image to jpg 2427 
+ 
+storing image with buf len 2427
+Image Captured
+coverted Image to jpg 2478 
+Image Captured
+coverted Image to jpg 2414 
+Image Captured
+coverted Image to jpg 2342 
+Image Captured
+coverted Image to jpg 2368 
+Image Captured
+coverted Image to jpg 2354 
+ 
+storing image with buf len 2354
+Image Captured
+coverted Image to jpg 2394 
+Image Captured
+coverted Image to jpg 2386 
+Image Captured
+coverted Image to jpg 2422 
+Image Captured
+coverted Image to jpg 2453 
+Image Captured
+coverted Image to jpg 2420 
+ 
+storing image with buf len 2420
+Image Captured
+coverted Image to jpg 2358 
+Image Captured
+coverted Image to jpg 2356 
+Image Captured
+coverted Image to jpg 2350 
+Image Captured
+coverted Image to jpg 2351 
+Image Captured
+coverted Image to jpg 2348 
+ 
+storing image with buf len 2348
+Image Captured
+coverted Image to jpg 2354 
+Image Captured
+coverted Image to jpg 2386 
+I (10704) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+I (10704) wifi:station: 1c:57:dc:2f:0d:58 join, AID=1, bgn, 20
+I (10704) wifi:station: 1c:57:dc:2f:0d:58 leave, AID = 1, bss_flags is 134242, bss:0x3fcd108c
+I (10714) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1
+Image Captured
+I (11114) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1
+I (11114) wifi:station: 1c:57:dc:2f:0d:58 join, AID=1, bgn, 20
+coverted Image to jpg 2339 
+I (11154) wifi:[0;32mI (11154) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.1.2[0m
+<ba-add>idx:2 (ifx:1, 1c:57:dc:2f:0d:58), tid:6, ssn:0, winSize:64
+Image Captured
+coverted Image to jpg 2374 
+Image Captured
+coverted Image to jpg 2318 
+ 
+storing image with buf len 2318
+I (11484) wifi:<ba-add>idx:3 (ifx:1, 1c:57:dc:2f:0d:58), tid:0, ssn:2, winSize:64
+Image Captured
+coverted Image to jpg 2398 
+Image Captured
+coverted Image to jpg 2350 
+Image Captured
+coverted Image to jpg 2315 
+Image Captured
+coverted Image to jpg 2354 
+Image Captured
+coverted Image to jpg 2357 
+ 
+storing image with buf len 2357
+Image Captured
+coverted Image to jpg 2380 
+Image Captured
+coverted Image to jpg 2327 
+Image Captured
+coverted Image to jpg 2362 
+Image Captured
+coverted Image to jpg 2392 
+mpu found ______________
+sedning image with buf len 2357
+Image Captured
+coverted Image to jpg 2387 
+ 
+storing image with buf len 2387
+Image Captured
+coverted Image to jpg 2408 
+Image Captured
+coverted Image to jpg 2364 
+Image Captured
+coverted Image to jpg 2334 
+Image Captured
+coverted Image to jpg 2386 
+Image Captured
+coverted Image to jpg 2308 
+ 
+storing image with buf len 2308
+Image Captured
+coverted Image to jpg 2205 
+Image Captured
+coverted Image to jpg 2353 
+Image Captured
+coverted Image to jpg 2332 
+Image Captured
+coverted Image to jpg 2348 
+Image Captured
+coverted Image to jpg 2336 
+ 
+storing image with buf len 2336
+Image Captured
+coverted Image to jpg 1946 
+here1mpu found ______________
+sedning image with buf len 2336
+Image Captured
+coverted Image to jpg 1582 
+Image Captured
+coverted Image to jpg 1704 
+Image Captured
+coverted Image to jpg 1805 
+Image Captured
+coverted Image to jpg 1832 
+ 
+storing image with buf len 1832
+Image Captured
+coverted Image to jpg 2024 
+Image Captured
+coverted Image to jpg 1742 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1826 
+Image Captured
+coverted Image to jpg 1835 
+arrow detected at 39 :91.796875%
+arrow detected at 63 :98.828125%
+arrow detected 
+Image Captured
+coverted Image to jpg 1990 
+here1mpu found ______________
+sedning image with buf len 1832
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :80.078125%
+ 
+storing image with buf len 1990
+Image Captured
+coverted Image to jpg 1974 
+Image Captured
+coverted Image to jpg 1996 
+Image Captured
+coverted Image to jpg 2084 
+Image Captured
+coverted Image to jpg 2103 
+Image Captured
+coverted Image to jpg 2101 
+arrow detected at 39 :97.656250%
+arrow detected 
+Image Captured
+coverted Image to jpg 2012 
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :73.437500%
+ 
+storing image with buf len 2012
+Image Captured
+coverted Image to jpg 2030 
+Image Captured
+coverted Image to jpg 1922 
+Image Captured
+coverted Image to jpg 1732 
+here1mpu found ______________
+sedning image with buf len 2012
+Image Captured
+coverted Image to jpg 1533 
+Image Captured
+coverted Image to jpg 1642 
+ 
+storing image with buf len 1642
+Image Captured
+coverted Image to jpg 1624 
+Image Captured
+coverted Image to jpg 1569 
+Image Captured
+coverted Image to jpg 1517 
+Image Captured
+coverted Image to jpg 1469 
+Image Captured
+coverted Image to jpg 1319 
+ 
+storing image with buf len 1319
+Image Captured
+coverted Image to jpg 1619 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1396 
+here1mpu found ______________
+sedning image with buf len 1319
+Image Captured
+coverted Image to jpg 1228 
+Image Captured
+coverted Image to jpg 1284 
+ 
+storing image with buf len 1284
+Image Captured
+coverted Image to jpg 1409 
+Image Captured
+coverted Image to jpg 2214 
+Image Captured
+coverted Image to jpg 2657 
+Image Captured
+coverted Image to jpg 2596 
+Image Captured
+coverted Image to jpg 2916 
+ 
+storing image with buf len 2916
+Image Captured
+coverted Image to jpg 2177 
+Image Captured
+coverted Image to jpg 2736 
+here1mpu found ______________
+sedning image with buf len 2916
+Image Captured
+coverted Image to jpg 2247 
+Image Captured
+coverted Image to jpg 2754 
+Image Captured
+coverted Image to jpg 3135 
+ 
+storing image with buf len 3135
+Image Captured
+coverted Image to jpg 3063 
+Image Captured
+coverted Image to jpg 3249 
+Image Captured
+coverted Image to jpg 3336 
+Image Captured
+coverted Image to jpg 3556 
+Image Captured
+coverted Image to jpg 3585 
+ 
+storing image with buf len 3585
+Image Captured
+coverted Image to jpg 3563 
+here1mpu found ______________
+sedning image with buf len 3585
+Image Captured
+coverted Image to jpg 3607 
+Image Captured
+coverted Image to jpg 3610 
+Image Captured
+coverted Image to jpg 3651 
+Image Captured
+coverted Image to jpg 3556 
+ 
+storing image with buf len 3556
+Image Captured
+coverted Image to jpg 3638 
+Image Captured
+coverted Image to jpg 3352 
+Image Captured
+coverted Image to jpg 3602 
+Image Captured
+coverted Image to jpg 3092 
+Image Captured
+coverted Image to jpg 3408 
+ 
+storing image with buf len 3408
+Image Captured
+coverted Image to jpg 3460 
+here1mpu found ______________
+sedning image with buf len 3408
+Image Captured
+coverted Image to jpg 3429 
+Image Captured
+coverted Image to jpg 3336 
+Image Captured
+coverted Image to jpg 3164 
+Image Captured
+coverted Image to jpg 3394 
+ 
+storing image with buf len 3394
+Image Captured
+coverted Image to jpg 3354 
+Image Captured
+coverted Image to jpg 3524 
+Image Captured
+coverted Image to jpg 3536 
+Image Captured
+coverted Image to jpg 3281 
+Image Captured
+coverted Image to jpg 2305 
+ 
+storing image with buf len 2305
+
+Brownout detector was triggered
+
+cpu_start: Project name:     persESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048839
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x186c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3130
+entry 0x403c9934
+[0;32mI (27) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb 27 2024 01:54:59[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=e54b0h (939184) map[0m
+[0;32mI (247) esp_image: segment 1: paddr=000f54d8 vaddr=3fc99200 size=05960h ( 22880) load[0m
+[0;32mI (251) esp_image: segment 2: paddr=000fae40 vaddr=40374000 size=051d8h ( 20952) load[0m
+[0;32mI (257) esp_image: segment 3: paddr=00100020 vaddr=42000020 size=d2134h (860468) map[0m
+[0;32mI (391) esp_image: segment 4: paddr=001d215c vaddr=403791d8 size=0ffa0h ( 65440) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (414) boot: Disabling RNG early entropy source...[0m
+[0;32mI (425) cpu_start: Multicore app[0m
+[0;32mI (426) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (426) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (429) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (434) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (439) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (445) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (450) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (456) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (462) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (467) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (473) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (479) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (484) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (488) esp_psram: Speed: 80MHz[0m
+[0;32mI (492) cpu_start: Pro cpu up.[0m
+[0;32mI (496) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (788) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (797) cpu_start: Pro cpu start user code[0m
+[0;32mI (797) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (797) cpu_start: Application information:[0m
+[0;32mI (800) cpu_start: Project name:     person_detection[0m
+[0;32mI (806) cpu_start: App version:      e319458-dirty[0m
+[0;32mI (811) cpu_start: Compile time:     Feb 27 2024 02:51:02[0m
+[0;32mI (818) cpu_start: ELF file SHA256:  0b9772eaf81fcb3b...[0m
+[0;32mI (823) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (828) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (833) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (838) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (843) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (850) heap_init: At 3FCA6000 len 00043710 (269 KiB): DRAM[0m
+[0;32mI (856) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (863) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (869) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (877) spi_flash: detected chip: gd[0m
+[0;32mI (881) spi_flash: flash io: qio[0m
+[0;32mI (886) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (891) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (899) app_start: Starting scheduler on CPU0[0m
+[0;32mI (904) app_start: Starting scheduler on CPU1[0m
+[0;32mI (904) main_task: Started on CPU0[0m
+[0;32mI (914) main_task: Calling app_main()[0m
+[0;32mI (934) pp: pp rom version: e7ae62f[0m
+[0;32mI (934) net80211: net80211 rom version: e7ae62f[0m
+I (944) wifi:wifi driver task: 3fcb1db4, prio:23, stack:6656, core=0
+I (944) wifi:wifi firmware version: ce9244d
+I (944) wifi:wifi certification version: v7.0
+I (944) wifi:config NVS flash: enabled
+I (944) wifi:config nano formating: disabled
+I (954) wifi:Init data frame dynamic rx buffer num: 32
+I (954) wifi:Init management frame dynamic rx buffer num: 32
+I (964) wifi:Init management short buffer num: 32
+I (964) wifi:Init dynamic tx buffer num: 32
+I (974) wifi:Init tx cache buffer num: 32
+I (974) wifi:Init static tx FG buffer num: 2
+I (974) wifi:Init static rx buffer size: 1600
+I (984) wifi:Init static rx buffer num: 10
+I (984) wifi:Init dynamic rx buffer num: 32
+[0;32mI (994) wifi_init: rx ba win: 6[0m
+[0;32mI (994) wifi_init: tcpip mbox: 32[0m
+[0;32mI (994) wifi_init: udp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1004) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1014) wifi_init: tcp mss: 1440[0m
+[0;32mI (1014) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1024) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1034) phy_init: phy_version 601,98f2a71,Jun 29 2023,09:58:12[0m
+I (1064) wifi:mode : softAP (48:27:e2:f0:32:a1)
+I (1094) wifi:Total power save buffer number: 16
+I (1094) wifi:Init max length of beacon: 752/752
+I (1094) wifi:Init max length of beacon: 752/752
+[0;32mI (1094) VISIO: ESP32 IP:192.168.4.1[0m
+[0;32mI (1094) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+PSRAM size: 8695308 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (1174) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (1174) cam_hal: cam init ok[0m
+[0;32mI (1174) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (1174) sccb: sccb_i2c_port=1[0m
+[0;32mI (1184) camera: Detected camera at address=0x30[0m
+[0;32mI (1184) camera: Detected OV2640 camera[0m
+[0;32mI (1184) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1264) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (1264) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (1274) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (1284) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1294) cam_hal: cam config ok[0m
+[0;32mI (1294) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+coverted Image to jpg 1133 
+Image Captured
+coverted Image to jpg 1271 
+Image Captured
+coverted Image to jpg 1813 
+Image Captured
+coverted Image to jpg 2004 
+Image Captured
+coverted Image to jpg 2708 
+ 
+storing image with buf len 2708
+Image Captured
+coverted Image to jpg 2447 
+Image Captured
+coverted Image to jpg 2298 
+Image Captured
+coverted Image to jpg 2565 
+Image Captured
+coverted Image to jpg 2582 
+Image Captured
+coverted Image to jpg 2766 
+ 
+storing image with buf len 2766
+Image Captured
+coverted Image to jpg 2922 
+Image Captured
+coverted Image to jpg 3014 
+Image Captured
+coverted Image to jpg 3062 
+Image Captured
+coverted Image to jpg 3050 
+Image Captured
+coverted Image to jpg 3028 
+ 
+storing image with buf len 3028
+Image Captured
+coverted Image to jpg 2941 
+Image Captured
+coverted Image to jpg 2975 
+Image Captured
+coverted Image to jpg 2750 
+Image Captured
+coverted Image to jpg 3079 
+Image Captured
+coverted Image to jpg 3077 
+ 
+storing image with buf len 3077
+Image Captured
+coverted Image to jpg 3120 
+Image Captured
+coverted Image to jpg 2865 
+Image Captured
+coverted Image to jpg 2505 
+Image Captured
+coverted Image to jpg 2106 
+Image Captured
+coverted Image to jpg 2019 
+ 
+storing image with buf len 2019
+Image Captured
+coverted Image to jpg 1838 
+Image Captured
+coverted Image to jpg 2138 
+Image Captured
+coverted Image to jpg 2072 
+Image Captured
+coverted Image to jpg 1793 
+Image Captured
+coverted Image to jpg 2731 
+ 
+storing image with buf len 2731
+Image Captured
+coverted Image to jpg 3234 
+Image Captured
+coverted Image to jpg 2820 
+Image Captured
+coverted Image to jpg 3376 
+Image Captured
+coverted Image to jpg 3648 
+Image Captured
+coverted Image to jpg 3683 
+ 
+storing image with buf len 3683
+Image Captured
+coverted Image to jpg 3575 
+Image Captured
+coverted Image to jpg 3719 
+Image Captured
+coverted Image to jpg 3794 
+Image Captured
+coverted Image to jpg 3856 
+Image Captured
+coverted Image to jpg 3695 
+ 
+storing image with buf len 3695
+Image Captured
+coverted Image to jpg 3590 
+Image Captured
+coverted Image to jpg 3748 
+Image Captured
+coverted Image to jpg 3785 
+Image Captured
+coverted Image to jpg 3825 
+I (7004) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+I (7004) wifi:station: 1c:57:dc:2f:0d:58 join, AID=1, bgn, 20
+I (7004) wifi:station: 1c:57:dc:2f:0d:58 leave, AID = 1, bss_flags is 134242, bss:0x3fcd11e4
+I (7014) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1
+Image Captured
+coverted Image to jpg 3772 
+I (7424) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1
+I (7424) wifi:station: 1c:57:dc:2f:0d:58 join, AID=1, bgn, 20
+I (7524) wifi:[0;32mI (7524) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.1.2[0m
+<ba-add>idx:2 (ifx:1, 1c:57:dc:2f:0d:58), tid:6, ssn:0, winSize:64
+ 
+storing image with buf len 3772
+Image Captured
+coverted Image to jpg 3828 
+Image Captured
+coverted Image to jpg 3694 
+Image Captured
+coverted Image to jpg 3603 
+Image Captured
+coverted Image to jpg 3652 
+Image Captured
+coverted Image to jpg 3336 
+I (8104) wifi:<ba-add>idx:3 (ifx:1, 1c:57:dc:2f:0d:58), tid:0, ssn:2, winSize:64
+ 
+storing image with buf len 3336
+Image Captured
+coverted Image to jpg 3467 
+Image Captured
+coverted Image to jpg 2372 
+Image Captured
+coverted Image to jpg 2839 
+Image Captured
+coverted Image to jpg 3436 
+Image Captured
+coverted Image to jpg 2721 
+ 
+storing image with buf len 2721
+Image Captured
+coverted Image to jpg 2661 
+Image Captured
+coverted Image to jpg 3251 
+Image Captured
+coverted Image to jpg 2610 
+Image Captured
+coverted Image to jpg 2329 
+Image Captured
+coverted Image to jpg 2246 
+ 
+storing image with buf len 2246
+Image Captured
+coverted Image to jpg 2091 
+Image Captured
+coverted Image to jpg 2668 
+Image Captured
+coverted Image to jpg 2243 
+Image Captured
+coverted Image to jpg 2712 
+Image Captured
+coverted Image to jpg 3048 
+ 
+storing image with buf len 3048
+Image Captured
+coverted Image to jpg 3168 
+Image Captured
+coverted Image to jpg 3405 
+Image Captured
+coverted Image to jpg 3447 
+Image Captured
+coverted Image to jpg 3326 
+Image Captured
+coverted Image to jpg 3348 
+ 
+storing image with buf len 3348
+Image Captured
+coverted Image to jpg 3433 
+Image Captured
+coverted Image to jpg 3338 
+Image Captured
+coverted Image to jpg 3140 
+Image Captured
+coverted Image to jpg 2849 
+Image Captured
+coverted Image to jpg 3372 
+ 
+storing image with buf len 3372
+Image Captured
+coverted Image to jpg 3444 
+Image Captured
+coverted Image to jpg 2669 
+Image Captured
+coverted Image to jpg 2805 
+Image Captured
+coverted Image to jpg 2892 
+Image Captured
+coverted Image to jpg 2484 
+ 
+storing image with buf len 2484
+Image Captured
+coverted Image to jpg 2347 
+Image Captured
+coverted Image to jpg 2224 
+Image Captured
+coverted Image to jpg 2081 
+Image Captured
+coverted Image to jpg 1860 
+Image Captured
+coverted Image to jpg 2129 
+ 
+storing image with buf len 2129
+Image Captured
+coverted Image to jpg 1465 
+Image Captured
+coverted Image to jpg 1511 
+Image Captured
+coverted Image to jpg 1408 
+Image Captured
+coverted Image to jpg 1228 
+Image Captured
+coverted Image to jpg 1499 
+ 
+storing image with buf len 1499
+Image Captured
+coverted Image to jpg 1683 
+Image Captured
+coverted Image to jpg 1194 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1622 
+Image Captured
+coverted Image to jpg 1724 
+ 
+storing image with buf len 1724
+Image Captured
+coverted Image to jpg 1804 
+Image Captured
+coverted Image to jpg 1979 
+Image Captured
+coverted Image to jpg 1952 
+mpu found ______________
+Image Captured
+coverted Image to jpg 1980 
+Image Captured
+coverted Image to jpg 1732 
+sedning image with buf len 1724
+ 
+storing image with buf len 1732
+Image Captured
+coverted Image to jpg 2355 
+Image Captured
+coverted Image to jpg 2441 
+Image Captured
+coverted Image to jpg 2852 
+Image Captured
+coverted Image to jpg 2864 
+Image Captured
+coverted Image to jpg 3342 
+ 
+storing image with buf len 3342
+Image Captured
+coverted Image to jpg 3295 
+Image Captured
+coverted Image to jpg 2065 
+Image Captured
+coverted Image to jpg 2076 
+Image Captured
+coverted Image to jpg 2079 
+Image Captured
+coverted Image to jpg 2014 
+ 
+storing image with buf len 2014
+Image Captured
+coverted Image to jpg 2037 
+here1mpu found ______________
+Image Captured
+coverted Image to jpg 2127 
+sedning image with buf len 2014
+Image Captured
+coverted Image to jpg 2130 
+Image Captured
+coverted Image to jpg 2140 
+Image Captured
+coverted Image to jpg 2178 
+ 
+storing image with buf len 2178
+Image Captured
+coverted Image to jpg 2147 
+Image Captured
+coverted Image to jpg 2364 
+Image Captured
+coverted Image to jpg 2574 
+Image Captured
+coverted Image to jpg 2603 
+Image Captured
+coverted Image to jpg 2628 
+ 
+storing image with buf len 2628
+Image Captured
+coverted Image to jpg 2616 
+here1mpu found ______________
+Image Captured
+sedning image with buf len 2628
+coverted Image to jpg 2606 
+Image Captured
+coverted Image to jpg 2380 
+Image Captured
+coverted Image to jpg 2613 
+Image Captured
+coverted Image to jpg 2671 
+ 
+storing image with buf len 2671
+Image Captured
+coverted Image to jpg 2648 
+Image Captured
+coverted Image to jpg 3264 
+Image Captured
+coverted Image to jpg 3280 
+Image Captured
+coverted Image to jpg 3262 
+Image Captured
+coverted Image to jpg 3219 
+ 
+storing image with buf len 3219
+Image Captured
+coverted Image to jpg 3333 
+here1mpu found ______________
+sedning image with buf len 3219
+Image Captured
+coverted Image to jpg 3300 
+Image Captured
+coverted Image to jpg 3340 
+Image Captured
+coverted Image to jpg 3336 
+Image Captured
+coverted Image to jpg 3215 
+ 
+storing image with buf len 3215
+Image Captured
+coverted Image to jpg 3301 
+Image Captured
+coverted Image to jpg 3625 
+Image Captured
+coverted Image to jpg 3626 
+Image Captured
+coverted Image to jpg 3595 
+Image Captured
+coverted Image to jpg 3715 
+ 
+storing image with buf len 3715
+Image Captured
+coverted Image to jpg 3676 
+here1mpu found ______________
+sedning image with buf len 3715
+Image Captured
+coverted Image to jpg 3762 
+Image Captured
+coverted Image to jpg 3627 
+Image Captured
+coverted Image to jpg 2728 
+Image Captured
+coverted Image to jpg 2355 
+ 
+storing image with buf len 2355
+Image Captured
+coverted Image to jpg 2206 
+Image Captured
+coverted Image to jpg 2396 
+Image Captured
+coverted Image to jpg 2925 
+Image Captured
+coverted Image to jpg 2985 
+Image Captured
+coverted Image to jpg 2661 
+ 
+storing image with buf len 2661
+Image Captured
+coverted Image to jpg 2765 
+Image Captured
+here1mpu found ______________
+coverted Image to jpg 3068 
+sedning image with buf len 2661
+Image Captured
+coverted Image to jpg 3079 
+Image Captured
+coverted Image to jpg 3004 
+Image Captured
+coverted Image to jpg 3056 
+ 
+storing image with buf len 3056
+Image Captured
+coverted Image to jpg 3056 
+Image Captured
+coverted Image to jpg 2887 
+Image Captured
+coverted Image to jpg 2979 
+Image Captured
+coverted Image to jpg 1712 
+Image Captured
+coverted Image to jpg 1453 
+ 
+storing image with buf len 1453
+Image Captured
+coverted Image to jpg 1257 
+Image Captured
+here1mpu found ______________
+coverted Image to jpg 1326 
+sedning image with buf len 1453
+Image Captured
+coverted Image to jpg 1418 
+Image Captured
+coverted Image to jpg 1563 
+Image Captured
+coverted Image to jpg 1575 
+ 
+storing image with buf len 1575
+Image Captured
+coverted Image to jpg 1577 
+Image Captured
+coverted Image to jpg 1955 
+Image Captured
+coverted Image to jpg 1905 
+Image Captured
+coverted Image to jpg 1683 
+Image Captured
+coverted Image to jpg 1546 
+ 
+storing image with buf len 1546
+Image Captured
+coverted Image to jpg 1581 
+Image Captured
+coverted Image to jpg 1893 
+here1mpu found ______________
+Image Captured
+coverted Image to jpg 2121 
+sedning image with buf len 1546
+Image Captured
+coverted Image to jpg 2195 
+Image Captured
+coverted Image to jpg 2266 
+ 
+storing image with buf len 2266
+Image Captured
+coverted Image to jpg 2301 
+Image Captured
+coverted Image to jpg 2470 
+Image Captured
+coverted Image to jpg 2416 
+Image Captured
+coverted Image to jpg 2385 
+Image Captured
+coverted Image to jpg 2475 
+arrow detected at 67 :97.265625%
+arrow detected 
+Image Captured
+coverted Image to jpg 2509 
+output classification type 4
+arrow left prob at :0.000000%
+arrow right prob at :2.734375%
+ 
+storing image with buf len 2509
+here1mpu found ______________
+sedning image with buf len 2509
+Image Captured
+coverted Image to jpg 2523 
+Image Captured
+coverted Image to jpg 2524 
+Image Captured
+coverted Image to jpg 2542 
+Image Captured
+coverted Image to jpg 2569 
+Image Captured
+coverted Image to jpg 2555 
+ 
+storing image with buf len 2555
+Image Captured
+coverted Image to jpg 2609 
+Image Captured
+coverted Image to jpg 2641 
+Image Captured
+coverted Image to jpg 2623 
+Image Captured
+coverted Image to jpg 2640 
+Image Captured
+coverted Image to jpg 2633 
+ 
+storing image with buf len 2633
+here1mpu found ______________
+Image Captured
+sedning image with buf len 2633
+coverted Image to jpg 2620 
+Image Captured
+coverted Image to jpg 2538 
+Image Captured
+coverted Image to jpg 2558 
+Image Captured
+coverted Image to jpg 2555 
+Image Captured
+coverted Image to jpg 2606 
+ 
+storing image with buf len 2606
+Image Captured
+coverted Image to jpg 2577 
+Image Captured
+coverted Image to jpg 2591 
+Image Captured
+coverted Image to jpg 2571 
+Image Captured
+coverted Image to jpg 2443 
+Image Captured
+coverted Image to jpg 2060 
+ 
+storing image with buf len 2060
+here1mpu found ______________
+Image Captured
+coverted Image to jpg 1464 
+sedning image with buf len 2060
+Image Captured
+coverted Image to jpg 1376 
+Image Captured
+coverted Image to jpg 1360 
+Image Captured
+coverted Image to jpg 1171 
+Image Captured
+coverted Image to jpg 1188 
+ 
+storing image with buf len 1188
+Image Captured
+coverted Image to jpg 1151 
+Image Captured
+coverted Image to jpg 1428 
+Image Captured
+coverted Image to jpg 1667 
+Image Captured
+coverted Image to jpg 1619 
+Image Captured
+coverted Image to jpg 1573 
+ 
+storing image with buf len 1573
+here1mpu found ______________
+sedning image with buf len 1573
+Image Captured
+coverted Image to jpg 1508 
+Image Captured
+coverted Image to jpg 1473 
+Image Captured
+coverted Image to jpg 2200 
+Image Captured
+coverted Image to jpg 2410 
+Image Captured
+coverted Image to jpg 2488 
+ 
+storing image with buf len 2488
+Image Captured
+coverted Image to jpg 2437 
+Image Captured
+coverted Image to jpg 2381 
+Image Captured
+coverted Image to jpg 2363 
+Image Captured
+coverted Image to jpg 2416 
+Image Captured
+coverted Image to jpg 2380 
+ 
+storing image with buf len 2380
+Image Captured
+coverted Image to jpg 2357 
+here1mpu found ______________
+sedning image with buf len 2380
+Image Captured
+coverted Image to jpg 2380 
+Image Captured
+coverted Image to jpg 2348 
+Image Captured
+coverted Image to jpg 2396 
+Image Captured
+coverted Image to jpg 2395 
+ 
+storing image with buf len 2395
+Image Captured
+coverted Image to jpg 1933 
+Image Captured
+coverted Image to jpg 2376 
+Image Captured
+coverted Image to jpg 2363 
+Image Captured
+coverted Image to jpg 2360 
+Image Captured
+coverted Image to jpg 2370 
+ 
+storing image with buf len 2370
+Image Captured
+coverted Image to jpg 2384 
+Image Captured
+coverted Image to jpg 2395 
+here1mpu found ______________
+sedning image with buf len 2370
+Image Captured
+coverted Image to jpg 2352 
+Image Captured
+coverted Image to jpg 2345 
+Image Captured
+coverted Image to jpg 2291 
+ 
+storing image with buf len 2291
+Image Captured
+coverted Image to jpg 2301 
+Image Captured
+coverted Image to jpg 2281 
+Image Captured
+coverted Image to jpg 2309 
+Image Captured
+coverted Image to jpg 2312 
+Image Captured
+coverted Image to jpg 2353 
+ 
+storing image with buf len 2353
+Image Captured
+coverted Image to jpg 2359 
+here1mpu found ______________
+Image Captured
+coverted Image to jpg 2288 
+sedning image with buf len 2353
+Image Captured
+coverted Image to jpg 2300 
+Image Captured
+coverted Image to jpg 2321 
+Image Captured
+coverted Image to jpg 2331 
+ 
+storing image with buf len 2331
+Image Captured
+coverted Image to jpg 2338 
+Image Captured
+coverted Image to jpg 2389 
+Image Captured
+coverted Image to jpg 2416 
+Image Captured
+coverted Image to jpg 2367 
+Image Captured
+coverted Image to jpg 2351 
+ 
+storing image with buf len 2351
+Image Captured
+coverted Image to jpg 2288 
+here1mpu found ______________
+sedning image with buf len 2351
+Image Captured
+coverted Image to jpg 2327 
+Image Captured
+coverted Image to jpg 2330 
+Image Captured
+coverted Image to jpg 2311 
+Image Captured
+coverted Image to jpg 2358 
+ 
+storing image with buf len 2358
+Image Captured
+coverted Image to jpg 2343 
+Image Captured
+coverted Image to jpg 2344 
+Image Captured
+coverted Image to jpg 2317 
+Image Captured
+coverted Image to jpg 2344 
+Image Captured
+coverted Image to jpg 2338 
+ 
+storing image with buf len 2338
+Image Captured
+coverted Image to jpg 2358 
+here1mpu found ______________
+sedning image with buf len 2338
+Image Captured
+coverted Image to jpg 2225 
+Image Captured
+coverted Image to jpg 2208 
+Image Captured
+coverted Image to jpg 2242 
+Image Captured
+coverted Image to jpg 2292 
+ 
+storing image with buf len 2292
+Image Captured
+coverted Image to jpg 2237 
+Image Captured
+coverted Image to jpg 2279 
+Image Captured
+coverted Image to jpg 2327 
+Image Captured
+coverted Image to jpg 2365 
+Image Captured
+coverted Image to jpg 2322 
+ 
+storing image with buf len 2322
+here1mpu found ______________
+sedning image with buf len 2322
+Image Captured
+coverted Image to jpg 2264 
+Image Captured
+coverted Image to jpg 2223 
+Image Captured
+coverted Image to jpg 2263 
+Image Captured
+coverted Image to jpg 2250 
+Image Captured
+coverted Image to jpg 2224 
+ 
+storing image with buf len 2224
+Image Captured
+coverted Image to jpg 2226 
+Image Captured
+coverted Image to jpg 2264 
+Image Captured
+coverted Image to jpg 2259 
+Image Captured
+coverted Image to jpg 2296 
+Image Captured
+coverted Image to jpg 2262 
+ 
+storing image with buf len 2262
+here1mpu found ______________
+sedning image with buf len 2262
+Image Captured
+coverted Image to jpg 2233 
+Image Captured
+coverted Image to jpg 2309 
+Image Captured
+coverted Image to jpg 2346 
+Image Captured
+coverted Image to jpg 2327 
+Image Captured
+coverted Image to jpg 2278 
+ 
+storing image with buf len 2278
+Image Captured
+coverted Image to jpg 2236 
+Image Captured
+coverted Image to jpg 2256 
+Image Captured
+coverted Image to jpg 2242 
+Image Captured
+coverted Image to jpg 2225 
+Image Captured
+coverted Image to jpg 2284 
+ 
+here1mpu found ______________
+sedning image with buf len 2278
+storing image with buf len 2284
+Image Captured
+coverted Image to jpg 2307 
+Image Captured
+coverted Image to jpg 2207 
+Image Captured
+coverted Image to jpg 2158 
+Image Captured
+coverted Image to jpg 2205 
+Image Captured
+coverted Image to jpg 2218 
+ 
+storing image with buf len 2218
+Image Captured
+coverted Image to jpg 2222 
+Image Captured
+coverted Image to jpg 2202 
+Image Captured
+coverted Image to jpg 2276 
+Image Captured
+coverted Image to jpg 2314 
+Image Captured
+coverted Image to jpg 2294 
+ 
+storing image with buf len 2294
+Image Captured
+coverted Image to jpg 2272 
+Image Captured
+coverted Image to jpg 2257 
+Image Captured
+coverted Image to jpg 2297 
+Image Captured
+coverted Image to jpg 2238 
+Image Captured
+coverted Image to jpg 2200 
+ 
+storing image with buf len 2200
+Image Captured
+coverted Image to jpg 2251 
+Image Captured
+coverted Image to jpg 2331 
+Image Captured
+coverted Image to jpg 2293 
+Image Captured
+coverted Image to jpg 2258 
+Image Captured
+coverted Image to jpg 2175 
+ 
+storing image with buf len 2175
+Image Captured
+coverted Image to jpg 2205 
+Image Captured
+coverted Image to jpg 2228 
+Image Captured
+coverted Image to jpg 2197 
+Image Captured
+coverted Image to jpg 2226 
+Image Captured
+coverted Image to jpg 2274 
+ 
+storing image with buf len 2274
+Image Captured
+coverted Image to jpg 2275 
+Image Captured
+coverted Image to jpg 2233 
+Image Captured
+coverted Image to jpg 2248 
+Image Captured
+coverted Image to jpg 2216 
+Image Captured
+coverted Image to jpg 2245 
+ 
+storing image with buf len 2245
+Image Captured
+coverted Image to jpg 2268 
+Image Captured
+coverted Image to jpg 2267 
+Image Captured
+coverted Image to jpg 2241 
+Image Captured
+coverted Image to jpg 2222 
+Image Captured
+coverted Image to jpg 2211 
+ 
+storing image with buf len 2211
+Image Captured
+coverted Image to jpg 2242 
+Image Captured
+coverted Image to jpg 2203 
+Image Captured
+coverted Image to jpg 2232 
+Image Captured
+coverted Image to jpg 2276 
+Image Captured
+coverted Image to jpg 2292 
+ 
+storing image with buf len 2292
+Image Captured
+coverted Image to jpg 2319 
+Image Captured
+coverted Image to jpg 2245 
+Image Captured
+coverted Image to jpg 2192 
+Image Captured
+coverted Image to jpg 2215 
+Image Captured
+coverted Image to jpg 2264 
+ 
+storing image with buf len 2264
+Image Captured
+coverted Image to jpg 2234 
+Image Captured
+coverted Image to jpg 2234 
+Image Captured
+coverted Image to jpg 2248 
+Image Captured
+coverted Image to jpg 2279 
+Image Captured
+coverted Image to jpg 2316 
+ 
+storing image with buf len 2316
+Image Captured
+coverted Image to jpg 2316 
+Image Captured
+coverted Image to jpg 2204 
+Image Captured
+coverted Image to jpg 2224 
+Image Captured
+coverted Image to jpg 2245 
+Image Captured
+coverted Image to jpg 2201 
+ 
+storing image with buf len 2201
+Image Captured
+coverted Image to jpg 2250 
+Image Captured
+coverted Image to jpg 2280 
+Image Captured
+coverted Image to jpg 2223 
+Image Captured
+coverted Image to jpg 2236 
+Image Captured
+coverted Image to jpg 2254 
+ 
+storing image with buf len 2254
+Image Captured
+coverted Image to jpg 2242 
+Image Captured
+coverted Image to jpg 2228 
+Image Captured
+coverted Image to jpg 2245 
+Image Captured
+coverted Image to jpg 2211 

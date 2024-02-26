@@ -1,0 +1,141 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x57a0 bytes. 0x2860 bytes (32%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_camera_esp.c.obj
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.c: In function 'app_camera_init':
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.c:62:3: warning: 'pin_sscb_sda' is deprecated: please use pin_sccb_sda instead [-Wdeprecated-declarations]
+   62 |   config.pin_sscb_sda = CAMERA_PIN_SIOD;
+      |   ^~~~~~
+In file included from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.h:20,
+                 from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.c:16:
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera/driver/include/esp_camera.h:123:13: note: declared here
+  123 |         int pin_sscb_sda __attribute__((deprecated("please use pin_sccb_sda instead")));           /*!< GPIO pin for camera SDA line (legacy name) */
+      |             ^~~~~~~~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/main/app_camera_esp.c:63:3: warning: 'pin_sscb_scl' is deprecated: please use pin_sccb_scl instead [-Wdeprecated-declarations]
+   63 |   config.pin_sscb_scl = CAMERA_PIN_SIOC;
+      |   ^~~~~~
+/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera/driver/include/esp_camera.h:127:13: note: declared here
+  127 |         int pin_sscb_scl __attribute__((deprecated("please use pin_sccb_scl instead")));           /*!< GPIO pin for camera SCL line (legacy name) */
+      |             ^~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable person_detection.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+[9/10] cd /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/partition_table/partition-table.bin /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+person_detection.bin binary size 0x1d2120 bytes. Smallest app partition is 0x3a0000 bytes. 0x1cdee0 bytes (50%) free.
+[9/10] cd /Users/saket/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/saket/esp/esp-idf -D "SERIAL_TOOL=/Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/Users/saket/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build -P /Users/saket/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem11301 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev3
+Serial port /dev/cu.usbmodem11301
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:27:e2:f0:32:a0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x001e2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 22432 bytes to 14250...
+Writing at 0x00000000... (100 %)
+Wrote 22432 bytes (14250 compressed) at 0x00000000 in 0.4 seconds (effective 457.5 kbit/s)...
+Hash of data verified.
+Compressed 1909024 bytes to 1248312...
+Writing at 0x00010000... (1 %)
+Writing at 0x00018c02... (2 %)
+Writing at 0x0001d937... (3 %)
+Writing at 0x00026f53... (5 %)
+Writing at 0x0002b381... (6 %)
+Writing at 0x0002f875... (7 %)
+Writing at 0x00033d76... (9 %)
+Writing at 0x0003819c... (10 %)
+Writing at 0x0003c5b2... (11 %)
+Writing at 0x00040a33... (12 %)
+Writing at 0x00044c7e... (14 %)
+Writing at 0x00049256... (15 %)
+Writing at 0x0004d5ec... (16 %)
+Writing at 0x00051acd... (18 %)
+Writing at 0x00055f56... (19 %)
+Writing at 0x0005a1c6... (20 %)
+Writing at 0x0005e64d... (22 %)
+Writing at 0x00062aeb... (23 %)
+Writing at 0x00066f62... (24 %)
+Writing at 0x0006b2db... (25 %)
+Writing at 0x0006f5ba... (27 %)
+Writing at 0x00073927... (28 %)
+Writing at 0x00077c5f... (29 %)
+Writing at 0x0007bf78... (31 %)
+Writing at 0x0008028c... (32 %)
+Writing at 0x00084619... (33 %)
+Writing at 0x00088a5d... (35 %)
+Writing at 0x0008d815... (36 %)
+Writing at 0x00099534... (37 %)
+Writing at 0x000a6c18... (38 %)
+Writing at 0x000b395a... (40 %)
+Writing at 0x000c05a9... (41 %)
+Writing at 0x000c9874... (42 %)
+Writing at 0x000d5878... (44 %)
+Writing at 0x000dbd0c... (45 %)
+Writing at 0x000e2625... (46 %)
+Writing at 0x000f5205... (48 %)
+Writing at 0x000fdc45... (49 %)
+Writing at 0x001038d5... (50 %)
+Writing at 0x0010918d... (51 %)
+Writing at 0x0010e622... (53 %)
+Writing at 0x00113587... (54 %)
+Writing at 0x001186e6... (55 %)
+Writing at 0x0011d767... (57 %)
+Writing at 0x0012303a... (58 %)
+Writing at 0x00129c28... (59 %)
+Writing at 0x0012f8c2... (61 %)
+Writing at 0x00134f59... (62 %)
+Writing at 0x0013a47c... (63 %)
+Writing at 0x0013f834... (64 %)
+Writing at 0x0014475e... (66 %)
+Writing at 0x001498b3... (67 %)
+Writing at 0x0014e925... (68 %)
+Writing at 0x00153bd3... (70 %)
+Writing at 0x00159095... (71 %)
+Writing at 0x0015ee2c... (72 %)
+Writing at 0x00164176... (74 %)
+Writing at 0x00169072... (75 %)
+Writing at 0x0016e08b... (76 %)
+Writing at 0x00172ff3... (77 %)
+Writing at 0x00177fd5... (79 %)
+Writing at 0x0017cf3d... (80 %)
+Writing at 0x00181f46... (81 %)
+Writing at 0x0018748f... (83 %)
+Writing at 0x0018cfb0... (84 %)
+Writing at 0x001949b0... (85 %)
+Writing at 0x0019d5eb... (87 %)
+Writing at 0x001a54a2... (88 %)
+Writing at 0x001accb1... (89 %)
+Writing at 0x001b2489... (90 %)
+Writing at 0x001b8dee... (92 %)
+Writing at 0x001c06c2... (93 %)
+Writing at 0x001c93d8... (94 %)
+Writing at 0x001d0828... (96 %)
+Writing at 0x001d62d0... (97 %)
+Writing at 0x001db8c6... (98 %)
+Writing at 0x001e0c08... (100 %)
+Wrote 1909024 bytes (1248312 compressed) at 0x00010000 in 13.3 seconds (effective 1145.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.0 seconds (effective 491.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

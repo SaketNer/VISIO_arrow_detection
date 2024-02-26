@@ -406,7 +406,6 @@ void loop() {
     return;
   }
   loopno = 0;
-  vTaskDelay(10);
   // Run the model on this input and make sure it succeeds.
   if (kTfLiteOk != interpreter->Invoke()) {
     MicroPrintf("Invoke failed.");
@@ -492,7 +491,7 @@ void loop() {
     //RespondToDetection(arrow_score_left_int, arrow_score_right_int);
   }
    MicroPrintf(" ");
-  vTaskDelay(10);
+  vTaskDelay(5);
   storeDetection(tempFomoDetConfidence,tempFomoPosX,tempFomoPosY,tempclassRight,tempclassLeft);
   // Respond to detection
   RespondToDetection(arrow_score_left_int, arrow_score_right_int);
