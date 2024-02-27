@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "person_detection",
-    "project_version":    "e319458-dirty",
+    "project_version":    "c3637bc-dirty",
     "project_path":       "/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection",
     "idf_path":           "/Users/saket/esp/esp-idf",
     "build_dir":          "/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build",

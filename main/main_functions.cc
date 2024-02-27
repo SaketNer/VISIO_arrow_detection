@@ -13,6 +13,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+
+//Down is right integer(last intereger)
+//Left will show 99 and second last integer
+
 #include "main_functions.h"
 
 #include "detection_responder.h"
@@ -391,7 +395,9 @@ void setup() {
 
 
 int loopno = 0;
+
 void loop() {
+  long long start_time = esp_timer_get_time();
   int tempFomoDetConfidence =-1, tempFomoPosX =-1, tempFomoPosY =-1;
   int tempclassRight = -1; int tempclassLeft = -1;
  // MicroPrintf("size of int %d",sizeof(int));
@@ -439,7 +445,7 @@ void loop() {
   
   float arrow_score_right_int = 0;
   float arrow_score_left_int = 0;
-  if(tostop ){
+  if(tostop  ){
     MicroPrintf("arrow detected ");
     //trying
     if (kTfLiteOk != GetImage(kNumCols, kNumRows, kNumChannels, input_classification->data.int8)) {
@@ -491,11 +497,14 @@ void loop() {
     //RespondToDetection(arrow_score_left_int, arrow_score_right_int);
   }
    MicroPrintf(" ");
+  
   vTaskDelay(5);
   storeDetection(tempFomoDetConfidence,tempFomoPosX,tempFomoPosY,tempclassRight,tempclassLeft);
   // Respond to detection
   RespondToDetection(arrow_score_left_int, arrow_score_right_int);
   vTaskDelay(10); // to avoid watchdog trigger
+  long long total_time = (esp_timer_get_time() - start_time);
+  MicroPrintf("Total time = %lld\n", total_time / 1000);
 }
 #endif
 
