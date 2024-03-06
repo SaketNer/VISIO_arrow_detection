@@ -179,14 +179,25 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base,
 int FomoDetConfidence =-1, FomoPosX =-1, FomoPosY =-1;
 int classRight = -1; int classLeft = -1;
 */
-
+int send_turns =0;
 esp_err_t mpu_handler(httpd_req_t *req) {
     httpd_resp_set_type(req, "text/csv");
     printf("mpu found ______________\n");
     //mpu6050_read();
-
+    int turn =0;
+    if(left_right>=5)
+    turn=1;
+    if(left_right<=-5)
+    turn=2;
+    if(turn!=0)
+    send_turns++;
+    if(send_turns>3)
+    {
+    send_turns=0;
+    left_right=0;
+    }
     char resp[512];
-    sprintf(resp, "%d,%d,%d,%d,%d \n",FomoDetConfidence,FomoPosX,FomoPosY,classRight,classLeft);
+    sprintf(resp, "%d,%d,%d,%d,%d,%d \n",FomoDetConfidence,FomoPosX,FomoPosY,classRight,classLeft,turn);
     //sprintf(resp, "hellp \n");
     httpd_resp_send(req, resp, HTTPD_RESP_USE_STRLEN);
 
@@ -393,7 +404,7 @@ void setup() {
 #ifndef CLI_ONLY_INFERENCE
 // The name of this function is important for Arduino compatibility.
 
-
+int left_right =0;
 int loopno = 0;
 
 void loop() {
@@ -471,24 +482,28 @@ void loop() {
               arrow_score_left_int);
     MicroPrintf("arrow right prob at :%f%%",
               arrow_score_right_int);
-    if(arrow_score_left_int>60){
+    if(arrow_score_left_int>80){
+      left_right++;
       turn++;
     }
-    if(arrow_score_right_int>60){
+    if(arrow_score_right_int>80){
+      left_right--;
       turn--;
     }
     
     tempclassRight = arrow_score_right_int;
     tempclassLeft = arrow_score_left_int;
 
-    if(turn>5){
+    if(turn>5 || left_right>=5){
       MicroPrintf(" left");
       turn = 0;
+      left_right=0;
       //sleep(1);
     }
-    else if(turn<-5){
+    else if(turn<-5|| left_right<=-5){
       MicroPrintf(" right");
       turn = 0;
+      left_right=0;
       //sleep(1);
     }
     //trying ends
