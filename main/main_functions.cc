@@ -178,7 +178,9 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base,
 /*
 int FomoDetConfidence =-1, FomoPosX =-1, FomoPosY =-1;
 int classRight = -1; int classLeft = -1;
-*/
+turn =1 left, turn =2 right;
+*/ 
+
 int send_turns =0;
 esp_err_t mpu_handler(httpd_req_t *req) {
     httpd_resp_set_type(req, "text/csv");
