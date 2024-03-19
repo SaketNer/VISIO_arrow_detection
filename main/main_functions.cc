@@ -467,7 +467,7 @@ void loop() {
     TfLiteTensor* output_classification = interpreter_classification->output(0);
     MicroPrintf("output classification type %d", (output_classification->bytes));
     int8_t arrow_score_right = output_classification->data.uint8[0];
-    int8_t arrow_score_left = output_classification->data.uint8[2];
+    int8_t arrow_score_left = output_classification->data.uint8[1];
     float arrow_score_left_f =
       (arrow_score_left - output_classification->params.zero_point) * output_classification->params.scale;
     float arrow_score_right_f =

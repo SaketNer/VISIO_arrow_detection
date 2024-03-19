@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
-  include("/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
-  include("/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
+  include("/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
+  include("/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
 
 endif()
 

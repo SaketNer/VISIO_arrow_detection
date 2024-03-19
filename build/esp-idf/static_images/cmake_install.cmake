@@ -1,4 +1,4 @@
-# Install script for directory: /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/static_images
+# Install script for directory: /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/static_images
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
