@@ -1,0 +1,332 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40045130
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x186c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3130
+entry 0x403c9934
+[0;32mI (27) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 19 2024 16:28:59[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=e5748h (939848) map[0m
+[0;32mI (247) esp_image: segment 1: paddr=000f5770 vaddr=3fc99200 size=05960h ( 22880) load[0m
+[0;32mI (252) esp_image: segment 2: paddr=000fb0d8 vaddr=40374000 size=04f40h ( 20288) load[0m
+[0;32mI (257) esp_image: segment 3: paddr=00100020 vaddr=42000020 size=d31e4h (864740) map[0m
+[0;32mI (392) esp_image: segment 4: paddr=001d320c vaddr=40378f40 size=10238h ( 66104) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (426) cpu_start: Multicore app[0m
+[0;32mI (426) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (427) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (430) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (435) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (440) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (446) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (451) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (457) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (462) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (468) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (474) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (480) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (485) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (489) esp_psram: Speed: 80MHz[0m
+[0;32mI (493) cpu_start: Pro cpu up.[0m
+[0;32mI (497) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (789) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (798) cpu_start: Pro cpu start user code[0m
+[0;32mI (798) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (798) cpu_start: Application information:[0m
+[0;32mI (801) cpu_start: Project name:     person_detection[0m
+[0;32mI (807) cpu_start: App version:      0b1c885-dirty[0m
+[0;32mI (812) cpu_start: Compile time:     Mar 20 2024 19:29:19[0m
+[0;32mI (818) cpu_start: ELF file SHA256:  fcf8ad750b607cd0...[0m
+[0;32mI (824) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (829) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (834) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (839) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (844) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (851) heap_init: At 3FCA6008 len 00043708 (269 KiB): DRAM[0m
+[0;32mI (857) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (878) spi_flash: detected chip: gd[0m
+[0;32mI (882) spi_flash: flash io: qio[0m
+[0;32mI (887) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (892) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (900) app_start: Starting scheduler on CPU0[0m
+[0;32mI (904) app_start: Starting scheduler on CPU1[0m
+[0;32mI (904) main_task: Started on CPU0[0m
+[0;32mI (914) main_task: Calling app_main()[0m
+[0;32mI (934) pp: pp rom version: e7ae62f[0m
+[0;32mI (934) net80211: net80211 rom version: e7ae62f[0m
+I (944) wifi:wifi driver task: 3fcb0c58, prio:23, stack:6656, core=0
+I (944) wifi:wifi firmware version: ce9244d
+I (944) wifi:wifi certification version: v7.0
+I (944) wifi:config NVS flash: enabled
+I (944) wifi:config nano formating: disabled
+I (954) wifi:Init data frame dynamic rx buffer num: 32
+I (954) wifi:Init management frame dynamic rx buffer num: 32
+I (964) wifi:Init management short buffer num: 32
+I (964) wifi:Init dynamic tx buffer num: 32
+I (974) wifi:Init tx cache buffer num: 32
+I (974) wifi:Init static tx FG buffer num: 2
+I (974) wifi:Init static rx buffer size: 1600
+I (984) wifi:Init static rx buffer num: 10
+I (984) wifi:Init dynamic rx buffer num: 32
+[0;32mI (994) wifi_init: rx ba win: 6[0m
+[0;32mI (994) wifi_init: tcpip mbox: 32[0m
+[0;32mI (994) wifi_init: udp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1004) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1014) wifi_init: tcp mss: 1440[0m
+[0;32mI (1014) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1024) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1034) phy_init: phy_version 601,98f2a71,Jun 29 2023,09:58:12[0m
+I (1064) wifi:mode : softAP (48:27:e2:f0:32:a1)
+I (1094) wifi:Total power save buffer number: 16
+I (1094) wifi:Init max length of beacon: 752/752
+I (1094) wifi:Init max length of beacon: 752/752
+[0;32mI (1094) VISIO: ESP32 IP:192.168.4.1[0m
+[0;32mI (1094) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+PSRAM size: 8695300 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (1164) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (1164) cam_hal: cam init ok[0m
+[0;32mI (1164) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (1164) sccb: sccb_i2c_port=1[0m
+[0;32mI (1184) camera: Detected camera at address=0x30[0m
+[0;32mI (1184) camera: Detected OV2640 camera[0m
+[0;32mI (1184) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1254) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (1254) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (1264) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (1274) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1284) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1284) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1294) cam_hal: cam config ok[0m
+[0;32mI (1294) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+coverted Image to jpg 3423 
+Image Captured
+coverted Image to jpg 4085 
+Image Captured
+coverted Image to jpg 3724 
+Image Captured
+coverted Image to jpg 2804 
+Image Captured
+coverted Image to jpg 2496 
+arrow detected 
+Image Captured
+coverted Image to jpg 2291 
+output classification type 4
+r:0.390625 0.000000 ,f: 11.328125, l : 51.171875 9293144063.981117
+ 
+storing image with buf len 2291
+Image Captured
+coverted Image to jpg 2016 
+Image Captured
+coverted Image to jpg 1922 
+Image Captured
+coverted Image to jpg 1299 
+Image Captured
+coverted Image to jpg 1555 
+Image Captured
+coverted Image to jpg 2125 
+arrow detected 
+Image Captured
+coverted Image to jpg 2176 
+output classification type 4
+r:7.812500 0.000000 ,f: 43.750000, l : 43.750000 9293144063.996948
+ 
+storing image with buf len 2176
+Image Captured
+coverted Image to jpg 2051 
+Image Captured
+coverted Image to jpg 1949 
+Image Captured
+coverted Image to jpg 2235 
+Image Captured
+coverted Image to jpg 1553 
+Image Captured
+coverted Image to jpg 1327 
+arrow detected 
+Image Captured
+coverted Image to jpg 1496 
+output classification type 4
+r:10.937500 0.000000 ,f: 23.437500, l : 41.015625 9293144063.987030
+ 
+storing image with buf len 1496
+Image Captured
+coverted Image to jpg 1756 
+Image Captured
+coverted Image to jpg 1738 
+Image Captured
+coverted Image to jpg 1919 
+Image Captured
+coverted Image to jpg 2542 
+Image Captured
+coverted Image to jpg 3122 
+arrow detected 
+Image Captured
+coverted Image to jpg 2883 
+output classification type 4
+r:16.796875 0.000000 ,f: 4.296875, l : 58.984375 9293144063.977684
+ 
+storing image with buf len 2883
+Image Captured
+coverted Image to jpg 2748 
+Image Captured
+coverted Image to jpg 3195 
+Image Captured
+coverted Image to jpg 3270 
+Image Captured
+coverted Image to jpg 3423 
+Image Captured
+coverted Image to jpg 3336 
+arrow detected 
+Image Captured
+coverted Image to jpg 3430 
+output classification type 4
+r:5.859375 0.000000 ,f: 2.343750, l : 20.312500 9293144063.976730
+ 
+storing image with buf len 3430
+Image Captured
+coverted Image to jpg 3466 
+Image Captured
+coverted Image to jpg 3346 
+Image Captured
+coverted Image to jpg 3437 
+Image Captured
+coverted Image to jpg 3381 
+Image Captured
+coverted Image to jpg 3395 
+arrow detected 
+Image Captured
+coverted Image to jpg 3393 
+output classification type 4
+r:5.468750 0.000000 ,f: 14.843750, l : 27.734375 9293144063.982834
+ 
+storing image with buf len 3393
+Image Captured
+coverted Image to jpg 3349 
+Image Captured
+coverted Image to jpg 3252 
+Image Captured
+coverted Image to jpg 3275 
+Image Captured
+coverted Image to jpg 3470 
+Image Captured
+coverted Image to jpg 3478 
+arrow detected 
+Image Captured
+coverted Image to jpg 3440 
+output classification type 4
+r:11.718750 0.000000 ,f: 14.843750, l : 56.640625 9293144063.982834
+ 
+storing image with buf len 3440
+Image Captured
+coverted Image to jpg 3343 
+Image Captured
+coverted Image to jpg 3426 
+Image Captured
+coverted Image to jpg 3507 
+Image Captured
+coverted Image to jpg 3359 
+Image Captured
+coverted Image to jpg 3299 
+arrow detected 
+Image Captured
+coverted Image to jpg 3104 
+output classification type 4
+r:7.812500 0.000000 ,f: 6.640625, l : 62.500000 9293144063.978828
+ 
+storing image with buf len 3104
+Image Captured
+coverted Image to jpg 2988 
+Image Captured
+coverted Image to jpg 3157 
+Image Captured
+coverted Image to jpg 3105 
+Image Captured
+coverted Image to jpg 3380 
+Image Captured
+coverted Image to jpg 3426 
+arrow detected 
+Image Captured
+coverted Image to jpg 3315 
+output classification type 4
+r:3.515625 0.000000 ,f: 1.953125, l : 91.796875 9293144063.976540
+ 
+storing image with buf len 3315
+Image Captured
+coverted Image to jpg 3521 
+Image Captured
+coverted Image to jpg 3613 
+Image Captured
+coverted Image to jpg 3541 
+Image Captured
+coverted Image to jpg 3971 
+Image Captured
+coverted Image to jpg 3939 
+arrow detected 
+Image Captured
+coverted Image to jpg 3801 
+output classification type 4
+r:3.515625 0.000000 ,f: 1.562500, l : 90.625000 9293144063.976349
+ 
+storing image with buf len 3801
+Image Captured
+coverted Image to jpg 3834 
+Image Captured
+coverted Image to jpg 3845 
+Image Captured
+coverted Image to jpg 3859 
+Image Captured
+coverted Image to jpg 2419 
+Image Captured
+coverted Image to jpg 2262 
+arrow detected 
+Image Captured
+coverted Image to jpg 2077 
+output classification type 4
+r:0.781250 0.000000 ,f: 11.718750, l : 87.500000 9293144063.981308
+ 
+storing image with buf len 2077
+Image Captured
+coverted Image to jpg 1350 
+Image Captured
+coverted Image to jpg 1421 
+Image Captured
+coverted Image to jpg 1357 
+Image Captured
+coverted Image to jpg 1554 
+Image Captured
+coverted Image to jpg 1599 
+arrow detected 
+Image Captured
+coverted Image to jpg 1568 
+output classification type 4
+r:0.390625 0.000000 ,f: 1.562500, l : 93.359375 9293144063.976349

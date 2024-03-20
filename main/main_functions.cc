@@ -402,20 +402,15 @@ void setup() {
 #ifndef CLI_ONLY_INFERENCE
 // The name of this function is important for Arduino compatibility.
 
-/*int model_to_int(int8_t){
-  int8_t arrow_score_right = output_classification->data.uint8[2];
-    int8_t arrow_score_far = output_classification->data.uint8[0];
-    int8_t arrow_score_left = output_classification->data.uint8[1];
-    float arrow_score_far_f =
-      (arrow_score_far - output_classification->params.zero_point) * output_classification->params.scale;
-    float arrow_score_left_f =
-      (arrow_score_left - output_classification->params.zero_point) * output_classification->params.scale;
-    float arrow_score_right_f =
-      (arrow_score_right - output_classification->params.zero_point) * output_classification->params.scale;
-    arrow_score_right_int = (arrow_score_right_f)*100;
-    arrow_score_left_int = (arrow_score_left_f)*100;
-    arrow_score_far_int = (arrow_score_far_f)*100;
-}*/
+float model_class_output(TfLiteTensor* output_classification , int pos){
+    //arrow_score_right -> arrow_score
+    int8_t arrow_score = output_classification->data.uint8[pos];
+    float arrow_score_f =
+      (arrow_score - output_classification->params.zero_point) * output_classification->params.scale;
+    float arrow_score_int = (arrow_score_f)*100;
+    return arrow_score_int;
+    
+}
 
 
 //int left_right =0;
@@ -484,26 +479,16 @@ void loop() {
       MicroPrintf("Invoke failed.");
     }
 
-    TfLiteTensor* output_classification = interpreter_classification->output(0);
-    MicroPrintf("output classification type %d", (output_classification->bytes));
-    int8_t arrow_score_right = output_classification->data.uint8[2];
-    int8_t arrow_score_far = output_classification->data.uint8[0];
-    int8_t arrow_score_left = output_classification->data.uint8[1];
-    float arrow_score_far_f =
-      (arrow_score_far - output_classification->params.zero_point) * output_classification->params.scale;
-    float arrow_score_left_f =
-      (arrow_score_left - output_classification->params.zero_point) * output_classification->params.scale;
-    float arrow_score_right_f =
-      (arrow_score_right - output_classification->params.zero_point) * output_classification->params.scale;
-    arrow_score_right_int = (arrow_score_right_f)*100;
-    arrow_score_left_int = (arrow_score_left_f)*100;
-    arrow_score_far_int = (arrow_score_far_f)*100;
-    /*MicroPrintf("arrow left prob at :%f%%",
-              arrow_score_left_int);
-    MicroPrintf("arrow right prob at :%f%%",
-              arrow_score_right_int);*/
-    MicroPrintf("r:%f ,f: %f, l : %f",arrow_score_right_int,arrow_score_left_int,arrow_score_far_int); 
-    if(arrow_score_right_int>90||arrow_score_left_int>90||arrow_score_far_int>90){
+    //TfLiteTensor* output_classification = interpreter_classification->output(0);
+    //MicroPrintf("output classification type %d", (output_classification->bytes));
+
+    //r = 2nd pos , l = 0th pos, f = 1/3st pos
+    arrow_score_right_int = model_class_output(output_classification ,2);
+    arrow_score_left_int = model_class_output(output_classification ,1);
+    MicroPrintf("r:%f ,f: %f, l : %f",model_class_output(output_classification ,2),arrow_score_left_int,model_class_output(output_classification ,0)); 
+    
+    if(arrow_score_right_int>90||arrow_score_left_int>90){
+      
       vTaskDelay(500);
     }
     if(arrow_score_left_int>80){
