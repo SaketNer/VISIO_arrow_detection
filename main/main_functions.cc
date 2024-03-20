@@ -176,7 +176,7 @@ int FomoDetConfidence =-1, FomoPosX =-1, FomoPosY =-1;
 int classRight = -1; int classLeft = -1;
 turn =1 left, turn =2 right;
 */ 
-
+int left_right = 0;
 int send_turns =0;
 esp_err_t mpu_handler(httpd_req_t *req) {
     httpd_resp_set_type(req, "text/csv");
@@ -402,8 +402,26 @@ void setup() {
 #ifndef CLI_ONLY_INFERENCE
 // The name of this function is important for Arduino compatibility.
 
-int left_right =0;
+/*int model_to_int(int8_t){
+  int8_t arrow_score_right = output_classification->data.uint8[2];
+    int8_t arrow_score_far = output_classification->data.uint8[0];
+    int8_t arrow_score_left = output_classification->data.uint8[1];
+    float arrow_score_far_f =
+      (arrow_score_far - output_classification->params.zero_point) * output_classification->params.scale;
+    float arrow_score_left_f =
+      (arrow_score_left - output_classification->params.zero_point) * output_classification->params.scale;
+    float arrow_score_right_f =
+      (arrow_score_right - output_classification->params.zero_point) * output_classification->params.scale;
+    arrow_score_right_int = (arrow_score_right_f)*100;
+    arrow_score_left_int = (arrow_score_left_f)*100;
+    arrow_score_far_int = (arrow_score_far_f)*100;
+}*/
+
+
+//int left_right =0;
 int loopno = 0;
+bool fomo_detect = false;
+bool fomo_last_detect_time = 0;
 void loop() {
   int tempFomoDetConfidence =-1, tempFomoPosX =-1, tempFomoPosY =-1;
   int tempclassRight = -1; int tempclassLeft = -1;
@@ -447,12 +465,14 @@ void loop() {
       tempFomoPosX = x;
       tempFomoPosY = y;
       Get_cordi(x*8,y*8);
+
     }
   }
   
   float arrow_score_right_int = 0;
   float arrow_score_left_int = 0;
-  if(tostop ){
+  float arrow_score_far_int = 0;
+  if(tostop||true ){
     MicroPrintf("arrow detected ");
     //trying
     if (kTfLiteOk != GetImage(kNumCols, kNumRows, kNumChannels, input_classification->data.int8)) {
@@ -466,18 +486,26 @@ void loop() {
 
     TfLiteTensor* output_classification = interpreter_classification->output(0);
     MicroPrintf("output classification type %d", (output_classification->bytes));
-    int8_t arrow_score_right = output_classification->data.uint8[0];
+    int8_t arrow_score_right = output_classification->data.uint8[2];
+    int8_t arrow_score_far = output_classification->data.uint8[0];
     int8_t arrow_score_left = output_classification->data.uint8[1];
+    float arrow_score_far_f =
+      (arrow_score_far - output_classification->params.zero_point) * output_classification->params.scale;
     float arrow_score_left_f =
       (arrow_score_left - output_classification->params.zero_point) * output_classification->params.scale;
     float arrow_score_right_f =
       (arrow_score_right - output_classification->params.zero_point) * output_classification->params.scale;
     arrow_score_right_int = (arrow_score_right_f)*100;
     arrow_score_left_int = (arrow_score_left_f)*100;
-    MicroPrintf("arrow left prob at :%f%%",
+    arrow_score_far_int = (arrow_score_far_f)*100;
+    /*MicroPrintf("arrow left prob at :%f%%",
               arrow_score_left_int);
     MicroPrintf("arrow right prob at :%f%%",
-              arrow_score_right_int);
+              arrow_score_right_int);*/
+    MicroPrintf("r:%f ,f: %f, l : %f",arrow_score_right_int,arrow_score_left_int,arrow_score_far_int); 
+    if(arrow_score_right_int>90||arrow_score_left_int>90||arrow_score_far_int>90){
+      vTaskDelay(500);
+    }
     if(arrow_score_left_int>80){
       left_right++;
       turn++;
@@ -486,6 +514,7 @@ void loop() {
       left_right--;
       turn--;
     }
+    //vTaskDelay(500);
     
     tempclassRight = arrow_score_right_int;
     tempclassLeft = arrow_score_left_int;

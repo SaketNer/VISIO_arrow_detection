@@ -318,7 +318,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake --regenerate-during-build -S/Users/saket/esp/esp-idf/components/bootloader/subproject -B/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/bootloader
+  command = /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake --regenerate-during-build -S/Users/saket/esp/esp-idf/components/bootloader/subproject -B/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/bootloader
   description = Re-running CMake...
   generator = 1
 

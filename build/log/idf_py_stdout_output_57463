@@ -1,0 +1,185 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/bootloader/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x57a0 bytes. 0x2860 bytes (32%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main_functions.cc.obj
+In file included from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/micro/tflite_bridge/flatbuffer_conversions_bridge.h:19,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/micro/micro_allocator.h:26,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.h:26,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:23:
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h: In member function 'T* tflite::BuiltinDataAllocator::AllocatePOD()':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h:46:24: warning: 'template<class _Tp> struct std::is_pod' is deprecated: use is_standard_layout && is_trivial instead [-Wdeprecated-declarations]
+   46 |     static_assert(std::is_pod<T>::value, "Builtin data structure must be POD.");
+      |                        ^~~~~~
+In file included from /Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/bits/stl_pair.h:60,
+                 from /Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/utility:69,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/core/c/common.h:1448,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/c/common.h:31,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/detection_responder.h:22,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:18:
+/Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/type_traits:757:5: note: declared here
+  757 |     is_pod
+      |     ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'esp_err_t camera_handler(httpd_req_t*)':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:138:28: warning: unused variable 'jchunk' [-Wunused-variable]
+  138 |             jpg_chunking_t jchunk = {req, 0};
+      |                            ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:117:12: warning: unused variable 'fb_len' [-Wunused-variable]
+  117 |     size_t fb_len = 0;
+      |            ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:118:13: warning: unused variable 'fr_str' [-Wunused-variable]
+  118 |     int64_t fr_str = esp_timer_get_time();
+      |             ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:157:13: warning: unused variable 'fr_end' [-Wunused-variable]
+  157 |     int64_t fr_end = esp_timer_get_time();
+      |             ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void wifi_event_handler(void*, esp_event_base_t, int32_t, void*)':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:166:39: warning: unused variable 'event' [-Wunused-variable]
+  166 |         wifi_event_ap_staconnected_t* event = (wifi_event_ap_staconnected_t*) event_data;
+      |                                       ^~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:169:42: warning: unused variable 'event' [-Wunused-variable]
+  169 |         wifi_event_ap_stadisconnected_t* event = (wifi_event_ap_stadisconnected_t*) event_data;
+      |                                          ^~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void setup()':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::ssid_hidden' [-Wmissing-field-initializers]
+  253 |     };
+      |     ^
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::beacon_interval' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::pairwise_cipher' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::ftm_responder' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::pmf_cfg' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void loop()':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:429:7: warning: unused variable 'x_cordi' [-Wunused-variable]
+  429 |   int x_cordi = 48;
+      |       ^~~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:430:7: warning: unused variable 'y_cordi' [-Wunused-variable]
+  430 |   int y_cordi = 48;
+      |       ^~~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:432:8: warning: unused variable 'possible_arrow' [-Wunused-variable]
+  432 |   bool possible_arrow = false;
+      |        ^~~~~~~~~~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: At global scope:
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:76:15: warning: 'size_t {anonymous}::jpg_encode_stream(void*, size_t, const void*, size_t)' defined but not used [-Wunused-function]
+   76 | static size_t jpg_encode_stream(void * arg, size_t index, const void* data, size_t len){
+      |               ^~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable person_detection.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+[9/10] cd /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/partition_table/partition-table.bin /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+person_detection.bin binary size 0x1d0a80 bytes. Smallest app partition is 0x3a0000 bytes. 0x1cf580 bytes (50%) free.
+[9/10] cd /Users/saket/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/saket/esp/esp-idf -D "SERIAL_TOOL=/Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/Users/saket/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build -P /Users/saket/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem1301 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev3
+Serial port /dev/cu.usbmodem1301
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:27:e2:f0:32:a0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x001e0fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 22432 bytes to 14249...
+Writing at 0x00000000... (100 %)
+Wrote 22432 bytes (14249 compressed) at 0x00000000 in 0.4 seconds (effective 456.6 kbit/s)...
+Hash of data verified.
+Compressed 1903232 bytes to 1243609...
+Writing at 0x00010000... (1 %)
+Writing at 0x00018be7... (2 %)
+Writing at 0x0001d99c... (3 %)
+Writing at 0x00026f42... (5 %)
+Writing at 0x0002b39a... (6 %)
+Writing at 0x0002f890... (7 %)
+Writing at 0x00033d9d... (9 %)
+Writing at 0x000381cc... (10 %)
+Writing at 0x0003c5e0... (11 %)
+Writing at 0x00040a59... (13 %)
+Writing at 0x00044ca8... (14 %)
+Writing at 0x00049274... (15 %)
+Writing at 0x0004d610... (17 %)
+Writing at 0x00051af4... (18 %)
+Writing at 0x00055f78... (19 %)
+Writing at 0x0005a1e8... (21 %)
+Writing at 0x0005e676... (22 %)
+Writing at 0x00062b19... (23 %)
+Writing at 0x00066f8d... (25 %)
+Writing at 0x0006b308... (26 %)
+Writing at 0x0006f5e9... (27 %)
+Writing at 0x00073954... (28 %)
+Writing at 0x00077c8e... (30 %)
+Writing at 0x0007bfa4... (31 %)
+Writing at 0x000802be... (32 %)
+Writing at 0x0008464a... (34 %)
+Writing at 0x00088b28... (35 %)
+Writing at 0x0008f84c... (36 %)
+Writing at 0x0009db91... (38 %)
+Writing at 0x000ab4bf... (39 %)
+Writing at 0x000b93e1... (40 %)
+Writing at 0x000c3195... (42 %)
+Writing at 0x000cd0ba... (43 %)
+Writing at 0x000d68f8... (44 %)
+Writing at 0x000dbbdc... (46 %)
+Writing at 0x000e62cd... (47 %)
+Writing at 0x000f86ae... (48 %)
+Writing at 0x000fdfb4... (50 %)
+Writing at 0x00103f3d... (51 %)
+Writing at 0x00109710... (52 %)
+Writing at 0x0010eb4f... (53 %)
+Writing at 0x00113cb1... (55 %)
+Writing at 0x00118be4... (56 %)
+Writing at 0x0011de37... (57 %)
+Writing at 0x00123516... (59 %)
+Writing at 0x00129f55... (60 %)
+Writing at 0x0012fdff... (61 %)
+Writing at 0x00135332... (63 %)
+Writing at 0x0013a9bd... (64 %)
+Writing at 0x0013fe2e... (65 %)
+Writing at 0x00144d41... (67 %)
+Writing at 0x00149e7f... (68 %)
+Writing at 0x0014ef0a... (69 %)
+Writing at 0x00154200... (71 %)
+Writing at 0x00159584... (72 %)
+Writing at 0x0015f0d0... (73 %)
+Writing at 0x001646e0... (75 %)
+Writing at 0x00169647... (76 %)
+Writing at 0x0016e68b... (77 %)
+Writing at 0x001734f6... (78 %)
+Writing at 0x00178594... (80 %)
+Writing at 0x0017d532... (81 %)
+Writing at 0x00182494... (82 %)
+Writing at 0x00187a03... (84 %)
+Writing at 0x0018ce67... (85 %)
+Writing at 0x00194486... (86 %)
+Writing at 0x0019d863... (88 %)
+Writing at 0x001a4c00... (89 %)
+Writing at 0x001ad1f7... (90 %)
+Writing at 0x001b29ef... (92 %)
+Writing at 0x001b8fa8... (93 %)
+Writing at 0x001c0c5b... (94 %)
+Writing at 0x001c91e6... (96 %)
+Writing at 0x001d04d1... (97 %)
+Writing at 0x001d646b... (98 %)
+Writing at 0x001dbd0c... (100 %)
+Wrote 1903232 bytes (1243609 compressed) at 0x00010000 in 13.4 seconds (effective 1139.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.0 seconds (effective 504.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

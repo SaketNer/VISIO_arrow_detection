@@ -1,0 +1,5255 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40056f6f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x186c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3130
+entry 0x403c9934
+[0;32mI (27) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 19 2024 16:28:59[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=e5740h (939840) map[0m
+[0;32mI (247) esp_image: segment 1: paddr=000f5768 vaddr=3fc99200 size=05960h ( 22880) load[0m
+[0;32mI (252) esp_image: segment 2: paddr=000fb0d0 vaddr=40374000 size=04f48h ( 20296) load[0m
+[0;32mI (257) esp_image: segment 3: paddr=00100020 vaddr=42000020 size=d31cch (864716) map[0m
+[0;32mI (392) esp_image: segment 4: paddr=001d31f4 vaddr=40378f48 size=10230h ( 66096) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (426) cpu_start: Multicore app[0m
+[0;32mI (426) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (427) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (430) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (435) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (440) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (446) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (451) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (457) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (462) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (468) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (474) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (480) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (485) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (489) esp_psram: Speed: 80MHz[0m
+[0;32mI (493) cpu_start: Pro cpu up.[0m
+[0;32mI (497) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (789) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (798) cpu_start: Pro cpu start user code[0m
+[0;32mI (798) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (798) cpu_start: Application information:[0m
+[0;32mI (801) cpu_start: Project name:     person_detection[0m
+[0;32mI (807) cpu_start: App version:      366ca46-dirty[0m
+[0;32mI (812) cpu_start: Compile time:     Mar 19 2024 16:28:54[0m
+[0;32mI (818) cpu_start: ELF file SHA256:  7a3d29e6c8dd0483...[0m
+[0;32mI (824) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (829) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (834) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (839) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (844) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (851) heap_init: At 3FCA6008 len 00043708 (269 KiB): DRAM[0m
+[0;32mI (857) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (878) spi_flash: detected chip: gd[0m
+[0;32mI (882) spi_flash: flash io: qio[0m
+[0;32mI (887) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (892) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (900) app_start: Starting scheduler on CPU0[0m
+[0;32mI (904) app_start: Starting scheduler on CPU1[0m
+[0;32mI (904) main_task: Started on CPU0[0m
+[0;32mI (914) main_task: Calling app_main()[0m
+[0;32mI (934) pp: pp rom version: e7ae62f[0m
+[0;32mI (934) net80211: net80211 rom version: e7ae62f[0m
+I (944) wifi:wifi driver task: 3fcb1dbc, prio:23, stack:6656, core=0
+I (944) wifi:wifi firmware version: ce9244d
+I (944) wifi:wifi certification version: v7.0
+I (944) wifi:config NVS flash: enabled
+I (944) wifi:config nano formating: disabled
+I (954) wifi:Init data frame dynamic rx buffer num: 32
+I (954) wifi:Init management frame dynamic rx buffer num: 32
+I (964) wifi:Init management short buffer num: 32
+I (964) wifi:Init dynamic tx buffer num: 32
+I (974) wifi:Init tx cache buffer num: 32
+I (974) wifi:Init static tx FG buffer num: 2
+I (974) wifi:Init static rx buffer size: 1600
+I (984) wifi:Init static rx buffer num: 10
+I (984) wifi:Init dynamic rx buffer num: 32
+[0;32mI (994) wifi_init: rx ba win: 6[0m
+[0;32mI (994) wifi_init: tcpip mbox: 32[0m
+[0;32mI (994) wifi_init: udp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1004) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1014) wifi_init: tcp mss: 1440[0m
+[0;32mI (1014) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1024) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1034) phy_init: phy_version 601,98f2a71,Jun 29 2023,09:58:12[0m
+I (1064) wifi:mode : softAP (48:27:e2:f0:32:a1)
+I (1094) wifi:Total power save buffer number: 16
+I (1094) wifi:Init max length of beacon: 752/752
+I (1094) wifi:Init max length of beacon: 752/752
+[0;32mI (1094) VISIO: ESP32 IP:192.168.4.1[0m
+[0;32mI (1094) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+PSRAM size: 8695300 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (1164) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (1164) cam_hal: cam init ok[0m
+[0;32mI (1164) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (1164) sccb: sccb_i2c_port=1[0m
+[0;32mI (1184) camera: Detected camera at address=0x30[0m
+[0;32mI (1184) camera: Detected OV2640 camera[0m
+[0;32mI (1184) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1254) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (1254) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (1264) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (1274) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1284) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1284) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1294) cam_hal: cam config ok[0m
+[0;32mI (1294) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+coverted Image to jpg 1494 
+Image Captured
+coverted Image to jpg 1535 
+Image Captured
+coverted Image to jpg 1542 
+Image Captured
+coverted Image to jpg 1557 
+Image Captured
+coverted Image to jpg 1577 
+arrow detected at 155 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1608 
+output classification type 4
+r:7.421875 ,l: 1.953125, far : 88.671875
+ 
+storing image with buf len 1608
+Image Captured
+coverted Image to jpg 1593 
+Image Captured
+coverted Image to jpg 1567 
+Image Captured
+coverted Image to jpg 1525 
+Image Captured
+coverted Image to jpg 1606 
+Image Captured
+coverted Image to jpg 1642 
+arrow detected at 179 :96.484375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1588 
+output classification type 4
+r:19.140625 ,l: 8.593750, far : 64.062500
+ 
+storing image with buf len 1588
+Image Captured
+coverted Image to jpg 1664 
+Image Captured
+coverted Image to jpg 1636 
+Image Captured
+coverted Image to jpg 1642 
+Image Captured
+coverted Image to jpg 1519 
+Image Captured
+coverted Image to jpg 1545 
+arrow detected at 203 :92.968750%
+arrow detected 
+Image Captured
+coverted Image to jpg 1549 
+output classification type 4
+r:26.171875 ,l: 7.031250, far : 59.375000
+ 
+storing image with buf len 1549
+Image Captured
+coverted Image to jpg 1564 
+Image Captured
+coverted Image to jpg 1561 
+Image Captured
+coverted Image to jpg 1584 
+Image Captured
+coverted Image to jpg 1643 
+Image Captured
+coverted Image to jpg 1696 
+arrow detected at 205 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1671 
+output classification type 4
+r:46.875000 ,l: 2.734375, far : 41.406250
+ 
+storing image with buf len 1671
+Image Captured
+coverted Image to jpg 1634 
+Image Captured
+coverted Image to jpg 1607 
+Image Captured
+coverted Image to jpg 1605 
+Image Captured
+coverted Image to jpg 1479 
+Image Captured
+coverted Image to jpg 1529 
+arrow detected at 203 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1483 
+output classification type 4
+r:47.265625 ,l: 3.906250, far : 44.140625
+ 
+storing image with buf len 1483
+Image Captured
+coverted Image to jpg 1520 
+Image Captured
+coverted Image to jpg 1469 
+Image Captured
+coverted Image to jpg 1470 
+Image Captured
+coverted Image to jpg 1479 
+Image Captured
+coverted Image to jpg 1468 
+arrow detected at 203 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1466 
+output classification type 4
+r:37.109375 ,l: 3.125000, far : 58.203125
+ 
+storing image with buf len 1466
+Image Captured
+coverted Image to jpg 1455 
+Image Captured
+coverted Image to jpg 1462 
+Image Captured
+coverted Image to jpg 1435 
+Image Captured
+coverted Image to jpg 1529 
+Image Captured
+coverted Image to jpg 1520 
+arrow detected at 205 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1525 
+output classification type 4
+r:30.078125 ,l: 3.906250, far : 64.062500
+ 
+storing image with buf len 1525
+Image Captured
+coverted Image to jpg 1545 
+Image Captured
+coverted Image to jpg 1501 
+Image Captured
+coverted Image to jpg 1448 
+Image Captured
+coverted Image to jpg 1386 
+Image Captured
+coverted Image to jpg 1486 
+arrow detected at 205 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1501 
+output classification type 4
+r:39.843750 ,l: 0.781250, far : 58.203125
+ 
+storing image with buf len 1501
+Image Captured
+coverted Image to jpg 1497 
+Image Captured
+coverted Image to jpg 1510 
+Image Captured
+coverted Image to jpg 1488 
+Image Captured
+coverted Image to jpg 1496 
+Image Captured
+coverted Image to jpg 1489 
+arrow detected at 205 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1460 
+output classification type 4
+r:32.812500 ,l: 0.390625, far : 66.015625
+ 
+storing image with buf len 1460
+Image Captured
+coverted Image to jpg 1461 
+Image Captured
+coverted Image to jpg 1439 
+Image Captured
+coverted Image to jpg 1380 
+Image Captured
+coverted Image to jpg 1573 
+Image Captured
+coverted Image to jpg 1547 
+arrow detected at 181 :94.531250%
+arrow detected at 205 :95.312500%
+arrow detected 
+Image Captured
+coverted Image to jpg 1511 
+output classification type 4
+r:12.890625 ,l: 0.390625, far : 85.937500
+ 
+storing image with buf len 1511
+Image Captured
+coverted Image to jpg 1425 
+Image Captured
+coverted Image to jpg 1452 
+Image Captured
+coverted Image to jpg 1434 
+Image Captured
+coverted Image to jpg 1377 
+Image Captured
+coverted Image to jpg 1392 
+arrow detected 
+Image Captured
+coverted Image to jpg 1394 
+output classification type 4
+r:19.140625 ,l: 1.562500, far : 77.734375
+ 
+storing image with buf len 1394
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1342 
+Image Captured
+coverted Image to jpg 1347 
+Image Captured
+coverted Image to jpg 1372 
+Image Captured
+coverted Image to jpg 1386 
+arrow detected 
+Image Captured
+coverted Image to jpg 1415 
+output classification type 4
+r:19.140625 ,l: 1.562500, far : 77.734375
+ 
+storing image with buf len 1415
+Image Captured
+coverted Image to jpg 1395 
+Image Captured
+coverted Image to jpg 1366 
+Image Captured
+coverted Image to jpg 1366 
+Image Captured
+coverted Image to jpg 1437 
+Image Captured
+coverted Image to jpg 1459 
+arrow detected 
+Image Captured
+coverted Image to jpg 1456 
+output classification type 4
+r:41.796875 ,l: 0.390625, far : 57.031250
+ 
+storing image with buf len 1456
+Image Captured
+coverted Image to jpg 1406 
+Image Captured
+coverted Image to jpg 1400 
+Image Captured
+coverted Image to jpg 1407 
+Image Captured
+coverted Image to jpg 1494 
+Image Captured
+coverted Image to jpg 1493 
+arrow detected at 203 :91.796875%
+arrow detected at 205 :96.484375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1506 
+output classification type 4
+r:43.359375 ,l: 0.781250, far : 55.859375
+ 
+storing image with buf len 1506
+Image Captured
+coverted Image to jpg 1452 
+Image Captured
+coverted Image to jpg 1428 
+Image Captured
+coverted Image to jpg 1463 
+Image Captured
+coverted Image to jpg 1463 
+Image Captured
+coverted Image to jpg 1462 
+arrow detected 
+Image Captured
+coverted Image to jpg 1453 
+output classification type 4
+r:20.312500 ,l: 1.562500, far : 76.171875
+ 
+storing image with buf len 1453
+Image Captured
+coverted Image to jpg 1411 
+Image Captured
+coverted Image to jpg 1424 
+Image Captured
+coverted Image to jpg 1419 
+Image Captured
+coverted Image to jpg 1313 
+Image Captured
+coverted Image to jpg 1278 
+arrow detected 
+Image Captured
+coverted Image to jpg 1269 
+output classification type 4
+r:12.890625 ,l: 0.781250, far : 85.546875
+ 
+storing image with buf len 1269
+Image Captured
+coverted Image to jpg 1296 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1310 
+Image Captured
+coverted Image to jpg 1168 
+Image Captured
+coverted Image to jpg 1188 
+arrow detected 
+Image Captured
+coverted Image to jpg 1184 
+output classification type 4
+r:78.515625 ,l: 0.781250, far : 19.531250
+ 
+storing image with buf len 1184
+Image Captured
+coverted Image to jpg 1194 
+Image Captured
+coverted Image to jpg 1223 
+Image Captured
+coverted Image to jpg 1234 
+Image Captured
+coverted Image to jpg 1228 
+Image Captured
+coverted Image to jpg 1187 
+arrow detected 
+Image Captured
+coverted Image to jpg 1178 
+output classification type 4
+r:75.390625 ,l: 0.781250, far : 22.656250
+ 
+storing image with buf len 1178
+Image Captured
+coverted Image to jpg 1175 
+Image Captured
+coverted Image to jpg 1161 
+Image Captured
+coverted Image to jpg 1150 
+Image Captured
+coverted Image to jpg 1092 
+Image Captured
+coverted Image to jpg 1119 
+arrow detected 
+Image Captured
+coverted Image to jpg 1139 
+output classification type 4
+r:98.046875 ,l: 0.000000, far : 1.953125
+ 
+storing image with buf len 1139
+Image Captured
+coverted Image to jpg 1098 
+Image Captured
+coverted Image to jpg 1096 
+Image Captured
+coverted Image to jpg 1090 
+Image Captured
+coverted Image to jpg 1244 
+Image Captured
+coverted Image to jpg 1234 
+arrow detected 
+Image Captured
+coverted Image to jpg 1208 
+output classification type 4
+r:92.968750 ,l: 0.000000, far : 7.031250
+ 
+storing image with buf len 1208
+Image Captured
+coverted Image to jpg 1205 
+Image Captured
+coverted Image to jpg 1205 
+Image Captured
+coverted Image to jpg 1219 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 889 
+arrow detected 
+Image Captured
+coverted Image to jpg 862 
+output classification type 4
+r:25.000000 ,l: 0.781250, far : 69.140625
+ 
+storing image with buf len 862
+Image Captured
+coverted Image to jpg 828 
+Image Captured
+coverted Image to jpg 819 
+Image Captured
+coverted Image to jpg 873 
+Image Captured
+coverted Image to jpg 994 
+Image Captured
+coverted Image to jpg 987 
+arrow detected 
+Image Captured
+coverted Image to jpg 1007 
+output classification type 4
+r:22.265625 ,l: 1.953125, far : 30.859375
+ 
+storing image with buf len 1007
+Image Captured
+coverted Image to jpg 1058 
+Image Captured
+coverted Image to jpg 1069 
+Image Captured
+coverted Image to jpg 1078 
+Image Captured
+coverted Image to jpg 1257 
+Image Captured
+coverted Image to jpg 1456 
+arrow detected at 155 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1252 
+output classification type 4
+r:11.328125 ,l: 1.171875, far : 86.718750
+ 
+storing image with buf len 1252
+Image Captured
+coverted Image to jpg 1163 
+Image Captured
+coverted Image to jpg 1184 
+Image Captured
+coverted Image to jpg 1456 
+Image Captured
+coverted Image to jpg 1719 
+Image Captured
+coverted Image to jpg 1683 
+arrow detected at 209 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1770 
+output classification type 4
+r:6.640625 ,l: 2.734375, far : 89.062500
+ 
+storing image with buf len 1770
+Image Captured
+coverted Image to jpg 1935 
+Image Captured
+coverted Image to jpg 1734 
+Image Captured
+coverted Image to jpg 1674 
+Image Captured
+coverted Image to jpg 1844 
+Image Captured
+coverted Image to jpg 1925 
+arrow detected at 187 :97.656250%
+arrow detected 
+Image Captured
+coverted Image to jpg 1969 
+output classification type 4
+r:1.562500 ,l: 0.390625, far : 98.437500
+ 
+storing image with buf len 1969
+Image Captured
+coverted Image to jpg 2008 
+Image Captured
+coverted Image to jpg 1903 
+Image Captured
+coverted Image to jpg 1873 
+Image Captured
+coverted Image to jpg 1576 
+Image Captured
+coverted Image to jpg 1668 
+arrow detected at 139 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1665 
+output classification type 4
+r:1.562500 ,l: 0.000000, far : 98.046875
+ 
+storing image with buf len 1665
+Image Captured
+coverted Image to jpg 1628 
+Image Captured
+coverted Image to jpg 1671 
+Image Captured
+coverted Image to jpg 1691 
+Image Captured
+coverted Image to jpg 1725 
+Image Captured
+coverted Image to jpg 1711 
+arrow detected 
+Image Captured
+coverted Image to jpg 1771 
+output classification type 4
+r:3.515625 ,l: 0.000000, far : 96.484375
+ 
+storing image with buf len 1771
+Image Captured
+coverted Image to jpg 1726 
+Image Captured
+coverted Image to jpg 1660 
+Image Captured
+coverted Image to jpg 1689 
+Image Captured
+coverted Image to jpg 1160 
+Image Captured
+coverted Image to jpg 1147 
+arrow detected 
+Image Captured
+coverted Image to jpg 1173 
+output classification type 4
+r:3.125000 ,l: 0.000000, far : 96.484375
+ 
+storing image with buf len 1173
+Image Captured
+coverted Image to jpg 1176 
+Image Captured
+coverted Image to jpg 1182 
+Image Captured
+coverted Image to jpg 1177 
+Image Captured
+coverted Image to jpg 1204 
+Image Captured
+coverted Image to jpg 1175 
+arrow detected 
+Image Captured
+coverted Image to jpg 1175 
+output classification type 4
+r:2.734375 ,l: 0.000000, far : 97.265625
+ 
+storing image with buf len 1175
+Image Captured
+coverted Image to jpg 1191 
+Image Captured
+coverted Image to jpg 1195 
+Image Captured
+coverted Image to jpg 1192 
+Image Captured
+coverted Image to jpg 998 
+Image Captured
+coverted Image to jpg 1033 
+arrow detected 
+Image Captured
+coverted Image to jpg 1052 
+output classification type 4
+r:38.671875 ,l: 0.390625, far : 60.156250
+ 
+storing image with buf len 1052
+Image Captured
+coverted Image to jpg 1052 
+Image Captured
+coverted Image to jpg 1067 
+Image Captured
+coverted Image to jpg 1044 
+Image Captured
+coverted Image to jpg 1041 
+Image Captured
+coverted Image to jpg 1039 
+arrow detected 
+Image Captured
+coverted Image to jpg 1041 
+output classification type 4
+r:38.281250 ,l: 0.781250, far : 59.765625
+ 
+storing image with buf len 1041
+Image Captured
+coverted Image to jpg 1021 
+Image Captured
+coverted Image to jpg 1036 
+Image Captured
+coverted Image to jpg 1045 
+Image Captured
+coverted Image to jpg 1021 
+Image Captured
+coverted Image to jpg 1042 
+arrow detected 
+Image Captured
+coverted Image to jpg 1046 
+output classification type 4
+r:38.671875 ,l: 0.390625, far : 60.156250
+ 
+storing image with buf len 1046
+Image Captured
+coverted Image to jpg 1058 
+Image Captured
+coverted Image to jpg 1075 
+Image Captured
+coverted Image to jpg 1053 
+Image Captured
+coverted Image to jpg 1053 
+Image Captured
+coverted Image to jpg 1016 
+arrow detected 
+Image Captured
+coverted Image to jpg 1074 
+output classification type 4
+r:30.078125 ,l: 0.781250, far : 67.968750
+ 
+storing image with buf len 1074
+Image Captured
+coverted Image to jpg 1085 
+Image Captured
+coverted Image to jpg 1033 
+Image Captured
+coverted Image to jpg 1029 
+Image Captured
+coverted Image to jpg 1045 
+Image Captured
+coverted Image to jpg 1053 
+arrow detected 
+Image Captured
+coverted Image to jpg 1045 
+output classification type 4
+r:42.968750 ,l: 0.781250, far : 55.468750
+ 
+storing image with buf len 1045
+Image Captured
+coverted Image to jpg 1042 
+Image Captured
+coverted Image to jpg 1071 
+Image Captured
+coverted Image to jpg 1043 
+Image Captured
+coverted Image to jpg 1066 
+Image Captured
+coverted Image to jpg 1063 
+arrow detected 
+Image Captured
+coverted Image to jpg 1060 
+output classification type 4
+r:42.968750 ,l: 0.781250, far : 55.468750
+ 
+storing image with buf len 1060
+Image Captured
+coverted Image to jpg 1055 
+Image Captured
+coverted Image to jpg 1085 
+Image Captured
+coverted Image to jpg 1061 
+Image Captured
+coverted Image to jpg 1064 
+Image Captured
+coverted Image to jpg 1040 
+arrow detected 
+Image Captured
+coverted Image to jpg 1029 
+output classification type 4
+r:41.406250 ,l: 0.390625, far : 57.031250
+ 
+storing image with buf len 1029
+Image Captured
+coverted Image to jpg 1042 
+Image Captured
+coverted Image to jpg 1068 
+Image Captured
+coverted Image to jpg 1076 
+Image Captured
+coverted Image to jpg 1034 
+Image Captured
+coverted Image to jpg 1067 
+arrow detected 
+Image Captured
+coverted Image to jpg 1050 
+output classification type 4
+r:38.671875 ,l: 0.390625, far : 60.156250
+ 
+storing image with buf len 1050
+Image Captured
+coverted Image to jpg 1046 
+Image Captured
+coverted Image to jpg 1037 
+Image Captured
+coverted Image to jpg 1055 
+Image Captured
+coverted Image to jpg 830 
+Image Captured
+coverted Image to jpg 863 
+arrow detected 
+Image Captured
+coverted Image to jpg 889 
+output classification type 4
+r:5.078125 ,l: 2.343750, far : 76.171875
+ 
+storing image with buf len 889
+Image Captured
+coverted Image to jpg 870 
+Image Captured
+coverted Image to jpg 847 
+Image Captured
+coverted Image to jpg 813 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 1093 
+output classification type 4
+r:3.125000 ,l: 3.515625, far : 71.875000
+ 
+storing image with buf len 1093
+Image Captured
+coverted Image to jpg 1153 
+Image Captured
+coverted Image to jpg 1164 
+Image Captured
+coverted Image to jpg 1180 
+Image Captured
+coverted Image to jpg 1215 
+Image Captured
+coverted Image to jpg 1237 
+arrow detected 
+Image Captured
+coverted Image to jpg 1236 
+output classification type 4
+r:3.125000 ,l: 11.718750, far : 72.656250
+ 
+storing image with buf len 1236
+Image Captured
+coverted Image to jpg 1240 
+Image Captured
+coverted Image to jpg 1229 
+Image Captured
+coverted Image to jpg 1260 
+Image Captured
+coverted Image to jpg 1290 
+Image Captured
+coverted Image to jpg 1275 
+arrow detected 
+Image Captured
+coverted Image to jpg 1273 
+output classification type 4
+r:1.171875 ,l: 5.859375, far : 80.078125
+ 
+storing image with buf len 1273
+Image Captured
+coverted Image to jpg 1279 
+Image Captured
+coverted Image to jpg 1288 
+Image Captured
+coverted Image to jpg 1296 
+Image Captured
+coverted Image to jpg 1303 
+Image Captured
+coverted Image to jpg 1290 
+arrow detected 
+Image Captured
+coverted Image to jpg 1309 
+output classification type 4
+r:2.343750 ,l: 1.562500, far : 92.187500
+ 
+storing image with buf len 1309
+Image Captured
+coverted Image to jpg 1284 
+Image Captured
+coverted Image to jpg 1291 
+Image Captured
+coverted Image to jpg 1315 
+Image Captured
+coverted Image to jpg 1018 
+Image Captured
+coverted Image to jpg 1004 
+arrow detected 
+Image Captured
+coverted Image to jpg 1010 
+output classification type 4
+r:16.015625 ,l: 4.687500, far : 67.968750
+ 
+storing image with buf len 1010
+Image Captured
+coverted Image to jpg 1006 
+Image Captured
+coverted Image to jpg 1007 
+Image Captured
+coverted Image to jpg 1008 
+Image Captured
+coverted Image to jpg 1018 
+Image Captured
+coverted Image to jpg 1021 
+arrow detected 
+Image Captured
+coverted Image to jpg 1026 
+output classification type 4
+r:8.203125 ,l: 2.343750, far : 79.687500
+ 
+storing image with buf len 1026
+Image Captured
+coverted Image to jpg 1028 
+Image Captured
+coverted Image to jpg 1026 
+Image Captured
+coverted Image to jpg 1012 
+Image Captured
+coverted Image to jpg 1026 
+Image Captured
+coverted Image to jpg 1028 
+arrow detected 
+Image Captured
+coverted Image to jpg 1032 
+output classification type 4
+r:6.250000 ,l: 3.125000, far : 80.859375
+ 
+storing image with buf len 1032
+Image Captured
+coverted Image to jpg 1023 
+Image Captured
+coverted Image to jpg 1007 
+Image Captured
+coverted Image to jpg 1011 
+Image Captured
+coverted Image to jpg 1032 
+Image Captured
+coverted Image to jpg 1032 
+arrow detected 
+Image Captured
+coverted Image to jpg 1014 
+output classification type 4
+r:6.640625 ,l: 2.734375, far : 82.812500
+ 
+storing image with buf len 1014
+Image Captured
+coverted Image to jpg 1019 
+Image Captured
+coverted Image to jpg 1009 
+Image Captured
+coverted Image to jpg 1023 
+Image Captured
+coverted Image to jpg 1040 
+Image Captured
+coverted Image to jpg 1035 
+arrow detected 
+Image Captured
+coverted Image to jpg 1024 
+output classification type 4
+r:6.640625 ,l: 5.078125, far : 80.078125
+ 
+storing image with buf len 1024
+Image Captured
+coverted Image to jpg 1019 
+Image Captured
+coverted Image to jpg 1033 
+Image Captured
+coverted Image to jpg 1034 
+Image Captured
+coverted Image to jpg 1063 
+Image Captured
+coverted Image to jpg 1211 
+arrow detected 
+Image Captured
+coverted Image to jpg 1182 
+output classification type 4
+r:37.500000 ,l: 12.890625, far : 22.656250
+ 
+storing image with buf len 1182
+Image Captured
+coverted Image to jpg 1184 
+Image Captured
+coverted Image to jpg 1204 
+Image Captured
+coverted Image to jpg 1286 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1321 
+arrow detected 
+Image Captured
+coverted Image to jpg 1310 
+output classification type 4
+r:44.921875 ,l: 2.343750, far : 37.109375
+ 
+storing image with buf len 1310
+Image Captured
+coverted Image to jpg 1309 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1314 
+arrow detected 
+Image Captured
+coverted Image to jpg 1298 
+output classification type 4
+r:46.875000 ,l: 1.562500, far : 36.328125
+ 
+storing image with buf len 1298
+Image Captured
+coverted Image to jpg 1302 
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1310 
+arrow detected 
+Image Captured
+coverted Image to jpg 1312 
+output classification type 4
+r:50.390625 ,l: 0.781250, far : 44.531250
+ 
+storing image with buf len 1312
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1320 
+arrow detected 
+Image Captured
+coverted Image to jpg 1312 
+output classification type 4
+r:45.703125 ,l: 0.781250, far : 45.703125
+ 
+storing image with buf len 1312
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1321 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1330 
+arrow detected 
+Image Captured
+coverted Image to jpg 1334 
+output classification type 4
+r:41.015625 ,l: 1.171875, far : 49.609375
+ 
+storing image with buf len 1334
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1331 
+arrow detected 
+Image Captured
+coverted Image to jpg 1337 
+output classification type 4
+r:38.281250 ,l: 0.781250, far : 52.734375
+ 
+storing image with buf len 1337
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1313 
+arrow detected 
+Image Captured
+coverted Image to jpg 1328 
+output classification type 4
+r:57.031250 ,l: 1.171875, far : 34.375000
+ 
+storing image with buf len 1328
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1321 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1320 
+arrow detected 
+Image Captured
+coverted Image to jpg 1322 
+output classification type 4
+r:48.046875 ,l: 1.562500, far : 39.843750
+ 
+storing image with buf len 1322
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1327 
+arrow detected 
+Image Captured
+coverted Image to jpg 1325 
+output classification type 4
+r:54.296875 ,l: 1.562500, far : 32.812500
+ 
+storing image with buf len 1325
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1325 
+arrow detected 
+Image Captured
+coverted Image to jpg 1332 
+output classification type 4
+r:51.171875 ,l: 1.562500, far : 35.156250
+ 
+storing image with buf len 1332
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1320 
+arrow detected 
+Image Captured
+coverted Image to jpg 1336 
+output classification type 4
+r:57.812500 ,l: 1.953125, far : 26.953125
+ 
+storing image with buf len 1336
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1336 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1339 
+arrow detected 
+Image Captured
+coverted Image to jpg 1335 
+output classification type 4
+r:55.468750 ,l: 1.953125, far : 31.250000
+ 
+storing image with buf len 1335
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1336 
+Image Captured
+coverted Image to jpg 1332 
+arrow detected 
+Image Captured
+coverted Image to jpg 1340 
+output classification type 4
+r:60.156250 ,l: 1.953125, far : 21.875000
+ 
+storing image with buf len 1340
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1330 
+arrow detected 
+Image Captured
+coverted Image to jpg 1322 
+output classification type 4
+r:58.984375 ,l: 1.562500, far : 29.296875
+ 
+storing image with buf len 1322
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1347 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1335 
+arrow detected 
+Image Captured
+coverted Image to jpg 1344 
+output classification type 4
+r:59.375000 ,l: 1.953125, far : 21.484375
+ 
+storing image with buf len 1344
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1345 
+Image Captured
+coverted Image to jpg 1349 
+arrow detected 
+Image Captured
+coverted Image to jpg 1342 
+output classification type 4
+r:50.781250 ,l: 2.734375, far : 26.953125
+ 
+storing image with buf len 1342
+Image Captured
+coverted Image to jpg 1342 
+Image Captured
+coverted Image to jpg 1342 
+Image Captured
+coverted Image to jpg 1350 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1339 
+arrow detected 
+Image Captured
+coverted Image to jpg 1339 
+output classification type 4
+r:43.750000 ,l: 3.515625, far : 29.687500
+ 
+storing image with buf len 1339
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1340 
+arrow detected 
+Image Captured
+coverted Image to jpg 1347 
+output classification type 4
+r:35.937500 ,l: 3.515625, far : 35.937500
+ 
+storing image with buf len 1347
+Image Captured
+coverted Image to jpg 1348 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1341 
+arrow detected 
+Image Captured
+coverted Image to jpg 1330 
+output classification type 4
+r:43.750000 ,l: 2.734375, far : 33.984375
+ 
+storing image with buf len 1330
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1347 
+arrow detected 
+Image Captured
+coverted Image to jpg 1342 
+output classification type 4
+r:27.343750 ,l: 3.906250, far : 42.968750
+ 
+storing image with buf len 1342
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1345 
+Image Captured
+coverted Image to jpg 1332 
+arrow detected 
+Image Captured
+coverted Image to jpg 1337 
+output classification type 4
+r:36.718750 ,l: 2.734375, far : 44.531250
+ 
+storing image with buf len 1337
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1341 
+arrow detected 
+Image Captured
+coverted Image to jpg 1339 
+output classification type 4
+r:38.281250 ,l: 1.953125, far : 46.484375
+ 
+storing image with buf len 1339
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1342 
+arrow detected 
+Image Captured
+coverted Image to jpg 1322 
+output classification type 4
+r:42.578125 ,l: 2.343750, far : 39.843750
+ 
+storing image with buf len 1322
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1335 
+arrow detected 
+Image Captured
+coverted Image to jpg 1342 
+output classification type 4
+r:46.484375 ,l: 1.562500, far : 38.671875
+ 
+storing image with buf len 1342
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1346 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1321 
+arrow detected 
+Image Captured
+coverted Image to jpg 1338 
+output classification type 4
+r:40.625000 ,l: 2.343750, far : 40.625000
+ 
+storing image with buf len 1338
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1337 
+arrow detected 
+Image Captured
+coverted Image to jpg 1343 
+output classification type 4
+r:50.000000 ,l: 2.734375, far : 26.562500
+ 
+storing image with buf len 1343
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1338 
+arrow detected 
+Image Captured
+coverted Image to jpg 1353 
+output classification type 4
+r:46.875000 ,l: 2.734375, far : 36.328125
+ 
+storing image with buf len 1353
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1336 
+arrow detected 
+Image Captured
+coverted Image to jpg 1335 
+output classification type 4
+r:63.281250 ,l: 1.562500, far : 27.734375
+ 
+storing image with buf len 1335
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1342 
+Image Captured
+coverted Image to jpg 1344 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1334 
+arrow detected 
+Image Captured
+coverted Image to jpg 1335 
+output classification type 4
+r:46.093750 ,l: 1.953125, far : 40.625000
+ 
+storing image with buf len 1335
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1336 
+arrow detected 
+Image Captured
+coverted Image to jpg 1339 
+output classification type 4
+r:56.640625 ,l: 1.953125, far : 28.125000
+ 
+storing image with buf len 1339
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1339 
+arrow detected 
+Image Captured
+coverted Image to jpg 1336 
+output classification type 4
+r:43.359375 ,l: 2.343750, far : 40.625000
+ 
+storing image with buf len 1336
+Image Captured
+coverted Image to jpg 1347 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1337 
+arrow detected 
+Image Captured
+coverted Image to jpg 1335 
+output classification type 4
+r:58.203125 ,l: 1.562500, far : 27.343750
+ 
+storing image with buf len 1335
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1338 
+arrow detected 
+Image Captured
+coverted Image to jpg 1331 
+output classification type 4
+r:53.515625 ,l: 1.953125, far : 32.031250
+ 
+storing image with buf len 1331
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1341 
+arrow detected 
+Image Captured
+coverted Image to jpg 1346 
+output classification type 4
+r:50.390625 ,l: 2.343750, far : 30.078125
+ 
+storing image with buf len 1346
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1348 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1339 
+arrow detected 
+Image Captured
+coverted Image to jpg 1340 
+output classification type 4
+r:59.375000 ,l: 1.953125, far : 23.046875
+ 
+storing image with buf len 1340
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1347 
+arrow detected 
+Image Captured
+coverted Image to jpg 1344 
+output classification type 4
+r:45.312500 ,l: 2.343750, far : 35.156250
+ 
+storing image with buf len 1344
+Image Captured
+coverted Image to jpg 1336 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1350 
+Image Captured
+coverted Image to jpg 1335 
+arrow detected 
+Image Captured
+coverted Image to jpg 1349 
+output classification type 4
+r:39.843750 ,l: 3.125000, far : 39.843750
+ 
+storing image with buf len 1349
+Image Captured
+coverted Image to jpg 1344 
+Image Captured
+coverted Image to jpg 1350 
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1340 
+arrow detected 
+Image Captured
+coverted Image to jpg 1343 
+output classification type 4
+r:40.625000 ,l: 1.953125, far : 43.359375
+ 
+storing image with buf len 1343
+Image Captured
+coverted Image to jpg 1347 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1346 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1329 
+arrow detected 
+Image Captured
+coverted Image to jpg 1347 
+output classification type 4
+r:43.750000 ,l: 1.953125, far : 41.015625
+ 
+storing image with buf len 1347
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1348 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1332 
+arrow detected 
+Image Captured
+coverted Image to jpg 1343 
+output classification type 4
+r:47.656250 ,l: 1.562500, far : 39.453125
+ 
+storing image with buf len 1343
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1345 
+Image Captured
+coverted Image to jpg 1344 
+Image Captured
+coverted Image to jpg 1347 
+arrow detected 
+Image Captured
+coverted Image to jpg 1331 
+output classification type 4
+r:39.453125 ,l: 1.953125, far : 47.656250
+ 
+storing image with buf len 1331
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1334 
+arrow detected 
+Image Captured
+coverted Image to jpg 1341 
+output classification type 4
+r:40.234375 ,l: 1.171875, far : 48.828125
+ 
+storing image with buf len 1341
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1346 
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1332 
+arrow detected 
+Image Captured
+coverted Image to jpg 1334 
+output classification type 4
+r:48.828125 ,l: 1.562500, far : 40.234375
+ 
+storing image with buf len 1334
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1335 
+arrow detected 
+Image Captured
+coverted Image to jpg 1335 
+output classification type 4
+r:41.406250 ,l: 1.171875, far : 50.000000
+ 
+storing image with buf len 1335
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1322 
+arrow detected 
+Image Captured
+coverted Image to jpg 1329 
+output classification type 4
+r:44.140625 ,l: 0.781250, far : 46.875000
+ 
+storing image with buf len 1329
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1333 
+arrow detected 
+Image Captured
+coverted Image to jpg 1325 
+output classification type 4
+r:45.312500 ,l: 1.562500, far : 45.312500
+ 
+storing image with buf len 1325
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1331 
+arrow detected 
+Image Captured
+coverted Image to jpg 1321 
+output classification type 4
+r:51.171875 ,l: 1.171875, far : 39.843750
+ 
+storing image with buf len 1321
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1309 
+Image Captured
+coverted Image to jpg 1333 
+arrow detected 
+Image Captured
+coverted Image to jpg 1336 
+output classification type 4
+r:57.031250 ,l: 1.171875, far : 34.375000
+ 
+storing image with buf len 1336
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1317 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1328 
+arrow detected 
+Image Captured
+coverted Image to jpg 1322 
+output classification type 4
+r:53.515625 ,l: 1.171875, far : 36.718750
+ 
+storing image with buf len 1322
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1326 
+arrow detected 
+Image Captured
+coverted Image to jpg 1333 
+output classification type 4
+r:50.000000 ,l: 1.562500, far : 32.031250
+ 
+storing image with buf len 1333
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1324 
+arrow detected 
+Image Captured
+coverted Image to jpg 1330 
+output classification type 4
+r:56.250000 ,l: 1.953125, far : 26.171875
+ 
+storing image with buf len 1330
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1315 
+arrow detected 
+Image Captured
+coverted Image to jpg 1330 
+output classification type 4
+r:45.703125 ,l: 2.343750, far : 33.203125
+ 
+storing image with buf len 1330
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1333 
+arrow detected 
+Image Captured
+coverted Image to jpg 1337 
+output classification type 4
+r:51.171875 ,l: 1.953125, far : 32.812500
+ 
+storing image with buf len 1337
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1327 
+arrow detected 
+Image Captured
+coverted Image to jpg 1344 
+output classification type 4
+r:44.140625 ,l: 1.953125, far : 36.718750
+ 
+storing image with buf len 1344
+Image Captured
+coverted Image to jpg 1347 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1336 
+arrow detected 
+Image Captured
+coverted Image to jpg 1332 
+output classification type 4
+r:43.750000 ,l: 2.734375, far : 36.328125
+ 
+storing image with buf len 1332
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1337 
+arrow detected 
+Image Captured
+coverted Image to jpg 1343 
+output classification type 4
+r:35.546875 ,l: 2.734375, far : 40.234375
+ 
+storing image with buf len 1343
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1336 
+Image Captured
+coverted Image to jpg 1347 
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1337 
+arrow detected 
+Image Captured
+coverted Image to jpg 1342 
+output classification type 4
+r:37.890625 ,l: 1.953125, far : 46.093750
+ 
+storing image with buf len 1342
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1352 
+Image Captured
+coverted Image to jpg 1345 
+Image Captured
+coverted Image to jpg 1341 
+arrow detected 
+Image Captured
+coverted Image to jpg 1337 
+output classification type 4
+r:38.671875 ,l: 1.953125, far : 46.484375
+ 
+storing image with buf len 1337
+Image Captured
+coverted Image to jpg 1346 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1344 
+arrow detected 
+Image Captured
+coverted Image to jpg 1339 
+output classification type 4
+r:44.140625 ,l: 1.953125, far : 41.406250
+ 
+storing image with buf len 1339
+Image Captured
+coverted Image to jpg 1352 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1336 
+arrow detected 
+Image Captured
+coverted Image to jpg 1334 
+output classification type 4
+r:47.265625 ,l: 1.171875, far : 44.531250
+ 
+storing image with buf len 1334
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1328 
+arrow detected 
+Image Captured
+coverted Image to jpg 1337 
+output classification type 4
+r:47.265625 ,l: 1.562500, far : 41.796875
+ 
+storing image with buf len 1337
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1325 
+arrow detected 
+Image Captured
+coverted Image to jpg 1327 
+output classification type 4
+r:54.687500 ,l: 1.171875, far : 37.500000
+ 
+storing image with buf len 1327
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1347 
+arrow detected 
+Image Captured
+coverted Image to jpg 1333 
+output classification type 4
+r:42.578125 ,l: 1.953125, far : 45.312500
+ 
+storing image with buf len 1333
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1336 
+arrow detected 
+Image Captured
+coverted Image to jpg 1330 
+output classification type 4
+r:49.609375 ,l: 1.171875, far : 41.015625
+ 
+storing image with buf len 1330
+Image Captured
+coverted Image to jpg 1342 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1335 
+Image Captured
+coverted Image to jpg 1322 
+arrow detected 
+Image Captured
+coverted Image to jpg 1336 
+output classification type 4
+r:55.859375 ,l: 1.171875, far : 35.937500
+ 
+storing image with buf len 1336
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1336 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1323 
+Image Captured
+coverted Image to jpg 1331 
+arrow detected 
+Image Captured
+coverted Image to jpg 1333 
+output classification type 4
+r:44.921875 ,l: 1.562500, far : 42.187500
+ 
+storing image with buf len 1333
+Image Captured
+coverted Image to jpg 1346 
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1326 
+arrow detected 
+Image Captured
+coverted Image to jpg 1330 
+output classification type 4
+r:47.265625 ,l: 1.562500, far : 39.062500
+ 
+storing image with buf len 1330
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1317 
+Image Captured
+coverted Image to jpg 1338 
+arrow detected 
+Image Captured
+coverted Image to jpg 1329 
+output classification type 4
+r:50.000000 ,l: 1.171875, far : 36.328125
+ 
+storing image with buf len 1329
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1325 
+arrow detected 
+Image Captured
+coverted Image to jpg 1328 
+output classification type 4
+r:41.406250 ,l: 1.171875, far : 46.875000
+ 
+storing image with buf len 1328
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1330 
+arrow detected 
+Image Captured
+coverted Image to jpg 1327 
+output classification type 4
+r:46.875000 ,l: 1.562500, far : 39.062500
+ 
+storing image with buf len 1327
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1316 
+arrow detected 
+Image Captured
+coverted Image to jpg 1335 
+output classification type 4
+r:39.843750 ,l: 1.562500, far : 48.046875
+ 
+storing image with buf len 1335
+Image Captured
+coverted Image to jpg 1323 
+Image Captured
+coverted Image to jpg 1323 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1323 
+Image Captured
+coverted Image to jpg 1339 
+arrow detected 
+Image Captured
+coverted Image to jpg 1326 
+output classification type 4
+r:34.765625 ,l: 1.953125, far : 50.781250
+ 
+storing image with buf len 1326
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1325 
+arrow detected 
+Image Captured
+coverted Image to jpg 1332 
+output classification type 4
+r:34.375000 ,l: 1.562500, far : 53.515625
+ 
+storing image with buf len 1332
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1341 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1318 
+Image Captured
+coverted Image to jpg 1324 
+arrow detected 
+Image Captured
+coverted Image to jpg 1328 
+output classification type 4
+r:39.843750 ,l: 1.171875, far : 51.171875
+ 
+storing image with buf len 1328
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1317 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1323 
+arrow detected 
+Image Captured
+coverted Image to jpg 1328 
+output classification type 4
+r:35.937500 ,l: 1.953125, far : 52.343750
+ 
+storing image with buf len 1328
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1330 
+arrow detected 
+Image Captured
+coverted Image to jpg 1333 
+output classification type 4
+r:39.843750 ,l: 1.171875, far : 51.562500
+ 
+storing image with buf len 1333
+Image Captured
+coverted Image to jpg 1344 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1320 
+arrow detected 
+Image Captured
+coverted Image to jpg 1337 
+output classification type 4
+r:43.750000 ,l: 0.781250, far : 49.609375
+ 
+storing image with buf len 1337
+Image Captured
+coverted Image to jpg 1315 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1325 
+arrow detected 
+Image Captured
+coverted Image to jpg 1333 
+output classification type 4
+r:48.046875 ,l: 0.781250, far : 45.312500
+ 
+storing image with buf len 1333
+Image Captured
+coverted Image to jpg 1323 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1334 
+Image Captured
+coverted Image to jpg 1321 
+arrow detected 
+Image Captured
+coverted Image to jpg 1333 
+output classification type 4
+r:44.531250 ,l: 1.171875, far : 44.531250
+ 
+storing image with buf len 1333
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1322 
+arrow detected 
+Image Captured
+coverted Image to jpg 1321 
+output classification type 4
+r:51.171875 ,l: 0.781250, far : 42.187500
+ 
+storing image with buf len 1321
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1319 
+arrow detected 
+Image Captured
+coverted Image to jpg 1326 
+output classification type 4
+r:48.437500 ,l: 0.781250, far : 45.312500
+ 
+storing image with buf len 1326
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1318 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1320 
+arrow detected 
+Image Captured
+coverted Image to jpg 1321 
+output classification type 4
+r:50.000000 ,l: 0.781250, far : 41.406250
+ 
+storing image with buf len 1321
+Image Captured
+coverted Image to jpg 1315 
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1324 
+arrow detected 
+Image Captured
+coverted Image to jpg 1313 
+output classification type 4
+r:51.953125 ,l: 0.781250, far : 40.234375
+ 
+storing image with buf len 1313
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1317 
+arrow detected 
+Image Captured
+coverted Image to jpg 1323 
+output classification type 4
+r:53.125000 ,l: 0.781250, far : 38.671875
+ 
+storing image with buf len 1323
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1312 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1319 
+arrow detected 
+Image Captured
+coverted Image to jpg 1331 
+output classification type 4
+r:46.484375 ,l: 1.171875, far : 43.750000
+ 
+storing image with buf len 1331
+Image Captured
+coverted Image to jpg 1318 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1317 
+Image Captured
+coverted Image to jpg 1339 
+Image Captured
+coverted Image to jpg 1318 
+arrow detected 
+Image Captured
+coverted Image to jpg 1323 
+output classification type 4
+r:47.656250 ,l: 1.171875, far : 42.187500
+ 
+storing image with buf len 1323
+Image Captured
+coverted Image to jpg 1323 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1313 
+arrow detected 
+Image Captured
+coverted Image to jpg 1322 
+output classification type 4
+r:55.078125 ,l: 1.171875, far : 35.156250
+ 
+storing image with buf len 1322
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1315 
+arrow detected 
+Image Captured
+coverted Image to jpg 1317 
+output classification type 4
+r:48.437500 ,l: 1.171875, far : 42.578125
+ 
+storing image with buf len 1317
+Image Captured
+coverted Image to jpg 1317 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1313 
+Image Captured
+coverted Image to jpg 1319 
+arrow detected 
+Image Captured
+coverted Image to jpg 1330 
+output classification type 4
+r:55.078125 ,l: 0.781250, far : 33.203125
+ 
+storing image with buf len 1330
+Image Captured
+coverted Image to jpg 1313 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1312 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1329 
+arrow detected 
+Image Captured
+coverted Image to jpg 1311 
+output classification type 4
+r:51.562500 ,l: 1.171875, far : 37.500000
+ 
+storing image with buf len 1311
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1321 
+arrow detected 
+Image Captured
+coverted Image to jpg 1309 
+output classification type 4
+r:60.937500 ,l: 0.781250, far : 32.421875
+ 
+storing image with buf len 1309
+Image Captured
+coverted Image to jpg 1313 
+Image Captured
+coverted Image to jpg 1323 
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1318 
+Image Captured
+coverted Image to jpg 1318 
+arrow detected 
+Image Captured
+coverted Image to jpg 1315 
+output classification type 4
+r:43.750000 ,l: 1.171875, far : 43.750000
+ 
+storing image with buf len 1315
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1322 
+arrow detected 
+Image Captured
+coverted Image to jpg 1339 
+output classification type 4
+r:41.796875 ,l: 1.171875, far : 47.265625
+ 
+storing image with buf len 1339
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1315 
+arrow detected 
+Image Captured
+coverted Image to jpg 1328 
+output classification type 4
+r:48.046875 ,l: 1.562500, far : 39.843750
+ 
+storing image with buf len 1328
+Image Captured
+coverted Image to jpg 1304 
+Image Captured
+coverted Image to jpg 1310 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1320 
+arrow detected 
+Image Captured
+coverted Image to jpg 1322 
+output classification type 4
+r:43.359375 ,l: 0.781250, far : 48.828125
+ 
+storing image with buf len 1322
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1319 
+arrow detected 
+Image Captured
+coverted Image to jpg 1325 
+output classification type 4
+r:41.796875 ,l: 0.781250, far : 47.656250
+ 
+storing image with buf len 1325
+Image Captured
+coverted Image to jpg 1315 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1326 
+arrow detected 
+Image Captured
+coverted Image to jpg 1322 
+output classification type 4
+r:38.671875 ,l: 0.781250, far : 53.125000
+ 
+storing image with buf len 1322
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1321 
+Image Captured
+coverted Image to jpg 1311 
+arrow detected 
+Image Captured
+coverted Image to jpg 1324 
+output classification type 4
+r:43.359375 ,l: 1.171875, far : 46.484375
+ 
+storing image with buf len 1324
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1312 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1312 
+Image Captured
+coverted Image to jpg 1333 
+arrow detected 
+Image Captured
+coverted Image to jpg 1334 
+output classification type 4
+r:57.031250 ,l: 0.781250, far : 34.375000
+ 
+storing image with buf len 1334
+Image Captured
+coverted Image to jpg 1332 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1316 
+arrow detected 
+Image Captured
+coverted Image to jpg 1329 
+output classification type 4
+r:44.140625 ,l: 0.781250, far : 50.000000
+ 
+storing image with buf len 1329
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1315 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1321 
+arrow detected 
+Image Captured
+coverted Image to jpg 1314 
+output classification type 4
+r:48.437500 ,l: 1.171875, far : 42.578125
+ 
+storing image with buf len 1314
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1321 
+arrow detected 
+Image Captured
+coverted Image to jpg 1328 
+output classification type 4
+r:43.750000 ,l: 0.781250, far : 49.609375
+ 
+storing image with buf len 1328
+Image Captured
+coverted Image to jpg 1322 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1309 
+Image Captured
+coverted Image to jpg 1307 
+arrow detected 
+Image Captured
+coverted Image to jpg 1318 
+output classification type 4
+r:46.484375 ,l: 0.781250, far : 46.484375
+ 
+storing image with buf len 1318
+Image Captured
+coverted Image to jpg 1306 
+Image Captured
+coverted Image to jpg 1306 
+Image Captured
+coverted Image to jpg 1321 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1322 
+arrow detected 
+Image Captured
+coverted Image to jpg 1312 
+output classification type 4
+r:50.000000 ,l: 0.390625, far : 44.140625
+ 
+storing image with buf len 1312
+Image Captured
+coverted Image to jpg 1313 
+Image Captured
+coverted Image to jpg 1309 
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1302 
+Image Captured
+coverted Image to jpg 1317 
+arrow detected 
+Image Captured
+coverted Image to jpg 1318 
+output classification type 4
+r:50.000000 ,l: 0.390625, far : 44.140625
+ 
+storing image with buf len 1318
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1312 
+Image Captured
+coverted Image to jpg 1306 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1316 
+arrow detected 
+Image Captured
+coverted Image to jpg 1312 
+output classification type 4
+r:56.640625 ,l: 0.390625, far : 38.671875
+ 
+storing image with buf len 1312
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1315 
+Image Captured
+coverted Image to jpg 1309 
+Image Captured
+coverted Image to jpg 1315 
+Image Captured
+coverted Image to jpg 1313 
+arrow detected 
+Image Captured
+coverted Image to jpg 1319 
+output classification type 4
+r:51.171875 ,l: 0.390625, far : 44.921875
+ 
+storing image with buf len 1319
+Image Captured
+coverted Image to jpg 1304 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1315 
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1316 
+arrow detected 
+Image Captured
+coverted Image to jpg 1309 
+output classification type 4
+r:58.984375 ,l: 0.390625, far : 35.546875
+ 
+storing image with buf len 1309
+Image Captured
+coverted Image to jpg 1311 
+Image Captured
+coverted Image to jpg 1299 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1305 
+Image Captured
+coverted Image to jpg 1312 
+arrow detected 
+Image Captured
+coverted Image to jpg 1330 
+output classification type 4
+r:60.546875 ,l: 0.781250, far : 32.031250
+ 
+storing image with buf len 1330
+Image Captured
+coverted Image to jpg 1304 
+Image Captured
+coverted Image to jpg 1309 
+Image Captured
+coverted Image to jpg 1305 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1321 
+arrow detected 
+Image Captured
+coverted Image to jpg 1305 
+output classification type 4
+r:51.171875 ,l: 0.390625, far : 42.187500
+ 
+storing image with buf len 1305
+Image Captured
+coverted Image to jpg 1310 
+Image Captured
+coverted Image to jpg 1306 
+Image Captured
+coverted Image to jpg 1326 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1306 
+arrow detected 
+Image Captured
+coverted Image to jpg 1317 
+output classification type 4
+r:53.515625 ,l: 0.781250, far : 38.671875
+ 
+storing image with buf len 1317
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1318 
+Image Captured
+coverted Image to jpg 1310 
+Image Captured
+coverted Image to jpg 1272 
+Image Captured
+coverted Image to jpg 1288 
+arrow detected 
+Image Captured
+coverted Image to jpg 1278 
+output classification type 4
+r:60.156250 ,l: 1.171875, far : 30.078125
+ 
+storing image with buf len 1278
+Image Captured
+coverted Image to jpg 1268 
+Image Captured
+coverted Image to jpg 1247 
+Image Captured
+coverted Image to jpg 1279 
+Image Captured
+coverted Image to jpg 1364 
+Image Captured
+coverted Image to jpg 1388 
+arrow detected 
+Image Captured
+coverted Image to jpg 1253 
+output classification type 4
+r:40.625000 ,l: 1.953125, far : 40.625000
+ 
+storing image with buf len 1253
+Image Captured
+coverted Image to jpg 1220 
+Image Captured
+coverted Image to jpg 1353 
+Image Captured
+coverted Image to jpg 1243 
+Image Captured
+coverted Image to jpg 972 
+Image Captured
+coverted Image to jpg 1067 
+arrow detected 
+Image Captured
+coverted Image to jpg 1134 
+output classification type 4
+r:1.562500 ,l: 7.031250, far : 67.187500
+ 
+storing image with buf len 1134
+Image Captured
+coverted Image to jpg 1013 
+Image Captured
+coverted Image to jpg 1137 
+Image Captured
+coverted Image to jpg 1254 
+Image Captured
+coverted Image to jpg 1476 
+Image Captured
+coverted Image to jpg 1529 
+arrow detected 
+Image Captured
+coverted Image to jpg 1712 
+output classification type 4
+r:3.515625 ,l: 7.031250, far : 83.984375
+ 
+storing image with buf len 1712
+Image Captured
+coverted Image to jpg 1667 
+Image Captured
+coverted Image to jpg 1615 
+Image Captured
+coverted Image to jpg 1684 
+Image Captured
+coverted Image to jpg 1742 
+Image Captured
+coverted Image to jpg 1740 
+arrow detected 
+Image Captured
+coverted Image to jpg 1576 
+output classification type 4
+r:6.640625 ,l: 4.296875, far : 54.296875
+ 
+storing image with buf len 1576
+Image Captured
+coverted Image to jpg 1402 
+Image Captured
+coverted Image to jpg 1250 
+Image Captured
+coverted Image to jpg 1198 
+Image Captured
+coverted Image to jpg 1394 
+Image Captured
+coverted Image to jpg 1629 
+arrow detected 
+Image Captured
+coverted Image to jpg 1537 
+output classification type 4
+r:54.687500 ,l: 22.656250, far : 15.625000
+ 
+storing image with buf len 1537
+Image Captured
+coverted Image to jpg 1667 
+Image Captured
+coverted Image to jpg 1466 
+Image Captured
+coverted Image to jpg 1477 
+Image Captured
+coverted Image to jpg 1069 
+Image Captured
+coverted Image to jpg 1227 
+arrow detected 
+Image Captured
+coverted Image to jpg 1465 
+output classification type 4
+r:16.015625 ,l: 13.281250, far : 53.515625
+ 
+storing image with buf len 1465
+Image Captured
+coverted Image to jpg 1604 
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1521 
+Image Captured
+coverted Image to jpg 965 
+Image Captured
+coverted Image to jpg 971 
+arrow detected 
+Image Captured
+coverted Image to jpg 1134 
+output classification type 4
+r:54.296875 ,l: 3.906250, far : 16.406250
+ 
+storing image with buf len 1134
+Image Captured
+coverted Image to jpg 1061 
+Image Captured
+coverted Image to jpg 997 
+Image Captured
+coverted Image to jpg 1059 
+Image Captured
+coverted Image to jpg 1158 
+Image Captured
+coverted Image to jpg 1172 
+arrow detected 
+Image Captured
+coverted Image to jpg 1146 
+output classification type 4
+r:99.609375 ,l: 0.000000, far : 0.390625
+ 
+storing image with buf len 1146
+Image Captured
+coverted Image to jpg 1151 
+Image Captured
+coverted Image to jpg 1163 
+Image Captured
+coverted Image to jpg 1190 
+Image Captured
+coverted Image to jpg 1605 
+Image Captured
+coverted Image to jpg 1550 
+arrow detected at 177 :99.218750%
+arrow detected 
+Image Captured
+coverted Image to jpg 1554 
+output classification type 4
+r:14.062500 ,l: 3.125000, far : 82.421875
+ 
+storing image with buf len 1554
+Image Captured
+coverted Image to jpg 1571 
+Image Captured
+coverted Image to jpg 1527 
+Image Captured
+coverted Image to jpg 1559 
+Image Captured
+coverted Image to jpg 1558 
+Image Captured
+coverted Image to jpg 1562 
+arrow detected 
+Image Captured
+coverted Image to jpg 1544 
+output classification type 4
+r:26.171875 ,l: 3.906250, far : 67.968750
+ 
+storing image with buf len 1544
+Image Captured
+coverted Image to jpg 1566 
+Image Captured
+coverted Image to jpg 1557 
+Image Captured
+coverted Image to jpg 1572 
+Image Captured
+coverted Image to jpg 1594 
+Image Captured
+coverted Image to jpg 1587 
+arrow detected 
+Image Captured
+coverted Image to jpg 1595 
+output classification type 4
+r:39.453125 ,l: 1.562500, far : 57.421875
+ 
+storing image with buf len 1595
+Image Captured
+coverted Image to jpg 1616 
+Image Captured
+coverted Image to jpg 1625 
+Image Captured
+coverted Image to jpg 1552 
+Image Captured
+coverted Image to jpg 1579 
+Image Captured
+coverted Image to jpg 1583 
+arrow detected 
+Image Captured
+coverted Image to jpg 1560 
+output classification type 4
+r:40.625000 ,l: 1.953125, far : 55.859375
+ 
+storing image with buf len 1560
+Image Captured
+coverted Image to jpg 1510 
+Image Captured
+coverted Image to jpg 1502 
+Image Captured
+coverted Image to jpg 1456 
+Image Captured
+coverted Image to jpg 1537 
+Image Captured
+coverted Image to jpg 1484 
+arrow detected at 201 :94.531250%
+arrow detected 
+Image Captured
+coverted Image to jpg 1412 
+output classification type 4
+r:17.187500 ,l: 2.734375, far : 78.515625
+ 
+storing image with buf len 1412
+Image Captured
+coverted Image to jpg 1362 
+Image Captured
+coverted Image to jpg 1351 
+Image Captured
+coverted Image to jpg 1190 
+Image Captured
+coverted Image to jpg 1303 
+Image Captured
+coverted Image to jpg 1245 
+arrow detected 
+Image Captured
+coverted Image to jpg 1331 
+output classification type 4
+r:16.406250 ,l: 1.562500, far : 79.687500
+ 
+storing image with buf len 1331
+Image Captured
+coverted Image to jpg 1404 
+Image Captured
+coverted Image to jpg 1352 
+Image Captured
+coverted Image to jpg 1389 
+Image Captured
+coverted Image to jpg 956 
+Image Captured
+coverted Image to jpg 920 
+arrow detected 
+Image Captured
+coverted Image to jpg 948 
+output classification type 4
+r:35.546875 ,l: 0.390625, far : 58.984375
+ 
+storing image with buf len 948
+Image Captured
+coverted Image to jpg 1019 
+Image Captured
+coverted Image to jpg 952 
+Image Captured
+coverted Image to jpg 1045 
+Image Captured
+coverted Image to jpg 1041 
+Image Captured
+coverted Image to jpg 1042 
+arrow detected 
+Image Captured
+coverted Image to jpg 1061 
+output classification type 4
+r:93.750000 ,l: 0.000000, far : 5.859375
+ 
+storing image with buf len 1061
+Image Captured
+coverted Image to jpg 1047 
+Image Captured
+coverted Image to jpg 1056 
+Image Captured
+coverted Image to jpg 1049 
+Image Captured
+coverted Image to jpg 1782 
+Image Captured
+coverted Image to jpg 1687 
+arrow detected 
+Image Captured
+coverted Image to jpg 2034 
+output classification type 4
+r:5.468750 ,l: 11.718750, far : 82.031250
+ 
+storing image with buf len 2034
+Image Captured
+coverted Image to jpg 2211 
+Image Captured
+coverted Image to jpg 2544 
+Image Captured
+coverted Image to jpg 2476 
+Image Captured
+coverted Image to jpg 2595 
+Image Captured
+coverted Image to jpg 2492 
+arrow detected 
+Image Captured
+coverted Image to jpg 2549 
+output classification type 4
+r:14.062500 ,l: 1.562500, far : 83.593750
+ 
+storing image with buf len 2549
+Image Captured
+coverted Image to jpg 2546 
+Image Captured
+coverted Image to jpg 2560 
+Image Captured
+coverted Image to jpg 2560 
+Image Captured
+coverted Image to jpg 2524 
+Image Captured
+coverted Image to jpg 2412 
+arrow detected 
+Image Captured
+coverted Image to jpg 2310 
+output classification type 4
+r:19.531250 ,l: 13.281250, far : 57.812500
+ 
+storing image with buf len 2310
+Image Captured
+coverted Image to jpg 2478 
+Image Captured
+coverted Image to jpg 2479 
+Image Captured
+coverted Image to jpg 2409 
+Image Captured
+coverted Image to jpg 2524 
+Image Captured
+coverted Image to jpg 2447 
+arrow detected 
+Image Captured
+coverted Image to jpg 2481 
+output classification type 4
+r:19.921875 ,l: 6.250000, far : 71.093750
+ 
+storing image with buf len 2481
+Image Captured
+coverted Image to jpg 2515 
+Image Captured
+coverted Image to jpg 2539 
+Image Captured
+coverted Image to jpg 2542 
+Image Captured
+coverted Image to jpg 2381 
+Image Captured
+coverted Image to jpg 2368 
+arrow detected 
+Image Captured
+coverted Image to jpg 2434 
+output classification type 4
+r:6.250000 ,l: 6.250000, far : 87.109375
+ 
+storing image with buf len 2434
+Image Captured
+coverted Image to jpg 2427 
+Image Captured
+coverted Image to jpg 2454 
+Image Captured
+coverted Image to jpg 2127 
+Image Captured
+coverted Image to jpg 2461 
+Image Captured
+coverted Image to jpg 2425 
+arrow detected 
+Image Captured
+coverted Image to jpg 2473 
+output classification type 4
+r:7.812500 ,l: 8.593750, far : 82.812500
+ 
+storing image with buf len 2473
+Image Captured
+coverted Image to jpg 2428 
+Image Captured
+coverted Image to jpg 2454 
+Image Captured
+coverted Image to jpg 2445 
+Image Captured
+coverted Image to jpg 1435 
+Image Captured
+coverted Image to jpg 1493 
+arrow detected 
+Image Captured
+coverted Image to jpg 1581 
+output classification type 4
+r:21.093750 ,l: 10.546875, far : 28.906250
+ 
+storing image with buf len 1581
+Image Captured
+coverted Image to jpg 1417 
+Image Captured
+coverted Image to jpg 1413 
+Image Captured
+coverted Image to jpg 1218 
+Image Captured
+coverted Image to jpg 1210 
+Image Captured
+coverted Image to jpg 980 
+arrow detected 
+Image Captured
+coverted Image to jpg 1251 
+output classification type 4
+r:61.328125 ,l: 1.562500, far : 34.765625
+ 
+storing image with buf len 1251
+Image Captured
+coverted Image to jpg 1294 
+Image Captured
+coverted Image to jpg 1211 
+Image Captured
+coverted Image to jpg 1152 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1356 
+arrow detected 
+Image Captured
+coverted Image to jpg 1553 
+output classification type 4
+r:44.921875 ,l: 1.171875, far : 47.656250
+ 
+storing image with buf len 1553
+Image Captured
+coverted Image to jpg 1510 
+Image Captured
+coverted Image to jpg 1218 
+Image Captured
+coverted Image to jpg 1443 
+Image Captured
+coverted Image to jpg 1472 
+Image Captured
+coverted Image to jpg 1699 
+arrow detected 
+Image Captured
+coverted Image to jpg 1787 
+output classification type 4
+r:3.906250 ,l: 36.718750, far : 57.031250
+ 
+storing image with buf len 1787
+Image Captured
+coverted Image to jpg 1962 
+Image Captured
+coverted Image to jpg 2051 
+Image Captured
+coverted Image to jpg 2249 
+Image Captured
+coverted Image to jpg 2387 
+Image Captured
+coverted Image to jpg 2243 
+arrow detected 
+Image Captured
+coverted Image to jpg 1940 
+output classification type 4
+r:1.562500 ,l: 9.375000, far : 87.109375
+ 
+storing image with buf len 1940
+Image Captured
+coverted Image to jpg 1934 
+Image Captured
+coverted Image to jpg 1706 
+Image Captured
+coverted Image to jpg 1627 
+Image Captured
+coverted Image to jpg 1151 
+Image Captured
+coverted Image to jpg 1183 
+arrow detected 
+Image Captured
+coverted Image to jpg 1025 
+output classification type 4
+r:3.125000 ,l: 13.281250, far : 39.062500
+ 
+storing image with buf len 1025
+Image Captured
+coverted Image to jpg 1043 
+Image Captured
+coverted Image to jpg 1115 
+Image Captured
+coverted Image to jpg 1013 
+Image Captured
+coverted Image to jpg 905 
+Image Captured
+coverted Image to jpg 957 
+arrow detected 
+Image Captured
+coverted Image to jpg 973 
+output classification type 4
+r:21.875000 ,l: 2.343750, far : 68.750000
+ 
+storing image with buf len 973
+Image Captured
+coverted Image to jpg 1058 
+Image Captured
+coverted Image to jpg 1070 
+Image Captured
+coverted Image to jpg 990 
+Image Captured
+coverted Image to jpg 833 
+Image Captured
+coverted Image to jpg 869 
+arrow detected 
+Image Captured
+coverted Image to jpg 878 
+output classification type 4
+r:31.250000 ,l: 1.562500, far : 48.437500
+ 
+storing image with buf len 878
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 944 
+Image Captured
+coverted Image to jpg 946 
+Image Captured
+coverted Image to jpg 941 
+arrow detected 
+Image Captured
+coverted Image to jpg 947 
+output classification type 4
+r:25.781250 ,l: 1.953125, far : 55.468750
+ 
+storing image with buf len 947
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 936 
+output classification type 4
+r:33.984375 ,l: 1.562500, far : 52.734375
+ 
+storing image with buf len 936
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 913 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 941 
+output classification type 4
+r:21.484375 ,l: 1.953125, far : 63.671875
+ 
+storing image with buf len 941
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 936 
+arrow detected 
+Image Captured
+coverted Image to jpg 948 
+output classification type 4
+r:26.171875 ,l: 1.953125, far : 59.375000
+ 
+storing image with buf len 948
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 912 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 936 
+arrow detected 
+Image Captured
+coverted Image to jpg 927 
+output classification type 4
+r:25.000000 ,l: 1.953125, far : 60.546875
+ 
+storing image with buf len 927
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 914 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 943 
+output classification type 4
+r:28.515625 ,l: 1.562500, far : 57.031250
+ 
+storing image with buf len 943
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 928 
+arrow detected 
+Image Captured
+coverted Image to jpg 930 
+output classification type 4
+r:28.125000 ,l: 1.562500, far : 60.156250
+ 
+storing image with buf len 930
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 923 
+arrow detected 
+Image Captured
+coverted Image to jpg 930 
+output classification type 4
+r:31.250000 ,l: 1.562500, far : 55.078125
+ 
+storing image with buf len 930
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 938 
+arrow detected 
+Image Captured
+coverted Image to jpg 925 
+output classification type 4
+r:23.046875 ,l: 1.953125, far : 62.890625
+ 
+storing image with buf len 925
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 914 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 927 
+output classification type 4
+r:29.687500 ,l: 1.953125, far : 56.250000
+ 
+storing image with buf len 927
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 919 
+arrow detected 
+Image Captured
+coverted Image to jpg 940 
+output classification type 4
+r:25.000000 ,l: 1.562500, far : 60.937500
+ 
+storing image with buf len 940
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 939 
+Image Captured
+coverted Image to jpg 921 
+arrow detected 
+Image Captured
+coverted Image to jpg 933 
+output classification type 4
+r:30.859375 ,l: 1.562500, far : 54.296875
+ 
+storing image with buf len 933
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 924 
+arrow detected 
+Image Captured
+coverted Image to jpg 925 
+output classification type 4
+r:26.171875 ,l: 1.562500, far : 63.281250
+ 
+storing image with buf len 925
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 942 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 928 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:30.078125 ,l: 1.171875, far : 56.640625
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 939 
+arrow detected 
+Image Captured
+coverted Image to jpg 928 
+output classification type 4
+r:32.031250 ,l: 1.562500, far : 56.640625
+ 
+storing image with buf len 928
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 926 
+output classification type 4
+r:27.734375 ,l: 1.562500, far : 59.375000
+ 
+storing image with buf len 926
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 916 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 923 
+output classification type 4
+r:26.953125 ,l: 1.562500, far : 57.812500
+ 
+storing image with buf len 923
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 943 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 933 
+arrow detected 
+Image Captured
+coverted Image to jpg 921 
+output classification type 4
+r:33.984375 ,l: 1.171875, far : 53.125000
+ 
+storing image with buf len 921
+Image Captured
+coverted Image to jpg 944 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 937 
+output classification type 4
+r:33.593750 ,l: 1.171875, far : 55.468750
+ 
+storing image with buf len 937
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 929 
+arrow detected 
+Image Captured
+coverted Image to jpg 924 
+output classification type 4
+r:25.390625 ,l: 1.562500, far : 61.328125
+ 
+storing image with buf len 924
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 933 
+arrow detected 
+Image Captured
+coverted Image to jpg 927 
+output classification type 4
+r:30.859375 ,l: 2.343750, far : 51.562500
+ 
+storing image with buf len 927
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 943 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 937 
+arrow detected 
+Image Captured
+coverted Image to jpg 936 
+output classification type 4
+r:30.859375 ,l: 1.562500, far : 57.812500
+ 
+storing image with buf len 936
+Image Captured
+coverted Image to jpg 915 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 914 
+arrow detected 
+Image Captured
+coverted Image to jpg 910 
+output classification type 4
+r:32.031250 ,l: 1.562500, far : 53.125000
+ 
+storing image with buf len 910
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 915 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 920 
+arrow detected 
+Image Captured
+coverted Image to jpg 929 
+output classification type 4
+r:29.687500 ,l: 1.562500, far : 52.734375
+ 
+storing image with buf len 929
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 916 
+Image Captured
+coverted Image to jpg 940 
+Image Captured
+coverted Image to jpg 926 
+arrow detected 
+Image Captured
+coverted Image to jpg 942 
+output classification type 4
+r:24.218750 ,l: 1.562500, far : 62.109375
+ 
+storing image with buf len 942
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:29.296875 ,l: 1.562500, far : 58.593750
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 946 
+output classification type 4
+r:25.390625 ,l: 1.953125, far : 58.203125
+ 
+storing image with buf len 946
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 938 
+arrow detected 
+Image Captured
+coverted Image to jpg 914 
+output classification type 4
+r:32.421875 ,l: 1.562500, far : 53.515625
+ 
+storing image with buf len 914
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 941 
+arrow detected 
+Image Captured
+coverted Image to jpg 937 
+output classification type 4
+r:35.546875 ,l: 1.562500, far : 51.953125
+ 
+storing image with buf len 937
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 925 
+arrow detected 
+Image Captured
+coverted Image to jpg 924 
+output classification type 4
+r:26.562500 ,l: 1.562500, far : 56.640625
+ 
+storing image with buf len 924
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 934 
+arrow detected 
+Image Captured
+coverted Image to jpg 918 
+output classification type 4
+r:25.000000 ,l: 1.562500, far : 60.937500
+ 
+storing image with buf len 918
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 916 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 913 
+arrow detected 
+Image Captured
+coverted Image to jpg 939 
+output classification type 4
+r:33.203125 ,l: 1.562500, far : 51.562500
+ 
+storing image with buf len 939
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 921 
+output classification type 4
+r:30.859375 ,l: 1.562500, far : 54.296875
+ 
+storing image with buf len 921
+Image Captured
+coverted Image to jpg 945 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 939 
+Image Captured
+coverted Image to jpg 923 
+arrow detected 
+Image Captured
+coverted Image to jpg 927 
+output classification type 4
+r:26.953125 ,l: 1.562500, far : 57.812500
+ 
+storing image with buf len 927
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 918 
+arrow detected 
+Image Captured
+coverted Image to jpg 942 
+output classification type 4
+r:27.343750 ,l: 1.171875, far : 58.203125
+ 
+storing image with buf len 942
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 933 
+output classification type 4
+r:28.906250 ,l: 1.562500, far : 57.812500
+ 
+storing image with buf len 933
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 924 
+arrow detected 
+Image Captured
+coverted Image to jpg 928 
+output classification type 4
+r:28.125000 ,l: 1.562500, far : 56.250000
+ 
+storing image with buf len 928
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 926 
+arrow detected 
+Image Captured
+coverted Image to jpg 930 
+output classification type 4
+r:28.515625 ,l: 1.953125, far : 57.031250
+ 
+storing image with buf len 930
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 934 
+arrow detected 
+Image Captured
+coverted Image to jpg 923 
+output classification type 4
+r:31.250000 ,l: 1.562500, far : 55.078125
+ 
+storing image with buf len 923
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 923 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:23.828125 ,l: 1.953125, far : 61.718750
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 914 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 933 
+arrow detected 
+Image Captured
+coverted Image to jpg 907 
+output classification type 4
+r:27.343750 ,l: 1.562500, far : 58.203125
+ 
+storing image with buf len 907
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 925 
+arrow detected 
+Image Captured
+coverted Image to jpg 937 
+output classification type 4
+r:32.031250 ,l: 1.562500, far : 53.125000
+ 
+storing image with buf len 937
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 951 
+Image Captured
+coverted Image to jpg 918 
+arrow detected 
+Image Captured
+coverted Image to jpg 925 
+output classification type 4
+r:23.437500 ,l: 1.562500, far : 60.546875
+ 
+storing image with buf len 925
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 920 
+output classification type 4
+r:29.296875 ,l: 1.562500, far : 55.078125
+ 
+storing image with buf len 920
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 917 
+arrow detected 
+Image Captured
+coverted Image to jpg 932 
+output classification type 4
+r:26.562500 ,l: 1.562500, far : 60.156250
+ 
+storing image with buf len 932
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 913 
+Image Captured
+coverted Image to jpg 923 
+arrow detected 
+Image Captured
+coverted Image to jpg 928 
+output classification type 4
+r:25.781250 ,l: 1.953125, far : 58.593750
+ 
+storing image with buf len 928
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 928 
+arrow detected 
+Image Captured
+coverted Image to jpg 928 
+output classification type 4
+r:27.734375 ,l: 1.953125, far : 55.859375
+ 
+storing image with buf len 928
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 940 
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 916 
+arrow detected 
+Image Captured
+coverted Image to jpg 924 
+output classification type 4
+r:26.171875 ,l: 1.562500, far : 59.375000
+ 
+storing image with buf len 924
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 912 
+Image Captured
+coverted Image to jpg 925 
+arrow detected 
+Image Captured
+coverted Image to jpg 927 
+output classification type 4
+r:29.687500 ,l: 1.562500, far : 56.250000
+ 
+storing image with buf len 927
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 934 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:26.171875 ,l: 1.562500, far : 59.765625
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 928 
+arrow detected 
+Image Captured
+coverted Image to jpg 934 
+output classification type 4
+r:32.421875 ,l: 1.562500, far : 53.515625
+ 
+storing image with buf len 934
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 923 
+arrow detected 
+Image Captured
+coverted Image to jpg 926 
+output classification type 4
+r:26.953125 ,l: 1.562500, far : 60.937500
+ 
+storing image with buf len 926
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 915 
+arrow detected 
+Image Captured
+coverted Image to jpg 942 
+output classification type 4
+r:32.031250 ,l: 1.953125, far : 53.125000
+ 
+storing image with buf len 942
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 936 
+arrow detected 
+Image Captured
+coverted Image to jpg 933 
+output classification type 4
+r:28.125000 ,l: 1.562500, far : 56.640625
+ 
+storing image with buf len 933
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 936 
+output classification type 4
+r:27.343750 ,l: 1.562500, far : 58.203125
+ 
+storing image with buf len 936
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 935 
+arrow detected 
+Image Captured
+coverted Image to jpg 921 
+output classification type 4
+r:37.109375 ,l: 1.171875, far : 50.781250
+ 
+storing image with buf len 921
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 942 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 936 
+arrow detected 
+Image Captured
+coverted Image to jpg 938 
+output classification type 4
+r:22.265625 ,l: 1.562500, far : 65.234375
+ 
+storing image with buf len 938
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 937 
+arrow detected 
+Image Captured
+coverted Image to jpg 932 
+output classification type 4
+r:29.296875 ,l: 1.953125, far : 55.078125
+ 
+storing image with buf len 932
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 921 
+output classification type 4
+r:27.734375 ,l: 1.562500, far : 59.375000
+ 
+storing image with buf len 921
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 938 
+arrow detected 
+Image Captured
+coverted Image to jpg 937 
+output classification type 4
+r:35.546875 ,l: 1.562500, far : 51.953125
+ 
+storing image with buf len 937
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 929 
+arrow detected 
+Image Captured
+coverted Image to jpg 932 
+output classification type 4
+r:32.031250 ,l: 1.953125, far : 53.515625
+ 
+storing image with buf len 932
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:29.687500 ,l: 1.562500, far : 56.250000
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 923 
+arrow detected 
+Image Captured
+coverted Image to jpg 917 
+output classification type 4
+r:33.593750 ,l: 1.562500, far : 51.953125
+ 
+storing image with buf len 917
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 931 
+output classification type 4
+r:29.296875 ,l: 1.953125, far : 55.078125
+ 
+storing image with buf len 931
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 928 
+arrow detected 
+Image Captured
+coverted Image to jpg 926 
+output classification type 4
+r:34.765625 ,l: 1.171875, far : 51.171875
+ 
+storing image with buf len 926
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 940 
+arrow detected 
+Image Captured
+coverted Image to jpg 920 
+output classification type 4
+r:32.421875 ,l: 1.562500, far : 50.781250
+ 
+storing image with buf len 920
+Image Captured
+coverted Image to jpg 916 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 926 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:31.640625 ,l: 1.953125, far : 52.734375
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 922 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:30.468750 ,l: 1.562500, far : 53.515625
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 939 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 921 
+arrow detected 
+Image Captured
+coverted Image to jpg 931 
+output classification type 4
+r:25.781250 ,l: 1.562500, far : 58.984375
+ 
+storing image with buf len 931
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 929 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:29.687500 ,l: 1.562500, far : 56.250000
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 944 
+arrow detected 
+Image Captured
+coverted Image to jpg 936 
+output classification type 4
+r:31.250000 ,l: 1.562500, far : 55.468750
+ 
+storing image with buf len 936
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 923 
+arrow detected 
+Image Captured
+coverted Image to jpg 919 
+output classification type 4
+r:27.734375 ,l: 1.562500, far : 55.859375
+ 
+storing image with buf len 919
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 926 
+arrow detected 
+Image Captured
+coverted Image to jpg 931 
+output classification type 4
+r:33.984375 ,l: 1.562500, far : 49.609375
+ 
+storing image with buf len 931
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 924 
+arrow detected 
+Image Captured
+coverted Image to jpg 915 
+output classification type 4
+r:24.609375 ,l: 1.953125, far : 59.765625
+ 
+storing image with buf len 915
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 915 
+arrow detected 
+Image Captured
+coverted Image to jpg 918 
+output classification type 4
+r:26.562500 ,l: 1.171875, far : 60.937500
+ 
+storing image with buf len 918
+Image Captured
+coverted Image to jpg 939 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 926 
+arrow detected 
+Image Captured
+coverted Image to jpg 925 
+output classification type 4
+r:27.734375 ,l: 2.343750, far : 52.343750
+ 
+storing image with buf len 925
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 911 
+arrow detected 
+Image Captured
+coverted Image to jpg 921 
+output classification type 4
+r:23.437500 ,l: 1.953125, far : 60.546875
+ 
+storing image with buf len 921
+Image Captured
+coverted Image to jpg 909 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 928 
+arrow detected 
+Image Captured
+coverted Image to jpg 923 
+output classification type 4
+r:31.640625 ,l: 1.171875, far : 56.250000
+ 
+storing image with buf len 923
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 926 
+arrow detected 
+Image Captured
+coverted Image to jpg 943 
+output classification type 4
+r:32.812500 ,l: 1.953125, far : 51.171875
+ 
+storing image with buf len 943
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 913 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 918 
+arrow detected 
+Image Captured
+coverted Image to jpg 946 
+output classification type 4
+r:28.906250 ,l: 1.953125, far : 54.687500
+ 
+storing image with buf len 946
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 940 
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 925 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:30.468750 ,l: 1.562500, far : 50.781250
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 952 
+arrow detected 
+Image Captured
+coverted Image to jpg 934 
+output classification type 4
+r:25.000000 ,l: 1.562500, far : 60.937500
+ 
+storing image with buf len 934
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 937 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 932 
+output classification type 4
+r:27.343750 ,l: 1.953125, far : 55.078125
+ 
+storing image with buf len 932
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 943 
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:30.468750 ,l: 1.562500, far : 57.421875
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 916 
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 925 
+arrow detected 
+Image Captured
+coverted Image to jpg 941 
+output classification type 4
+r:32.421875 ,l: 1.171875, far : 53.906250
+ 
+storing image with buf len 941
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 939 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 935 
+arrow detected 
+Image Captured
+coverted Image to jpg 924 
+output classification type 4
+r:30.468750 ,l: 1.562500, far : 57.421875
+ 
+storing image with buf len 924
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 939 
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 926 
+arrow detected 
+Image Captured
+coverted Image to jpg 930 
+output classification type 4
+r:29.687500 ,l: 1.562500, far : 52.734375
+ 
+storing image with buf len 930
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 915 
+Image Captured
+coverted Image to jpg 925 
+arrow detected 
+Image Captured
+coverted Image to jpg 919 
+output classification type 4
+r:28.906250 ,l: 1.953125, far : 54.687500
+ 
+storing image with buf len 919
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 932 
+output classification type 4
+r:32.031250 ,l: 1.171875, far : 53.515625
+ 
+storing image with buf len 932
+Image Captured
+coverted Image to jpg 940 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 942 
+Image Captured
+coverted Image to jpg 923 
+arrow detected 
+Image Captured
+coverted Image to jpg 918 
+output classification type 4
+r:25.781250 ,l: 1.562500, far : 58.984375
+ 
+storing image with buf len 918
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 948 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 927 
+output classification type 4
+r:28.125000 ,l: 1.562500, far : 56.250000
+ 
+storing image with buf len 927
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 930 
+output classification type 4
+r:31.640625 ,l: 1.562500, far : 52.343750
+ 
+storing image with buf len 930
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 916 
+Image Captured
+coverted Image to jpg 912 
+arrow detected 
+Image Captured
+coverted Image to jpg 936 
+output classification type 4
+r:26.562500 ,l: 1.562500, far : 60.937500
+ 
+storing image with buf len 936
+Image Captured
+coverted Image to jpg 925 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 924 
+arrow detected 
+Image Captured
+coverted Image to jpg 933 
+output classification type 4
+r:24.609375 ,l: 1.562500, far : 63.671875
+ 
+storing image with buf len 933
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 928 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 936 
+arrow detected 
+Image Captured
+coverted Image to jpg 928 
+output classification type 4
+r:31.250000 ,l: 1.953125, far : 51.562500
+ 
+storing image with buf len 928
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 933 
+output classification type 4
+r:24.218750 ,l: 1.562500, far : 62.890625
+ 
+storing image with buf len 933
+Image Captured
+coverted Image to jpg 911 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 943 
+Image Captured
+coverted Image to jpg 925 
+arrow detected 
+Image Captured
+coverted Image to jpg 919 
+output classification type 4
+r:28.125000 ,l: 1.953125, far : 53.125000
+ 
+storing image with buf len 919
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 941 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 918 
+arrow detected 
+Image Captured
+coverted Image to jpg 917 
+output classification type 4
+r:34.765625 ,l: 1.562500, far : 50.781250
+ 
+storing image with buf len 917
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 931 
+Image Captured
+coverted Image to jpg 914 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 927 
+arrow detected 
+Image Captured
+coverted Image to jpg 938 
+output classification type 4
+r:36.718750 ,l: 1.562500, far : 47.265625
+ 
+storing image with buf len 938
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 934 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 925 
+arrow detected 
+Image Captured
+coverted Image to jpg 931 
+output classification type 4
+r:24.609375 ,l: 1.562500, far : 63.281250
+ 
+storing image with buf len 931
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 939 
+arrow detected 
+Image Captured
+coverted Image to jpg 930 
+output classification type 4
+r:30.859375 ,l: 1.562500, far : 54.687500
+ 
+storing image with buf len 930
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 935 
+arrow detected 
+Image Captured
+coverted Image to jpg 921 
+output classification type 4
+r:32.031250 ,l: 1.562500, far : 53.125000
+ 
+storing image with buf len 921
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 920 
+Image Captured
+coverted Image to jpg 911 
+arrow detected 
+Image Captured
+coverted Image to jpg 913 
+output classification type 4
+r:34.375000 ,l: 1.562500, far : 50.000000
+ 
+storing image with buf len 913
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 927 
+Image Captured
+coverted Image to jpg 924 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 929 
+output classification type 4
+r:26.562500 ,l: 1.171875, far : 60.546875
+ 
+storing image with buf len 929
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 929 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 922 
+arrow detected 
+Image Captured
+coverted Image to jpg 922 
+output classification type 4
+r:27.734375 ,l: 1.562500, far : 55.859375
+ 
+storing image with buf len 922
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 917 
+Image Captured
+coverted Image to jpg 918 
+arrow detected 
+Image Captured
+coverted Image to jpg 923 
+output classification type 4
+r:28.515625 ,l: 1.562500, far : 57.031250
+ 
+storing image with buf len 923
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 935 
+Image Captured
+coverted Image to jpg 923 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 921 
+arrow detected 
+Image Captured
+coverted Image to jpg 919 
+output classification type 4
+r:35.546875 ,l: 1.562500, far : 48.437500
+ 
+storing image with buf len 919
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 922 
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 930 
+arrow detected 
+Image Captured
+coverted Image to jpg 942 
+output classification type 4
+r:31.250000 ,l: 1.953125, far : 55.078125
+ 
+storing image with buf len 942
+Image Captured
+coverted Image to jpg 912 
+Image Captured
+coverted Image to jpg 933 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 917 
+arrow detected 
+Image Captured
+coverted Image to jpg 916 
+output classification type 4
+r:28.125000 ,l: 1.562500, far : 53.125000
+ 
+storing image with buf len 916
+Image Captured
+coverted Image to jpg 916 
+Image Captured
+coverted Image to jpg 913 
+Image Captured
+coverted Image to jpg 926 
+Image Captured
+coverted Image to jpg 921 
+Image Captured
+coverted Image to jpg 929 
+arrow detected 
+Image Captured
+coverted Image to jpg 928 
+output classification type 4
+r:29.296875 ,l: 1.562500, far : 55.468750
+ 
+storing image with buf len 928
+Image Captured
+coverted Image to jpg 918 
+Image Captured
+coverted Image to jpg 919 
+Image Captured
+coverted Image to jpg 914 

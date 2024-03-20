@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "person_detection",
-    "project_version":    "06e1182-dirty",
+    "project_version":    "366ca46-dirty",
     "project_path":       "/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection",
     "idf_path":           "/Users/saket/esp/esp-idf",
     "build_dir":          "/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build",

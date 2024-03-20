@@ -1,0 +1,1639 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40056f60
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x186c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3130
+entry 0x403c9934
+[0;32mI (27) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 19 2024 16:28:59[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=e2db0h (929200) map[0m
+[0;32mI (245) esp_image: segment 1: paddr=000f2dd8 vaddr=3fc99200 size=05960h ( 22880) load[0m
+[0;32mI (250) esp_image: segment 2: paddr=000f8740 vaddr=40374000 size=078d8h ( 30936) load[0m
+[0;32mI (257) esp_image: segment 3: paddr=00100020 vaddr=42000020 size=d31b8h (864696) map[0m
+[0;32mI (391) esp_image: segment 4: paddr=001d31e0 vaddr=4037b8d8 size=0d8a0h ( 55456) load[0m
+[0;32mI (411) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (411) boot: Disabling RNG early entropy source...[0m
+[0;32mI (422) cpu_start: Multicore app[0m
+[0;32mI (423) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (423) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (426) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (431) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (437) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (442) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (447) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (453) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (459) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (464) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (470) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (476) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (481) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (486) esp_psram: Speed: 80MHz[0m
+[0;32mI (489) cpu_start: Pro cpu up.[0m
+[0;32mI (493) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (785) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (794) cpu_start: Pro cpu start user code[0m
+[0;32mI (794) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (795) cpu_start: Application information:[0m
+[0;32mI (797) cpu_start: Project name:     person_detection[0m
+[0;32mI (803) cpu_start: App version:      366ca46-dirty[0m
+[0;32mI (809) cpu_start: Compile time:     Mar 19 2024 16:28:54[0m
+[0;32mI (815) cpu_start: ELF file SHA256:  d825aa4ce16dcacd...[0m
+[0;32mI (821) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (826) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (830) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (835) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (840) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (847) heap_init: At 3FCA6008 len 00043708 (269 KiB): DRAM[0m
+[0;32mI (853) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (860) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (866) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (874) spi_flash: detected chip: gd[0m
+[0;32mI (878) spi_flash: flash io: qio[0m
+[0;32mI (883) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (889) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (896) app_start: Starting scheduler on CPU0[0m
+[0;32mI (901) app_start: Starting scheduler on CPU1[0m
+[0;32mI (901) main_task: Started on CPU0[0m
+[0;32mI (911) main_task: Calling app_main()[0m
+[0;32mI (931) pp: pp rom version: e7ae62f[0m
+[0;32mI (931) net80211: net80211 rom version: e7ae62f[0m
+I (941) wifi:wifi driver task: 3fcb0c58, prio:23, stack:6656, core=0
+I (941) wifi:wifi firmware version: ce9244d
+I (941) wifi:wifi certification version: v7.0
+I (941) wifi:config NVS flash: enabled
+I (941) wifi:config nano formating: disabled
+I (951) wifi:Init data frame dynamic rx buffer num: 32
+I (951) wifi:Init management frame dynamic rx buffer num: 32
+I (961) wifi:Init management short buffer num: 32
+I (961) wifi:Init dynamic tx buffer num: 32
+I (971) wifi:Init tx cache buffer num: 32
+I (971) wifi:Init static tx FG buffer num: 2
+I (971) wifi:Init static rx buffer size: 1600
+I (981) wifi:Init static rx buffer num: 10
+I (981) wifi:Init dynamic rx buffer num: 32
+[0;32mI (991) wifi_init: rx ba win: 6[0m
+[0;32mI (991) wifi_init: tcpip mbox: 32[0m
+[0;32mI (991) wifi_init: udp mbox: 6[0m
+[0;32mI (1001) wifi_init: tcp mbox: 6[0m
+[0;32mI (1001) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1001) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1011) wifi_init: tcp mss: 1440[0m
+[0;32mI (1011) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1021) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1031) phy_init: phy_version 601,98f2a71,Jun 29 2023,09:58:12[0m
+I (1061) wifi:mode : softAP (48:27:e2:f0:32:a1)
+I (1091) wifi:Total power save buffer number: 16
+I (1091) wifi:Init max length of beacon: 752/752
+I (1091) wifi:Init max length of beacon: 752/752
+[0;32mI (1091) VISIO: ESP32 IP:192.168.4.1[0m
+[0;32mI (1091) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+PSRAM size: 8695300 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (1161) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (1161) cam_hal: cam init ok[0m
+[0;32mI (1161) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (1161) sccb: sccb_i2c_port=1[0m
+[0;32mI (1181) camera: Detected camera at address=0x30[0m
+[0;32mI (1181) camera: Detected OV2640 camera[0m
+[0;32mI (1181) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1251) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (1251) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (1261) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (1271) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1281) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1281) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1291) cam_hal: cam config ok[0m
+[0;32mI (1291) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+coverted Image to jpg 629 
+Image Captured
+coverted Image to jpg 1057 
+Image Captured
+coverted Image to jpg 1027 
+Image Captured
+coverted Image to jpg 1045 
+Image Captured
+coverted Image to jpg 1053 
+ 
+storing image with buf len 1053
+Image Captured
+coverted Image to jpg 1066 
+Image Captured
+coverted Image to jpg 1041 
+Image Captured
+coverted Image to jpg 1039 
+Image Captured
+coverted Image to jpg 1069 
+Image Captured
+coverted Image to jpg 1071 
+ 
+storing image with buf len 1071
+Image Captured
+coverted Image to jpg 1047 
+Image Captured
+coverted Image to jpg 1057 
+Image Captured
+coverted Image to jpg 1039 
+Image Captured
+coverted Image to jpg 1053 
+Image Captured
+coverted Image to jpg 1062 
+ 
+storing image with buf len 1062
+Image Captured
+coverted Image to jpg 1064 
+Image Captured
+coverted Image to jpg 1049 
+Image Captured
+coverted Image to jpg 1094 
+Image Captured
+coverted Image to jpg 1076 
+Image Captured
+coverted Image to jpg 1063 
+ 
+storing image with buf len 1063
+Image Captured
+coverted Image to jpg 1071 
+Image Captured
+coverted Image to jpg 1072 
+Image Captured
+coverted Image to jpg 1077 
+Image Captured
+coverted Image to jpg 1051 
+Image Captured
+coverted Image to jpg 1074 
+ 
+storing image with buf len 1074
+Image Captured
+coverted Image to jpg 1061 
+Image Captured
+coverted Image to jpg 1087 
+Image Captured
+coverted Image to jpg 1082 
+Image Captured
+coverted Image to jpg 1074 
+Image Captured
+coverted Image to jpg 1061 
+ 
+storing image with buf len 1061
+Image Captured
+coverted Image to jpg 1083 
+Image Captured
+coverted Image to jpg 1056 
+Image Captured
+coverted Image to jpg 1055 
+Image Captured
+coverted Image to jpg 1083 
+Image Captured
+coverted Image to jpg 1079 
+ 
+storing image with buf len 1079
+Image Captured
+coverted Image to jpg 1080 
+Image Captured
+coverted Image to jpg 1089 
+Image Captured
+coverted Image to jpg 1075 
+Image Captured
+coverted Image to jpg 1070 
+Image Captured
+coverted Image to jpg 1068 
+ 
+storing image with buf len 1068
+Image Captured
+coverted Image to jpg 1077 
+Image Captured
+coverted Image to jpg 1085 
+Image Captured
+coverted Image to jpg 1081 
+Image Captured
+coverted Image to jpg 1086 
+Image Captured
+coverted Image to jpg 1117 
+ 
+storing image with buf len 1117
+Image Captured
+coverted Image to jpg 1064 
+Image Captured
+coverted Image to jpg 1091 
+Image Captured
+coverted Image to jpg 1087 
+Image Captured
+coverted Image to jpg 1097 
+Image Captured
+coverted Image to jpg 1109 
+ 
+storing image with buf len 1109
+Image Captured
+coverted Image to jpg 1080 
+Image Captured
+coverted Image to jpg 1095 
+Image Captured
+coverted Image to jpg 1081 
+Image Captured
+coverted Image to jpg 1110 
+Image Captured
+coverted Image to jpg 1093 
+ 
+storing image with buf len 1093
+Image Captured
+coverted Image to jpg 1090 
+Image Captured
+coverted Image to jpg 1076 
+Image Captured
+coverted Image to jpg 1072 
+Image Captured
+coverted Image to jpg 1094 
+Image Captured
+coverted Image to jpg 1041 
+ 
+storing image with buf len 1041
+Image Captured
+coverted Image to jpg 1039 
+Image Captured
+coverted Image to jpg 945 
+Image Captured
+coverted Image to jpg 861 
+Image Captured
+coverted Image to jpg 1163 
+Image Captured
+coverted Image to jpg 1209 
+ 
+storing image with buf len 1209
+Image Captured
+coverted Image to jpg 1194 
+Image Captured
+coverted Image to jpg 1170 
+Image Captured
+coverted Image to jpg 1204 
+Image Captured
+coverted Image to jpg 1291 
+Image Captured
+coverted Image to jpg 1183 
+ 
+storing image with buf len 1183
+Image Captured
+coverted Image to jpg 1280 
+Image Captured
+coverted Image to jpg 1384 
+Image Captured
+coverted Image to jpg 1387 
+Image Captured
+coverted Image to jpg 1404 
+Image Captured
+coverted Image to jpg 1276 
+ 
+storing image with buf len 1276
+Image Captured
+coverted Image to jpg 1260 
+Image Captured
+coverted Image to jpg 1281 
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1632 
+Image Captured
+coverted Image to jpg 1603 
+ 
+storing image with buf len 1603
+Image Captured
+coverted Image to jpg 1473 
+Image Captured
+coverted Image to jpg 1342 
+Image Captured
+coverted Image to jpg 1085 
+Image Captured
+coverted Image to jpg 1004 
+Image Captured
+coverted Image to jpg 1030 
+ 
+storing image with buf len 1030
+Image Captured
+coverted Image to jpg 1011 
+Image Captured
+coverted Image to jpg 1061 
+Image Captured
+coverted Image to jpg 1083 
+Image Captured
+coverted Image to jpg 1154 
+Image Captured
+coverted Image to jpg 1222 
+ 
+storing image with buf len 1222
+Image Captured
+coverted Image to jpg 1296 
+Image Captured
+coverted Image to jpg 1086 
+Image Captured
+coverted Image to jpg 1030 
+Image Captured
+coverted Image to jpg 1248 
+Image Captured
+coverted Image to jpg 1224 
+ 
+storing image with buf len 1224
+Image Captured
+coverted Image to jpg 1261 
+Image Captured
+coverted Image to jpg 1264 
+Image Captured
+coverted Image to jpg 1267 
+Image Captured
+coverted Image to jpg 1207 
+Image Captured
+coverted Image to jpg 1128 
+ 
+storing image with buf len 1128
+Image Captured
+coverted Image to jpg 1064 
+Image Captured
+coverted Image to jpg 1097 
+Image Captured
+coverted Image to jpg 1212 
+Image Captured
+coverted Image to jpg 1173 
+Image Captured
+coverted Image to jpg 1206 
+arrow detected at 203 :96.875000%
+arrow detected 
+Image Captured
+coverted Image to jpg 1314 
+output classification type 3
+r:87.890625 ,l: 5.859375, far : 5.859375
+ 
+storing image with buf len 1314
+Image Captured
+coverted Image to jpg 1303 
+Image Captured
+coverted Image to jpg 1370 
+Image Captured
+coverted Image to jpg 1373 
+Image Captured
+coverted Image to jpg 1525 
+Image Captured
+coverted Image to jpg 1515 
+ 
+storing image with buf len 1515
+Image Captured
+coverted Image to jpg 1535 
+Image Captured
+coverted Image to jpg 1469 
+Image Captured
+coverted Image to jpg 1355 
+Image Captured
+coverted Image to jpg 1493 
+Image Captured
+coverted Image to jpg 1441 
+arrow detected at 141 :93.359375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1455 
+output classification type 3
+r:87.109375 ,l: 7.812500, far : 4.687500
+ 
+storing image with buf len 1455
+Image Captured
+coverted Image to jpg 1441 
+Image Captured
+coverted Image to jpg 1517 
+Image Captured
+coverted Image to jpg 1519 
+Image Captured
+coverted Image to jpg 1393 
+Image Captured
+coverted Image to jpg 1440 
+ 
+storing image with buf len 1440
+Image Captured
+coverted Image to jpg 1426 
+Image Captured
+coverted Image to jpg 1452 
+Image Captured
+coverted Image to jpg 1422 
+Image Captured
+coverted Image to jpg 1440 
+Image Captured
+coverted Image to jpg 1415 
+ 
+storing image with buf len 1415
+Image Captured
+coverted Image to jpg 1336 
+Image Captured
+coverted Image to jpg 1437 
+Image Captured
+coverted Image to jpg 1449 
+Image Captured
+coverted Image to jpg 1461 
+Image Captured
+coverted Image to jpg 1518 
+ 
+storing image with buf len 1518
+Image Captured
+coverted Image to jpg 1568 
+Image Captured
+coverted Image to jpg 1674 
+Image Captured
+coverted Image to jpg 1631 
+Image Captured
+coverted Image to jpg 1543 
+Image Captured
+coverted Image to jpg 1523 
+ 
+storing image with buf len 1523
+Image Captured
+coverted Image to jpg 1523 
+Image Captured
+coverted Image to jpg 1554 
+Image Captured
+coverted Image to jpg 1544 
+Image Captured
+coverted Image to jpg 1594 
+Image Captured
+coverted Image to jpg 1561 
+ 
+storing image with buf len 1561
+Image Captured
+coverted Image to jpg 1550 
+Image Captured
+coverted Image to jpg 1638 
+Image Captured
+coverted Image to jpg 1652 
+Image Captured
+coverted Image to jpg 1527 
+Image Captured
+coverted Image to jpg 1599 
+ 
+storing image with buf len 1599
+Image Captured
+coverted Image to jpg 1559 
+Image Captured
+coverted Image to jpg 1622 
+Image Captured
+coverted Image to jpg 1671 
+Image Captured
+coverted Image to jpg 1195 
+Image Captured
+coverted Image to jpg 1174 
+arrow detected at 63 :90.625000%
+arrow detected 
+Image Captured
+coverted Image to jpg 1112 
+output classification type 3
+r:21.484375 ,l: 66.796875, far : 11.328125
+ 
+storing image with buf len 1112
+Image Captured
+coverted Image to jpg 1062 
+Image Captured
+coverted Image to jpg 1196 
+Image Captured
+coverted Image to jpg 1075 
+Image Captured
+coverted Image to jpg 1479 
+Image Captured
+coverted Image to jpg 1502 
+ 
+storing image with buf len 1502
+Image Captured
+coverted Image to jpg 1499 
+Image Captured
+coverted Image to jpg 1513 
+Image Captured
+coverted Image to jpg 1503 
+Image Captured
+coverted Image to jpg 1511 
+Image Captured
+coverted Image to jpg 1488 
+ 
+storing image with buf len 1488
+Image Captured
+coverted Image to jpg 1468 
+Image Captured
+coverted Image to jpg 1455 
+Image Captured
+coverted Image to jpg 1460 
+Image Captured
+coverted Image to jpg 1504 
+Image Captured
+coverted Image to jpg 1498 
+arrow detected at 87 :91.796875%
+arrow detected 
+Image Captured
+coverted Image to jpg 1472 
+output classification type 3
+r:39.843750 ,l: 55.859375, far : 4.296875
+ 
+storing image with buf len 1472
+Image Captured
+coverted Image to jpg 1452 
+Image Captured
+coverted Image to jpg 1437 
+Image Captured
+coverted Image to jpg 1450 
+Image Captured
+coverted Image to jpg 1223 
+Image Captured
+coverted Image to jpg 1466 
+arrow detected at 113 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1509 
+output classification type 3
+r:18.750000 ,l: 52.343750, far : 28.906250
+ 
+storing image with buf len 1509
+Image Captured
+coverted Image to jpg 1444 
+Image Captured
+coverted Image to jpg 1568 
+Image Captured
+coverted Image to jpg 1340 
+Image Captured
+coverted Image to jpg 1766 
+Image Captured
+coverted Image to jpg 1811 
+arrow detected at 131 :99.218750%
+arrow detected at 133 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1815 
+output classification type 3
+r:62.109375 ,l: 28.515625, far : 9.765625
+ 
+storing image with buf len 1815
+Image Captured
+coverted Image to jpg 1787 
+Image Captured
+coverted Image to jpg 1701 
+Image Captured
+coverted Image to jpg 1729 
+Image Captured
+coverted Image to jpg 1834 
+Image Captured
+coverted Image to jpg 1814 
+arrow detected at 109 :99.218750%
+arrow detected at 133 :95.312500%
+arrow detected 
+Image Captured
+coverted Image to jpg 1803 
+output classification type 3
+r:54.296875 ,l: 33.203125, far : 12.500000
+ 
+storing image with buf len 1803
+Image Captured
+coverted Image to jpg 1836 
+Image Captured
+coverted Image to jpg 1854 
+Image Captured
+coverted Image to jpg 1840 
+Image Captured
+coverted Image to jpg 1672 
+Image Captured
+coverted Image to jpg 1773 
+arrow detected at 131 :98.437500%
+arrow detected 
+Image Captured
+coverted Image to jpg 1691 
+output classification type 3
+r:64.453125 ,l: 28.125000, far : 7.421875
+ 
+storing image with buf len 1691
+Image Captured
+coverted Image to jpg 1686 
+Image Captured
+coverted Image to jpg 1698 
+Image Captured
+coverted Image to jpg 1662 
+Image Captured
+coverted Image to jpg 1561 
+Image Captured
+coverted Image to jpg 1567 
+arrow detected at 131 :90.625000%
+arrow detected 
+Image Captured
+coverted Image to jpg 1568 
+output classification type 3
+r:75.000000 ,l: 21.875000, far : 3.125000
+ 
+storing image with buf len 1568
+Image Captured
+coverted Image to jpg 1577 
+Image Captured
+coverted Image to jpg 1586 
+Image Captured
+coverted Image to jpg 1631 
+Image Captured
+coverted Image to jpg 1594 
+Image Captured
+coverted Image to jpg 1639 
+arrow detected at 155 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1649 
+output classification type 3
+r:91.406250 ,l: 7.421875, far : 1.171875
+ 
+storing image with buf len 1649
+Image Captured
+coverted Image to jpg 1673 
+Image Captured
+coverted Image to jpg 1663 
+Image Captured
+coverted Image to jpg 1660 
+Image Captured
+coverted Image to jpg 1573 
+Image Captured
+coverted Image to jpg 1574 
+arrow detected at 155 :91.796875%
+arrow detected 
+Image Captured
+coverted Image to jpg 1560 
+output classification type 3
+r:94.531250 ,l: 3.906250, far : 1.562500
+ 
+storing image with buf len 1560
+Image Captured
+coverted Image to jpg 1582 
+Image Captured
+coverted Image to jpg 1576 
+Image Captured
+coverted Image to jpg 1607 
+Image Captured
+coverted Image to jpg 1570 
+Image Captured
+coverted Image to jpg 1587 
+arrow detected at 115 :98.046875%
+arrow detected 
+Image Captured
+coverted Image to jpg 1591 
+output classification type 3
+r:89.062500 ,l: 8.203125, far : 3.125000
+ right
+ 
+storing image with buf len 1591
+Image Captured
+coverted Image to jpg 1582 
+Image Captured
+coverted Image to jpg 1590 
+Image Captured
+coverted Image to jpg 1572 
+Image Captured
+coverted Image to jpg 1172 
+Image Captured
+coverted Image to jpg 1167 
+ 
+storing image with buf len 1167
+Image Captured
+coverted Image to jpg 1185 
+Image Captured
+coverted Image to jpg 1190 
+Image Captured
+coverted Image to jpg 1174 
+Image Captured
+coverted Image to jpg 1171 
+Image Captured
+coverted Image to jpg 1197 
+ 
+storing image with buf len 1197
+Image Captured
+coverted Image to jpg 1198 
+Image Captured
+coverted Image to jpg 1208 
+Image Captured
+coverted Image to jpg 1214 
+Image Captured
+coverted Image to jpg 1214 
+Image Captured
+coverted Image to jpg 1226 
+ 
+storing image with buf len 1226
+Image Captured
+coverted Image to jpg 1213 
+Image Captured
+coverted Image to jpg 1203 
+Image Captured
+coverted Image to jpg 1182 
+Image Captured
+coverted Image to jpg 1194 
+Image Captured
+coverted Image to jpg 1188 
+ 
+storing image with buf len 1188
+Image Captured
+coverted Image to jpg 1190 
+Image Captured
+coverted Image to jpg 1189 
+Image Captured
+coverted Image to jpg 1191 
+Image Captured
+coverted Image to jpg 1172 
+Image Captured
+coverted Image to jpg 1178 
+ 
+storing image with buf len 1178
+Image Captured
+coverted Image to jpg 1192 
+Image Captured
+coverted Image to jpg 1158 
+Image Captured
+coverted Image to jpg 1082 
+Image Captured
+coverted Image to jpg 1157 
+Image Captured
+coverted Image to jpg 1205 
+ 
+storing image with buf len 1205
+Image Captured
+coverted Image to jpg 1205 
+Image Captured
+coverted Image to jpg 1206 
+Image Captured
+coverted Image to jpg 1160 
+Image Captured
+coverted Image to jpg 1187 
+Image Captured
+coverted Image to jpg 1217 
+ 
+storing image with buf len 1217
+Image Captured
+coverted Image to jpg 1257 
+Image Captured
+coverted Image to jpg 1247 
+Image Captured
+coverted Image to jpg 1220 
+Image Captured
+coverted Image to jpg 1242 
+Image Captured
+coverted Image to jpg 1300 
+ 
+storing image with buf len 1300
+Image Captured
+coverted Image to jpg 1303 
+Image Captured
+coverted Image to jpg 1307 
+Image Captured
+coverted Image to jpg 1238 
+Image Captured
+coverted Image to jpg 1258 
+Image Captured
+coverted Image to jpg 1248 
+ 
+storing image with buf len 1248
+Image Captured
+coverted Image to jpg 1187 
+Image Captured
+coverted Image to jpg 1224 
+Image Captured
+coverted Image to jpg 1275 
+Image Captured
+coverted Image to jpg 1292 
+Image Captured
+coverted Image to jpg 1306 
+ 
+storing image with buf len 1306
+Image Captured
+coverted Image to jpg 1282 
+Image Captured
+coverted Image to jpg 1285 
+Image Captured
+coverted Image to jpg 1317 
+Image Captured
+coverted Image to jpg 1321 
+Image Captured
+coverted Image to jpg 1245 
+ 
+storing image with buf len 1245
+Image Captured
+coverted Image to jpg 1292 
+Image Captured
+coverted Image to jpg 1321 
+Image Captured
+coverted Image to jpg 1304 
+Image Captured
+coverted Image to jpg 1256 
+Image Captured
+coverted Image to jpg 1242 
+ 
+storing image with buf len 1242
+Image Captured
+coverted Image to jpg 1251 
+Image Captured
+coverted Image to jpg 1299 
+Image Captured
+coverted Image to jpg 1289 
+Image Captured
+coverted Image to jpg 1320 
+Image Captured
+coverted Image to jpg 1255 
+ 
+storing image with buf len 1255
+Image Captured
+coverted Image to jpg 1241 
+Image Captured
+coverted Image to jpg 1202 
+Image Captured
+coverted Image to jpg 1255 
+Image Captured
+coverted Image to jpg 1178 
+Image Captured
+coverted Image to jpg 1111 
+ 
+storing image with buf len 1111
+Image Captured
+coverted Image to jpg 1135 
+Image Captured
+coverted Image to jpg 1121 
+Image Captured
+coverted Image to jpg 1069 
+Image Captured
+coverted Image to jpg 1139 
+Image Captured
+coverted Image to jpg 1197 
+ 
+storing image with buf len 1197
+Image Captured
+coverted Image to jpg 1175 
+Image Captured
+coverted Image to jpg 1178 
+Image Captured
+coverted Image to jpg 1218 
+Image Captured
+coverted Image to jpg 1223 
+Image Captured
+coverted Image to jpg 1230 
+ 
+storing image with buf len 1230
+Image Captured
+coverted Image to jpg 1278 
+Image Captured
+coverted Image to jpg 1147 
+Image Captured
+coverted Image to jpg 1151 
+Image Captured
+coverted Image to jpg 1116 
+Image Captured
+coverted Image to jpg 1063 
+ 
+storing image with buf len 1063
+Image Captured
+coverted Image to jpg 1043 
+Image Captured
+coverted Image to jpg 1120 
+Image Captured
+coverted Image to jpg 1088 
+Image Captured
+coverted Image to jpg 1117 
+Image Captured
+coverted Image to jpg 1015 
+ 
+storing image with buf len 1015
+Image Captured
+coverted Image to jpg 1042 
+Image Captured
+coverted Image to jpg 1070 
+Image Captured
+coverted Image to jpg 1074 
+Image Captured
+coverted Image to jpg 1073 
+Image Captured
+coverted Image to jpg 1068 
+ 
+storing image with buf len 1068
+Image Captured
+coverted Image to jpg 1063 
+Image Captured
+coverted Image to jpg 1061 
+Image Captured
+coverted Image to jpg 1052 
+Image Captured
+coverted Image to jpg 1255 
+Image Captured
+coverted Image to jpg 1274 
+ 
+storing image with buf len 1274
+Image Captured
+coverted Image to jpg 1203 
+Image Captured
+coverted Image to jpg 1264 
+Image Captured
+coverted Image to jpg 1245 
+Image Captured
+coverted Image to jpg 1108 
+Image Captured
+coverted Image to jpg 1015 
+ 
+storing image with buf len 1015
+Image Captured
+coverted Image to jpg 992 
+Image Captured
+coverted Image to jpg 977 
+Image Captured
+coverted Image to jpg 964 
+Image Captured
+coverted Image to jpg 968 
+Image Captured
+coverted Image to jpg 1074 
+ 
+storing image with buf len 1074
+Image Captured
+coverted Image to jpg 1003 
+Image Captured
+coverted Image to jpg 1007 
+Image Captured
+coverted Image to jpg 975 
+Image Captured
+coverted Image to jpg 1003 
+Image Captured
+coverted Image to jpg 906 
+ 
+storing image with buf len 906
+Image Captured
+coverted Image to jpg 912 
+Image Captured
+coverted Image to jpg 930 
+Image Captured
+coverted Image to jpg 1034 
+Image Captured
+coverted Image to jpg 1697 
+Image Captured
+coverted Image to jpg 1472 
+ 
+storing image with buf len 1472
+Image Captured
+coverted Image to jpg 1767 
+Image Captured
+coverted Image to jpg 1854 
+Image Captured
+coverted Image to jpg 1522 
+Image Captured
+coverted Image to jpg 1565 
+Image Captured
+coverted Image to jpg 1223 
+ 
+storing image with buf len 1223
+Image Captured
+coverted Image to jpg 1083 
+Image Captured
+coverted Image to jpg 932 
+Image Captured
+coverted Image to jpg 824 
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 889 
+ 
+storing image with buf len 889
+Image Captured
+coverted Image to jpg 904 
+Image Captured
+coverted Image to jpg 1005 
+Image Captured
+coverted Image to jpg 1088 
+Image Captured
+coverted Image to jpg 783 
+Image Captured
+coverted Image to jpg 786 
+ 
+storing image with buf len 786
+Image Captured
+coverted Image to jpg 812 
+Image Captured
+coverted Image to jpg 798 
+Image Captured
+coverted Image to jpg 790 
+Image Captured
+coverted Image to jpg 832 
+Image Captured
+coverted Image to jpg 837 
+ 
+storing image with buf len 837
+Image Captured
+coverted Image to jpg 834 
+Image Captured
+coverted Image to jpg 910 
+Image Captured
+coverted Image to jpg 974 
+Image Captured
+coverted Image to jpg 843 
+Image Captured
+coverted Image to jpg 850 
+ 
+storing image with buf len 850
+Image Captured
+coverted Image to jpg 824 
+Image Captured
+coverted Image to jpg 821 
+Image Captured
+coverted Image to jpg 851 
+Image Captured
+coverted Image to jpg 957 
+Image Captured
+coverted Image to jpg 963 
+ 
+storing image with buf len 963
+Image Captured
+coverted Image to jpg 912 
+Image Captured
+coverted Image to jpg 1025 
+Image Captured
+coverted Image to jpg 1044 
+Image Captured
+coverted Image to jpg 1692 
+Image Captured
+coverted Image to jpg 1502 
+arrow detected at 59 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1576 
+output classification type 3
+r:39.062500 ,l: 60.546875, far : 0.781250
+ 
+storing image with buf len 1576
+Image Captured
+coverted Image to jpg 1665 
+Image Captured
+coverted Image to jpg 1662 
+Image Captured
+coverted Image to jpg 1835 
+Image Captured
+coverted Image to jpg 1616 
+Image Captured
+coverted Image to jpg 1624 
+arrow detected at 115 :99.218750%
+arrow detected at 117 :98.828125%
+arrow detected 
+Image Captured
+coverted Image to jpg 1611 
+output classification type 3
+r:16.406250 ,l: 83.203125, far : 0.000000
+ 
+storing image with buf len 1611
+Image Captured
+coverted Image to jpg 1577 
+Image Captured
+coverted Image to jpg 1586 
+Image Captured
+coverted Image to jpg 1583 
+Image Captured
+coverted Image to jpg 1780 
+Image Captured
+coverted Image to jpg 1791 
+ 
+storing image with buf len 1791
+Image Captured
+coverted Image to jpg 1790 
+Image Captured
+coverted Image to jpg 1843 
+Image Captured
+coverted Image to jpg 1801 
+Image Captured
+coverted Image to jpg 1754 
+Image Captured
+coverted Image to jpg 1717 
+ 
+storing image with buf len 1717
+Image Captured
+coverted Image to jpg 1764 
+Image Captured
+coverted Image to jpg 1769 
+Image Captured
+coverted Image to jpg 1787 
+Image Captured
+coverted Image to jpg 1607 
+Image Captured
+coverted Image to jpg 1656 
+arrow detected at 93 :95.703125%
+arrow detected 
+Image Captured
+coverted Image to jpg 1648 
+output classification type 3
+r:67.578125 ,l: 30.859375, far : 1.562500
+ 
+storing image with buf len 1648
+Image Captured
+coverted Image to jpg 1648 
+Image Captured
+coverted Image to jpg 1676 
+Image Captured
+coverted Image to jpg 1615 
+Image Captured
+coverted Image to jpg 1576 
+Image Captured
+coverted Image to jpg 1504 
+ 
+storing image with buf len 1504
+Image Captured
+coverted Image to jpg 1567 
+Image Captured
+coverted Image to jpg 1543 
+Image Captured
+coverted Image to jpg 1541 
+Image Captured
+coverted Image to jpg 1539 
+Image Captured
+coverted Image to jpg 1561 
+ 
+storing image with buf len 1561
+Image Captured
+coverted Image to jpg 1531 
+Image Captured
+coverted Image to jpg 1529 
+Image Captured
+coverted Image to jpg 1547 
+Image Captured
+coverted Image to jpg 1719 
+Image Captured
+coverted Image to jpg 1748 
+ 
+storing image with buf len 1748
+Image Captured
+coverted Image to jpg 1780 
+Image Captured
+coverted Image to jpg 1734 
+Image Captured
+coverted Image to jpg 1650 
+Image Captured
+coverted Image to jpg 1520 
+Image Captured
+coverted Image to jpg 1468 
+ 
+storing image with buf len 1468
+Image Captured
+coverted Image to jpg 1512 
+Image Captured
+coverted Image to jpg 1598 
+Image Captured
+coverted Image to jpg 1446 
+Image Captured
+coverted Image to jpg 1442 
+Image Captured
+coverted Image to jpg 1406 
+ 
+storing image with buf len 1406
+Image Captured
+coverted Image to jpg 1644 
+Image Captured
+coverted Image to jpg 1705 
+Image Captured
+coverted Image to jpg 1719 
+Image Captured
+coverted Image to jpg 1912 
+Image Captured
+coverted Image to jpg 1942 
+ 
+storing image with buf len 1942
+Image Captured
+coverted Image to jpg 1890 
+Image Captured
+coverted Image to jpg 1865 
+Image Captured
+coverted Image to jpg 1873 
+Image Captured
+coverted Image to jpg 1609 
+Image Captured
+coverted Image to jpg 1385 
+ 
+storing image with buf len 1385
+Image Captured
+coverted Image to jpg 1452 
+Image Captured
+coverted Image to jpg 1386 
+Image Captured
+coverted Image to jpg 1608 
+Image Captured
+coverted Image to jpg 1670 
+Image Captured
+coverted Image to jpg 1711 
+ 
+storing image with buf len 1711
+Image Captured
+coverted Image to jpg 1714 
+Image Captured
+coverted Image to jpg 1634 
+Image Captured
+coverted Image to jpg 1729 
+Image Captured
+coverted Image to jpg 1645 
+Image Captured
+coverted Image to jpg 1696 
+ 
+storing image with buf len 1696
+Image Captured
+coverted Image to jpg 1741 
+Image Captured
+coverted Image to jpg 1711 
+Image Captured
+coverted Image to jpg 1768 
+Image Captured
+coverted Image to jpg 1509 
+Image Captured
+coverted Image to jpg 1584 
+ 
+storing image with buf len 1584
+Image Captured
+coverted Image to jpg 1551 
+Image Captured
+coverted Image to jpg 1587 
+Image Captured
+coverted Image to jpg 1609 
+Image Captured
+coverted Image to jpg 1663 
+Image Captured
+coverted Image to jpg 1675 
+ 
+storing image with buf len 1675
+Image Captured
+coverted Image to jpg 1714 
+Image Captured
+coverted Image to jpg 1717 
+Image Captured
+coverted Image to jpg 1664 
+Image Captured
+coverted Image to jpg 1622 
+Image Captured
+coverted Image to jpg 1626 
+ 
+storing image with buf len 1626
+Image Captured
+coverted Image to jpg 1603 
+Image Captured
+coverted Image to jpg 1605 
+Image Captured
+coverted Image to jpg 1585 
+Image Captured
+coverted Image to jpg 1196 
+Image Captured
+coverted Image to jpg 1028 
+ 
+storing image with buf len 1028
+Image Captured
+coverted Image to jpg 1027 
+Image Captured
+coverted Image to jpg 1095 
+Image Captured
+coverted Image to jpg 1290 
+Image Captured
+coverted Image to jpg 1176 
+Image Captured
+coverted Image to jpg 1288 
+ 
+storing image with buf len 1288
+Image Captured
+coverted Image to jpg 1346 
+Image Captured
+coverted Image to jpg 1677 
+Image Captured
+coverted Image to jpg 1801 
+Image Captured
+coverted Image to jpg 2229 
+Image Captured
+coverted Image to jpg 2157 
+ 
+storing image with buf len 2157
+Image Captured
+coverted Image to jpg 1634 
+Image Captured
+coverted Image to jpg 1717 
+Image Captured
+coverted Image to jpg 1725 
+Image Captured
+coverted Image to jpg 1949 
+Image Captured
+coverted Image to jpg 1814 
+ 
+storing image with buf len 1814
+Image Captured
+coverted Image to jpg 2014 
+Image Captured
+coverted Image to jpg 2101 
+Image Captured
+coverted Image to jpg 1888 
+Image Captured
+coverted Image to jpg 2080 
+Image Captured
+coverted Image to jpg 2059 
+ 
+storing image with buf len 2059
+Image Captured
+coverted Image to jpg 2070 
+Image Captured
+coverted Image to jpg 1927 
+Image Captured
+coverted Image to jpg 1962 
+Image Captured
+coverted Image to jpg 2070 
+Image Captured
+coverted Image to jpg 1969 
+ 
+storing image with buf len 1969
+Image Captured
+coverted Image to jpg 1979 
+Image Captured
+coverted Image to jpg 1924 
+Image Captured
+coverted Image to jpg 1879 
+Image Captured
+coverted Image to jpg 1749 
+Image Captured
+coverted Image to jpg 1766 
+ 
+storing image with buf len 1766
+Image Captured
+coverted Image to jpg 1840 
+Image Captured
+coverted Image to jpg 1799 
+Image Captured
+coverted Image to jpg 1798 
+Image Captured
+coverted Image to jpg 1571 
+Image Captured
+coverted Image to jpg 1473 
+ 
+storing image with buf len 1473
+Image Captured
+coverted Image to jpg 1440 
+Image Captured
+coverted Image to jpg 1446 
+Image Captured
+coverted Image to jpg 1421 
+Image Captured
+coverted Image to jpg 1290 
+Image Captured
+coverted Image to jpg 1238 
+ 
+storing image with buf len 1238
+Image Captured
+coverted Image to jpg 1154 
+Image Captured
+coverted Image to jpg 1233 
+Image Captured
+coverted Image to jpg 1270 
+Image Captured
+coverted Image to jpg 1536 
+Image Captured
+coverted Image to jpg 1608 
+ 
+storing image with buf len 1608
+Image Captured
+coverted Image to jpg 1666 
+Image Captured
+coverted Image to jpg 1494 
+Image Captured
+coverted Image to jpg 1712 
+Image Captured
+coverted Image to jpg 1727 
+Image Captured
+coverted Image to jpg 1950 
+ 
+storing image with buf len 1950
+Image Captured
+coverted Image to jpg 1963 
+Image Captured
+coverted Image to jpg 2213 
+Image Captured
+coverted Image to jpg 2078 
+Image Captured
+coverted Image to jpg 1911 
+Image Captured
+coverted Image to jpg 1970 
+ 
+storing image with buf len 1970
+Image Captured
+coverted Image to jpg 2060 
+Image Captured
+coverted Image to jpg 2083 
+Image Captured
+coverted Image to jpg 2212 
+Image Captured
+coverted Image to jpg 2101 
+Image Captured
+coverted Image to jpg 1942 
+ 
+storing image with buf len 1942
+Image Captured
+coverted Image to jpg 1901 
+Image Captured
+coverted Image to jpg 2110 
+Image Captured
+coverted Image to jpg 2148 
+Image Captured
+coverted Image to jpg 2202 
+Image Captured
+coverted Image to jpg 2179 
+ 
+storing image with buf len 2179
+Image Captured
+coverted Image to jpg 2167 
+Image Captured
+coverted Image to jpg 2143 
+Image Captured
+coverted Image to jpg 2021 
+Image Captured
+coverted Image to jpg 1784 
+Image Captured
+coverted Image to jpg 2004 
+ 
+storing image with buf len 2004
+Image Captured
+coverted Image to jpg 1896 
+Image Captured
+coverted Image to jpg 1754 
+Image Captured
+coverted Image to jpg 1763 
+Image Captured
+coverted Image to jpg 1724 
+Image Captured
+coverted Image to jpg 1922 
+ 
+storing image with buf len 1922
+Image Captured
+coverted Image to jpg 1929 
+Image Captured
+coverted Image to jpg 2018 
+Image Captured
+coverted Image to jpg 2042 
+Image Captured
+coverted Image to jpg 2855 
+Image Captured
+coverted Image to jpg 3034 
+ 
+storing image with buf len 3034
+Image Captured
+coverted Image to jpg 2629 
+Image Captured
+coverted Image to jpg 2494 
+Image Captured
+coverted Image to jpg 2411 
+Image Captured
+coverted Image to jpg 2392 
+Image Captured
+coverted Image to jpg 2097 
+ 
+storing image with buf len 2097
+Image Captured
+coverted Image to jpg 2092 
+Image Captured
+coverted Image to jpg 2074 
+Image Captured
+coverted Image to jpg 2485 
+Image Captured
+coverted Image to jpg 2612 
+Image Captured
+coverted Image to jpg 2479 
+ 
+storing image with buf len 2479
+Image Captured
+coverted Image to jpg 2926 
+Image Captured
+coverted Image to jpg 2600 
+Image Captured
+coverted Image to jpg 2839 
+Image Captured
+coverted Image to jpg 2846 
+Image Captured
+coverted Image to jpg 2850 
+ 
+storing image with buf len 2850
+Image Captured
+coverted Image to jpg 2694 
+Image Captured
+coverted Image to jpg 2657 
+Image Captured
+coverted Image to jpg 2726 
+Image Captured
+coverted Image to jpg 2798 
+Image Captured
+coverted Image to jpg 2938 
+ 
+storing image with buf len 2938
+Image Captured
+coverted Image to jpg 2950 
+Image Captured
+coverted Image to jpg 2781 
+Image Captured
+coverted Image to jpg 2800 
+Image Captured
+coverted Image to jpg 2785 
+Image Captured
+coverted Image to jpg 2660 
+ 
+storing image with buf len 2660
+Image Captured
+coverted Image to jpg 2764 
+Image Captured
+coverted Image to jpg 2776 
+Image Captured
+coverted Image to jpg 2807 
+Image Captured
+coverted Image to jpg 2374 
+Image Captured
+coverted Image to jpg 1919 
+ 
+storing image with buf len 1919
+Image Captured
+coverted Image to jpg 1548 
+Image Captured
+coverted Image to jpg 1631 
+Image Captured
+coverted Image to jpg 1617 
+Image Captured
+coverted Image to jpg 1072 
+Image Captured
+coverted Image to jpg 1123 
+ 
+storing image with buf len 1123
+Image Captured
+coverted Image to jpg 1109 
+Image Captured
+coverted Image to jpg 1179 
+Image Captured
+coverted Image to jpg 1092 
+Image Captured
+coverted Image to jpg 1161 
+Image Captured
+coverted Image to jpg 1082 
+ 
+storing image with buf len 1082
+Image Captured
+coverted Image to jpg 1112 
+Image Captured
+coverted Image to jpg 1131 
+Image Captured
+coverted Image to jpg 1166 
+Image Captured
+coverted Image to jpg 1312 
+Image Captured
+coverted Image to jpg 1495 
+ 
+storing image with buf len 1495
+Image Captured
+coverted Image to jpg 1375 
+Image Captured
+coverted Image to jpg 1384 
+Image Captured
+coverted Image to jpg 1369 
+Image Captured
+coverted Image to jpg 1403 
+Image Captured
+coverted Image to jpg 1412 
+ 
+storing image with buf len 1412
+Image Captured
+coverted Image to jpg 1380 
+Image Captured
+coverted Image to jpg 1256 
+Image Captured
+coverted Image to jpg 1223 
+Image Captured
+coverted Image to jpg 1174 
+Image Captured
+coverted Image to jpg 1142 
+ 
+storing image with buf len 1142
+Image Captured
+coverted Image to jpg 1148 
+Image Captured
+coverted Image to jpg 1165 
+Image Captured
+coverted Image to jpg 1161 
+Image Captured
+coverted Image to jpg 1281 
+Image Captured
+coverted Image to jpg 1196 
+ 
+storing image with buf len 1196
+Image Captured
+coverted Image to jpg 1104 
+Image Captured
+coverted Image to jpg 1081 
+Image Captured
+coverted Image to jpg 1078 
+Image Captured
+coverted Image to jpg 1103 
+Image Captured
+coverted Image to jpg 1075 
+ 

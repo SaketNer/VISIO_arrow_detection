@@ -1,0 +1,214 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400490d5
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x186c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3130
+entry 0x403c9934
+[0;32mI (27) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 19 2024 16:28:59[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=e2db0h (929200) map[0m
+[0;32mI (245) esp_image: segment 1: paddr=000f2dd8 vaddr=3fc99200 size=05960h ( 22880) load[0m
+[0;32mI (250) esp_image: segment 2: paddr=000f8740 vaddr=40374000 size=078d8h ( 30936) load[0m
+[0;32mI (257) esp_image: segment 3: paddr=00100020 vaddr=42000020 size=d31a8h (864680) map[0m
+[0;32mI (391) esp_image: segment 4: paddr=001d31d0 vaddr=4037b8d8 size=0d8a0h ( 55456) load[0m
+[0;32mI (411) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (411) boot: Disabling RNG early entropy source...[0m
+[0;32mI (422) cpu_start: Multicore app[0m
+[0;32mI (423) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (423) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (426) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (432) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (437) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (442) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (447) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (453) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (459) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (464) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (470) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (476) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (481) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (486) esp_psram: Speed: 80MHz[0m
+[0;32mI (490) cpu_start: Pro cpu up.[0m
+[0;32mI (493) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (785) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (794) cpu_start: Pro cpu start user code[0m
+[0;32mI (795) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (795) cpu_start: Application information:[0m
+[0;32mI (798) cpu_start: Project name:     person_detection[0m
+[0;32mI (803) cpu_start: App version:      366ca46-dirty[0m
+[0;32mI (809) cpu_start: Compile time:     Mar 19 2024 16:28:54[0m
+[0;32mI (815) cpu_start: ELF file SHA256:  b1e2879949766796...[0m
+[0;32mI (821) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (826) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (830) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (835) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (840) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (847) heap_init: At 3FCA6008 len 00043708 (269 KiB): DRAM[0m
+[0;32mI (853) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (860) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (866) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (874) spi_flash: detected chip: gd[0m
+[0;32mI (878) spi_flash: flash io: qio[0m
+[0;32mI (883) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (889) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (896) app_start: Starting scheduler on CPU0[0m
+[0;32mI (901) app_start: Starting scheduler on CPU1[0m
+[0;32mI (901) main_task: Started on CPU0[0m
+[0;32mI (911) main_task: Calling app_main()[0m
+[0;32mI (931) pp: pp rom version: e7ae62f[0m
+[0;32mI (931) net80211: net80211 rom version: e7ae62f[0m
+I (941) wifi:wifi driver task: 3fcb1dbc, prio:23, stack:6656, core=0
+I (941) wifi:wifi firmware version: ce9244d
+I (941) wifi:wifi certification version: v7.0
+I (941) wifi:config NVS flash: enabled
+I (941) wifi:config nano formating: disabled
+I (951) wifi:Init data frame dynamic rx buffer num: 32
+I (951) wifi:Init management frame dynamic rx buffer num: 32
+I (961) wifi:Init management short buffer num: 32
+I (961) wifi:Init dynamic tx buffer num: 32
+I (971) wifi:Init tx cache buffer num: 32
+I (971) wifi:Init static tx FG buffer num: 2
+I (971) wifi:Init static rx buffer size: 1600
+I (981) wifi:Init static rx buffer num: 10
+I (981) wifi:Init dynamic rx buffer num: 32
+[0;32mI (991) wifi_init: rx ba win: 6[0m
+[0;32mI (991) wifi_init: tcpip mbox: 32[0m
+[0;32mI (991) wifi_init: udp mbox: 6[0m
+[0;32mI (1001) wifi_init: tcp mbox: 6[0m
+[0;32mI (1001) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1001) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1011) wifi_init: tcp mss: 1440[0m
+[0;32mI (1011) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1021) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1031) phy_init: phy_version 601,98f2a71,Jun 29 2023,09:58:12[0m
+I (1061) wifi:mode : softAP (48:27:e2:f0:32:a1)
+I (1091) wifi:Total power save buffer number: 16
+I (1091) wifi:Init max length of beacon: 752/752
+I (1091) wifi:Init max length of beacon: 752/752
+[0;32mI (1091) VISIO: ESP32 IP:192.168.4.1[0m
+[0;32mI (1091) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+PSRAM size: 8695300 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (1161) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (1161) cam_hal: cam init ok[0m
+[0;32mI (1161) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (1161) sccb: sccb_i2c_port=1[0m
+[0;32mI (1181) camera: Detected camera at address=0x30[0m
+[0;32mI (1181) camera: Detected OV2640 camera[0m
+[0;32mI (1181) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1251) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (1251) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (1261) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (1271) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1281) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1281) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1291) cam_hal: cam config ok[0m
+[0;32mI (1291) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+coverted Image to jpg 1651 
+Image Captured
+coverted Image to jpg 1481 
+Image Captured
+coverted Image to jpg 1482 
+Image Captured
+coverted Image to jpg 1639 
+Image Captured
+coverted Image to jpg 1592 
+arrow detected at 199 :93.750000%
+arrow detected 
+Image Captured
+coverted Image to jpg 1615 
+output classification type 3
+r:5.468750 ,l: 7.031250, far : 87.500000
+ 
+storing image with buf len 1615
+Image Captured
+coverted Image to jpg 1812 
+Image Captured
+coverted Image to jpg 1558 
+Image Captured
+coverted Image to jpg 1707 
+Image Captured
+coverted Image to jpg 875 
+Image Captured
+coverted Image to jpg 872 
+arrow detected 
+Image Captured
+coverted Image to jpg 886 
+output classification type 3
+r:62.890625 ,l: 33.203125, far : 3.515625
+ 
+storing image with buf len 886
+Image Captured
+coverted Image to jpg 886 
+Image Captured
+coverted Image to jpg 872 
+Image Captured
+coverted Image to jpg 885 
+Image Captured
+coverted Image to jpg 2318 
+Image Captured
+coverted Image to jpg 2347 
+arrow detected 
+Image Captured
+coverted Image to jpg 2370 
+output classification type 3
+r:8.593750 ,l: 90.234375, far : 1.171875
+ 
+storing image with buf len 2370
+Image Captured
+coverted Image to jpg 2349 
+Image Captured
+coverted Image to jpg 2365 
+Image Captured
+coverted Image to jpg 2379 
+Image Captured
+coverted Image to jpg 2262 
+Image Captured
+coverted Image to jpg 2280 
+arrow detected 
+Image Captured
+coverted Image to jpg 2198 
+output classification type 3
+r:0.781250 ,l: 64.843750, far : 34.375000
+ 
+storing image with buf len 2198
+Image Captured
+coverted Image to jpg 2205 
+Image Captured
+coverted Image to jpg 2217 
+Image Captured
+coverted Image to jpg 2242 
+Image Captured
+coverted Image to jpg 1137 
+Image Captured
+coverted Image to jpg 1150 
+arrow detected 
+Image Captured
+coverted Image to jpg 1131 
+output classification type 3
+r:49.609375 ,l: 49.609375, far : 1.171875

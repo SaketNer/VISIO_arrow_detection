@@ -1,4 +1,4 @@
-/* * Data converted from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/static_images/sample_images/image4
+/* * Data converted from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/static_images/sample_images/image4
  */
 .data
 .section .rodata.embedded

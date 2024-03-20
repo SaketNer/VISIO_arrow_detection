@@ -1,0 +1,710 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403ce7ef
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x186c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3130
+entry 0x403c9934
+[0;32mI (27) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 19 2024 16:28:59[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=e5740h (939840) map[0m
+[0;32mI (247) esp_image: segment 1: paddr=000f5768 vaddr=3fc99200 size=05960h ( 22880) load[0m
+[0;32mI (252) esp_image: segment 2: paddr=000fb0d0 vaddr=40374000 size=04f48h ( 20296) load[0m
+[0;32mI (257) esp_image: segment 3: paddr=00100020 vaddr=42000020 size=d31a8h (864680) map[0m
+[0;32mI (392) esp_image: segment 4: paddr=001d31d0 vaddr=40378f48 size=10230h ( 66096) load[0m
+[0;32mI (414) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (426) cpu_start: Multicore app[0m
+[0;32mI (426) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (427) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (430) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (435) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (440) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (446) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (451) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (457) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (462) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (468) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (474) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (480) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (485) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (489) esp_psram: Speed: 80MHz[0m
+[0;32mI (493) cpu_start: Pro cpu up.[0m
+[0;32mI (497) cpu_start: Starting app cpu, entry point is 0x40375754[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (789) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (798) cpu_start: Pro cpu start user code[0m
+[0;32mI (798) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (798) cpu_start: Application information:[0m
+[0;32mI (801) cpu_start: Project name:     person_detection[0m
+[0;32mI (807) cpu_start: App version:      366ca46-dirty[0m
+[0;32mI (812) cpu_start: Compile time:     Mar 19 2024 16:28:54[0m
+[0;32mI (818) cpu_start: ELF file SHA256:  644fccec42d91fe7...[0m
+[0;32mI (824) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (829) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (834) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (839) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (844) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (851) heap_init: At 3FCA6008 len 00043708 (269 KiB): DRAM[0m
+[0;32mI (857) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (878) spi_flash: detected chip: gd[0m
+[0;32mI (882) spi_flash: flash io: qio[0m
+[0;32mI (887) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (892) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (900) app_start: Starting scheduler on CPU0[0m
+[0;32mI (904) app_start: Starting scheduler on CPU1[0m
+[0;32mI (904) main_task: Started on CPU0[0m
+[0;32mI (914) main_task: Calling app_main()[0m
+[0;32mI (934) pp: pp rom version: e7ae62f[0m
+[0;32mI (934) net80211: net80211 rom version: e7ae62f[0m
+I (944) wifi:wifi driver task: 3fcb1dbc, prio:23, stack:6656, core=0
+I (944) wifi:wifi firmware version: ce9244d
+I (944) wifi:wifi certification version: v7.0
+I (944) wifi:config NVS flash: enabled
+I (944) wifi:config nano formating: disabled
+I (954) wifi:Init data frame dynamic rx buffer num: 32
+I (954) wifi:Init management frame dynamic rx buffer num: 32
+I (964) wifi:Init management short buffer num: 32
+I (964) wifi:Init dynamic tx buffer num: 32
+I (974) wifi:Init tx cache buffer num: 32
+I (974) wifi:Init static tx FG buffer num: 2
+I (974) wifi:Init static rx buffer size: 1600
+I (984) wifi:Init static rx buffer num: 10
+I (984) wifi:Init dynamic rx buffer num: 32
+[0;32mI (994) wifi_init: rx ba win: 6[0m
+[0;32mI (994) wifi_init: tcpip mbox: 32[0m
+[0;32mI (994) wifi_init: udp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp mbox: 6[0m
+[0;32mI (1004) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1004) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1014) wifi_init: tcp mss: 1440[0m
+[0;32mI (1014) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1024) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1034) phy_init: phy_version 601,98f2a71,Jun 29 2023,09:58:12[0m
+I (1064) wifi:mode : softAP (48:27:e2:f0:32:a1)
+I (1094) wifi:Total power save buffer number: 16
+I (1094) wifi:Init max length of beacon: 752/752
+I (1094) wifi:Init max length of beacon: 752/752
+[0;32mI (1094) VISIO: ESP32 IP:192.168.4.1[0m
+[0;32mI (1094) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+PSRAM size: 8695300 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (1164) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (1164) cam_hal: cam init ok[0m
+[0;32mI (1164) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (1164) sccb: sccb_i2c_port=1[0m
+[0;32mI (1184) camera: Detected camera at address=0x30[0m
+[0;32mI (1184) camera: Detected OV2640 camera[0m
+[0;32mI (1184) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1254) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (1254) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (1264) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (1274) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1284) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1284) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1294) cam_hal: cam config ok[0m
+[0;32mI (1294) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+coverted Image to jpg 743 
+Image Captured
+coverted Image to jpg 1097 
+Image Captured
+coverted Image to jpg 1092 
+Image Captured
+coverted Image to jpg 1111 
+Image Captured
+coverted Image to jpg 1107 
+arrow detected 
+Image Captured
+coverted Image to jpg 1118 
+output classification type 4
+r:46.093750 ,l: 5.468750, far : 40.625000
+ 
+storing image with buf len 1118
+Image Captured
+coverted Image to jpg 1119 
+Image Captured
+coverted Image to jpg 1099 
+Image Captured
+coverted Image to jpg 1114 
+Image Captured
+coverted Image to jpg 1233 
+Image Captured
+coverted Image to jpg 1327 
+arrow detected at 137 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1244 
+output classification type 4
+r:26.562500 ,l: 2.734375, far : 68.359375
+ 
+storing image with buf len 1244
+Image Captured
+coverted Image to jpg 1194 
+Image Captured
+coverted Image to jpg 1279 
+Image Captured
+coverted Image to jpg 1266 
+Image Captured
+coverted Image to jpg 1588 
+Image Captured
+coverted Image to jpg 1578 
+arrow detected at 157 :90.625000%
+arrow detected 
+Image Captured
+coverted Image to jpg 1575 
+output classification type 4
+r:13.671875 ,l: 8.593750, far : 75.390625
+ 
+storing image with buf len 1575
+Image Captured
+coverted Image to jpg 1572 
+Image Captured
+coverted Image to jpg 1580 
+Image Captured
+coverted Image to jpg 1608 
+Image Captured
+coverted Image to jpg 1516 
+Image Captured
+coverted Image to jpg 1437 
+arrow detected 
+Image Captured
+coverted Image to jpg 1395 
+output classification type 4
+r:37.500000 ,l: 3.515625, far : 58.203125
+ 
+storing image with buf len 1395
+Image Captured
+coverted Image to jpg 1416 
+Image Captured
+coverted Image to jpg 1443 
+Image Captured
+coverted Image to jpg 1494 
+Image Captured
+coverted Image to jpg 1417 
+Image Captured
+coverted Image to jpg 1370 
+arrow detected 
+Image Captured
+coverted Image to jpg 1365 
+output classification type 4
+r:61.718750 ,l: 1.171875, far : 30.859375
+ 
+storing image with buf len 1365
+Image Captured
+coverted Image to jpg 1436 
+Image Captured
+coverted Image to jpg 1453 
+Image Captured
+coverted Image to jpg 1422 
+Image Captured
+coverted Image to jpg 1181 
+Image Captured
+coverted Image to jpg 1182 
+arrow detected 
+Image Captured
+coverted Image to jpg 1178 
+output classification type 4
+r:99.218750 ,l: 0.000000, far : 0.781250
+ 
+storing image with buf len 1178
+Image Captured
+coverted Image to jpg 1193 
+Image Captured
+coverted Image to jpg 1189 
+Image Captured
+coverted Image to jpg 1190 
+Image Captured
+coverted Image to jpg 1260 
+Image Captured
+coverted Image to jpg 1246 
+arrow detected 
+Image Captured
+coverted Image to jpg 1225 
+output classification type 4
+r:99.218750 ,l: 0.000000, far : 0.781250
+ 
+storing image with buf len 1225
+Image Captured
+coverted Image to jpg 1242 
+Image Captured
+coverted Image to jpg 1272 
+Image Captured
+coverted Image to jpg 1285 
+Image Captured
+coverted Image to jpg 1252 
+Image Captured
+coverted Image to jpg 1278 
+arrow detected 
+Image Captured
+coverted Image to jpg 1306 
+output classification type 4
+r:0.000000 ,l: 0.000000, far : 99.609375
+ 
+storing image with buf len 1306
+Image Captured
+coverted Image to jpg 1329 
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1312 
+Image Captured
+coverted Image to jpg 1313 
+Image Captured
+coverted Image to jpg 1300 
+arrow detected 
+Image Captured
+coverted Image to jpg 1272 
+output classification type 4
+r:0.390625 ,l: 0.000000, far : 99.609375
+ 
+storing image with buf len 1272
+Image Captured
+coverted Image to jpg 1287 
+Image Captured
+coverted Image to jpg 1303 
+Image Captured
+coverted Image to jpg 1309 
+Image Captured
+coverted Image to jpg 1358 
+Image Captured
+coverted Image to jpg 1194 
+arrow detected 
+Image Captured
+coverted Image to jpg 1469 
+output classification type 4
+r:43.750000 ,l: 0.781250, far : 52.734375
+ 
+storing image with buf len 1469
+Image Captured
+coverted Image to jpg 1276 
+Image Captured
+coverted Image to jpg 1241 
+Image Captured
+coverted Image to jpg 1220 
+Image Captured
+coverted Image to jpg 1537 
+Image Captured
+coverted Image to jpg 1554 
+arrow detected at 179 :99.218750%
+arrow detected 
+Image Captured
+coverted Image to jpg 1554 
+output classification type 4
+r:5.468750 ,l: 0.781250, far : 93.359375
+ 
+storing image with buf len 1554
+Image Captured
+coverted Image to jpg 1533 
+Image Captured
+coverted Image to jpg 1567 
+Image Captured
+coverted Image to jpg 1562 
+Image Captured
+coverted Image to jpg 1709 
+Image Captured
+coverted Image to jpg 1682 
+arrow detected 
+Image Captured
+coverted Image to jpg 1682 
+output classification type 4
+r:61.718750 ,l: 3.515625, far : 32.812500
+ 
+storing image with buf len 1682
+Image Captured
+coverted Image to jpg 1681 
+Image Captured
+coverted Image to jpg 1659 
+Image Captured
+coverted Image to jpg 1617 
+Image Captured
+coverted Image to jpg 1596 
+Image Captured
+coverted Image to jpg 1565 
+arrow detected 
+Image Captured
+coverted Image to jpg 1584 
+output classification type 4
+r:51.953125 ,l: 1.171875, far : 45.703125
+ 
+storing image with buf len 1584
+Image Captured
+coverted Image to jpg 1607 
+Image Captured
+coverted Image to jpg 1563 
+Image Captured
+coverted Image to jpg 1555 
+Image Captured
+coverted Image to jpg 1257 
+Image Captured
+coverted Image to jpg 1250 
+arrow detected 
+Image Captured
+coverted Image to jpg 1263 
+output classification type 4
+r:99.218750 ,l: 0.000000, far : 0.781250
+ 
+storing image with buf len 1263
+Image Captured
+coverted Image to jpg 1249 
+Image Captured
+coverted Image to jpg 1243 
+Image Captured
+coverted Image to jpg 1239 
+Image Captured
+coverted Image to jpg 1250 
+Image Captured
+coverted Image to jpg 1291 
+arrow detected 
+Image Captured
+coverted Image to jpg 1331 
+output classification type 4
+r:99.218750 ,l: 0.000000, far : 0.781250
+ 
+storing image with buf len 1331
+Image Captured
+coverted Image to jpg 1330 
+Image Captured
+coverted Image to jpg 1333 
+Image Captured
+coverted Image to jpg 1316 
+Image Captured
+coverted Image to jpg 1292 
+Image Captured
+coverted Image to jpg 1319 
+arrow detected 
+Image Captured
+coverted Image to jpg 1320 
+output classification type 4
+r:99.218750 ,l: 0.000000, far : 0.781250
+ right
+ 
+storing image with buf len 1320
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1324 
+Image Captured
+coverted Image to jpg 1285 
+Image Captured
+coverted Image to jpg 1099 
+Image Captured
+coverted Image to jpg 1095 
+arrow detected 
+Image Captured
+coverted Image to jpg 1346 
+output classification type 4
+r:4.687500 ,l: 53.125000, far : 28.125000
+ 
+storing image with buf len 1346
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1350 
+Image Captured
+coverted Image to jpg 1215 
+Image Captured
+coverted Image to jpg 1343 
+Image Captured
+coverted Image to jpg 1327 
+arrow detected 
+Image Captured
+coverted Image to jpg 1330 
+output classification type 4
+r:27.343750 ,l: 2.343750, far : 62.890625
+ 
+storing image with buf len 1330
+Image Captured
+coverted Image to jpg 1319 
+Image Captured
+coverted Image to jpg 1325 
+Image Captured
+coverted Image to jpg 1327 
+Image Captured
+coverted Image to jpg 1309 
+Image Captured
+coverted Image to jpg 1316 
+arrow detected 
+Image Captured
+coverted Image to jpg 1314 
+output classification type 4
+r:19.921875 ,l: 2.343750, far : 75.000000
+ 
+storing image with buf len 1314
+Image Captured
+coverted Image to jpg 1285 
+Image Captured
+coverted Image to jpg 1297 
+Image Captured
+coverted Image to jpg 1299 
+Image Captured
+coverted Image to jpg 916 
+Image Captured
+coverted Image to jpg 890 
+arrow detected 
+Image Captured
+coverted Image to jpg 900 
+output classification type 4
+r:11.718750 ,l: 2.343750, far : 68.750000
+ 
+storing image with buf len 900
+Image Captured
+coverted Image to jpg 902 
+Image Captured
+coverted Image to jpg 902 
+Image Captured
+coverted Image to jpg 904 
+Image Captured
+coverted Image to jpg 1165 
+Image Captured
+coverted Image to jpg 1190 
+arrow detected 
+Image Captured
+coverted Image to jpg 1155 
+output classification type 4
+r:82.421875 ,l: 0.000000, far : 16.796875
+ 
+storing image with buf len 1155
+Image Captured
+coverted Image to jpg 1155 
+Image Captured
+coverted Image to jpg 1139 
+Image Captured
+coverted Image to jpg 1130 
+Image Captured
+coverted Image to jpg 1285 
+Image Captured
+coverted Image to jpg 1294 
+arrow detected 
+Image Captured
+coverted Image to jpg 1265 
+output classification type 4
+r:89.453125 ,l: 0.000000, far : 10.546875
+ 
+storing image with buf len 1265
+Image Captured
+coverted Image to jpg 1268 
+Image Captured
+coverted Image to jpg 1258 
+Image Captured
+coverted Image to jpg 1252 
+Image Captured
+coverted Image to jpg 1168 
+Image Captured
+coverted Image to jpg 1160 
+arrow detected 
+Image Captured
+coverted Image to jpg 1181 
+output classification type 4
+r:88.281250 ,l: 0.000000, far : 11.718750
+ 
+storing image with buf len 1181
+Image Captured
+coverted Image to jpg 1185 
+Image Captured
+coverted Image to jpg 1175 
+Image Captured
+coverted Image to jpg 1195 
+Image Captured
+coverted Image to jpg 1234 
+Image Captured
+coverted Image to jpg 1253 
+arrow detected 
+Image Captured
+coverted Image to jpg 1283 
+output classification type 4
+r:0.781250 ,l: 0.000000, far : 99.218750
+ 
+storing image with buf len 1283
+Image Captured
+coverted Image to jpg 1295 
+Image Captured
+coverted Image to jpg 1302 
+Image Captured
+coverted Image to jpg 1306 
+Image Captured
+coverted Image to jpg 1553 
+Image Captured
+coverted Image to jpg 1498 
+arrow detected 
+Image Captured
+coverted Image to jpg 1427 
+output classification type 4
+r:2.734375 ,l: 2.343750, far : 84.375000
+ 
+storing image with buf len 1427
+Image Captured
+coverted Image to jpg 1637 
+Image Captured
+coverted Image to jpg 1651 
+Image Captured
+coverted Image to jpg 1724 
+Image Captured
+coverted Image to jpg 1046 
+Image Captured
+coverted Image to jpg 1057 
+arrow detected 
+Image Captured
+coverted Image to jpg 1076 
+output classification type 4
+r:29.687500 ,l: 0.781250, far : 67.578125
+ 
+storing image with buf len 1076
+Image Captured
+coverted Image to jpg 1066 
+Image Captured
+coverted Image to jpg 1052 
+Image Captured
+coverted Image to jpg 1062 
+Image Captured
+coverted Image to jpg 1044 
+Image Captured
+coverted Image to jpg 1031 
+arrow detected 
+Image Captured
+coverted Image to jpg 1061 
+output classification type 4
+r:33.593750 ,l: 0.781250, far : 63.671875
+ 
+storing image with buf len 1061
+Image Captured
+coverted Image to jpg 1053 
+Image Captured
+coverted Image to jpg 1051 
+Image Captured
+coverted Image to jpg 1032 
+Image Captured
+coverted Image to jpg 1074 
+Image Captured
+coverted Image to jpg 1057 
+arrow detected 
+Image Captured
+coverted Image to jpg 1043 
+output classification type 4
+r:31.250000 ,l: 0.781250, far : 66.406250
+ 
+storing image with buf len 1043
+Image Captured
+coverted Image to jpg 1065 
+Image Captured
+coverted Image to jpg 1083 
+Image Captured
+coverted Image to jpg 1051 
+Image Captured
+coverted Image to jpg 1032 
+Image Captured
+coverted Image to jpg 1062 
+arrow detected 
+Image Captured
+coverted Image to jpg 1074 
+output classification type 4
+r:33.984375 ,l: 0.781250, far : 63.671875
+ 
+storing image with buf len 1074
+Image Captured
+coverted Image to jpg 1059 
+Image Captured
+coverted Image to jpg 1063 
+Image Captured
+coverted Image to jpg 1084 
+Image Captured
+coverted Image to jpg 1057 
+Image Captured
+coverted Image to jpg 1054 
+arrow detected 
+Image Captured
+coverted Image to jpg 1054 
+output classification type 4
+r:30.859375 ,l: 0.781250, far : 66.015625
+ 
+storing image with buf len 1054
+Image Captured
+coverted Image to jpg 1073 
+Image Captured
+coverted Image to jpg 1050 
+Image Captured
+coverted Image to jpg 1073 
+Image Captured
+coverted Image to jpg 1042 
+Image Captured
+coverted Image to jpg 1064 
+arrow detected 
+Image Captured
+coverted Image to jpg 1057 
+output classification type 4
+r:28.515625 ,l: 0.781250, far : 69.140625
+ 
+storing image with buf len 1057
+Image Captured
+coverted Image to jpg 1063 
+Image Captured
+coverted Image to jpg 1057 
+Image Captured
+coverted Image to jpg 1041 
+Image Captured
+coverted Image to jpg 1049 
+Image Captured
+coverted Image to jpg 1041 
+arrow detected 
+Image Captured
+coverted Image to jpg 1062 
+output classification type 4
+r:31.250000 ,l: 0.781250, far : 66.406250
+ 
+storing image with buf len 1062
+Image Captured
+coverted Image to jpg 1040 
+Image Captured
+coverted Image to jpg 1045 
+Image Captured
+coverted Image to jpg 1060 
+Image Captured
+coverted Image to jpg 1036 
+Image Captured
+coverted Image to jpg 1057 
+arrow detected 
+Image Captured
+coverted Image to jpg 1076 
+output classification type 4
+r:32.421875 ,l: 0.781250, far : 65.234375
+ 
+storing image with buf len 1076
+Image Captured
+coverted Image to jpg 1075 
+Image Captured
+coverted Image to jpg 1064 
+Image Captured
+coverted Image to jpg 1063 
+Image Captured
+coverted Image to jpg 1072 
+Image Captured
+coverted Image to jpg 1051 
+arrow detected 
+Image Captured
+coverted Image to jpg 1027 
+output classification type 4
+r:34.765625 ,l: 1.171875, far : 61.328125

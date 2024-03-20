@@ -1,4 +1,4 @@
-/* * Data converted from /Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

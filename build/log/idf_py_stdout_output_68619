@@ -1,0 +1,363 @@
+[1/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
+[2/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
+[3/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
+[4/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
+[5/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.obj
+[6/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
+[7/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj
+[8/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c.c.obj
+[9/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj
+[10/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj
+[11/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj
+[12/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj
+[13/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj
+[14/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.obj
+[15/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj
+[16/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj
+[17/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj
+[18/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.obj
+[19/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj
+[20/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj
+[21/187] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_httpd.c.obj
+[22/187] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_common.c.obj
+[23/187] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_checksum.c.obj
+[24/187] Building C object esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.obj
+[25/187] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj
+[26/187] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj
+[27/187] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj
+[28/187] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_binary.c.obj
+[29/187] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_elf.c.obj
+[30/187] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_uart.c.obj
+[31/187] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/port/xtensa/core_dump_port.c.obj
+[32/187] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_flash.c.obj
+[33/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i80.c.obj
+[34/187] Linking C static library esp-idf/espcoredump/libespcoredump.a
+[35/187] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/crc32.cpp.obj
+[36/187] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/SPI_Flash.cpp.obj
+[37/187] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/Partition.cpp.obj
+[38/187] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[39/187] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj
+[40/187] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Safe.cpp.obj
+[41/187] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/wear_levelling.cpp.obj
+[42/187] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_init.c.obj
+[43/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio.c.obj
+[44/187] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_common.c.obj
+[45/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_rawflash.c.obj
+[46/187] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_mmc.c.obj
+[47/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_wl.c.obj
+[48/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_sdmmc.c.obj
+[49/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj
+[50/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ffunicode.c.obj
+[51/187] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
+[52/187] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_io.c.obj
+[53/187] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
+[54/187] Linking C static library esp-idf/sdmmc/libsdmmc.a
+[55/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj
+[56/187] Building CXX object esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Flash.cpp.obj
+[57/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_spiflash.c.obj
+[58/187] Linking C static library esp-idf/wear_levelling/libwear_levelling.a
+[59/187] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_rgb.c.obj
+[60/187] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/platform_esp32_idf.c.obj
+[61/187] Linking C static library esp-idf/esp_lcd/libesp_lcd.a
+[62/187] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_access.c.obj
+[63/187] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_apis.c.obj
+[64/187] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_masks.c.obj
+[65/187] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_outbox.c.obj
+[66/187] Linking C static library esp-idf/perfmon/libperfmon.a
+[67/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat.c.obj
+[68/187] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[69/187] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_msg.c.obj
+[70/187] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
+[71/187] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[72/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/gc2145.c.obj
+[73/187] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_runner.c.obj
+[74/187] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[75/187] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[76/187] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_cache.c.obj
+[77/187] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_freertos.c.obj
+[78/187] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[79/187] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_memory.c.obj
+[80/187] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/port/esp/unity_utils_memory_esp.c.obj
+[81/187] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_port_esp32.c.obj
+[82/187] Building C object esp-idf/cmock/CMakeFiles/__idf_cmock.dir/CMock/src/cmock.c.obj
+[83/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/split_argv.c.obj
+[84/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/commands.c.obj
+[85/187] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
+[86/187] Linking C static library esp-idf/json/libjson.a
+[87/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/esp_console_repl.c.obj
+[88/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_cmd.c.obj
+[89/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_end.c.obj
+[90/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_dbl.c.obj
+[91/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_dstr.c.obj
+[92/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_file.c.obj
+[93/187] Building C object esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/protobuf-c/protobuf-c/protobuf-c.c.obj
+[94/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_lit.c.obj
+[95/187] Linking C static library esp-idf/protobuf-c/libprotobuf-c.a
+[96/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_rem.c.obj
+[97/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_date.c.obj
+[98/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_hashtable.c.obj
+[99/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_int.c.obj
+[100/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/conversions/yuv.c.obj
+[101/187] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/mqtt_client.c.obj
+[102/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_str.c.obj
+[103/187] Linking C static library esp-idf/mqtt/libmqtt.a
+[104/187] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj
+[105/187] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/unity/src/unity.c.obj
+[106/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_utils.c.obj
+[107/187] Linking C static library esp-idf/unity/libunity.a
+[108/187] Linking C static library esp-idf/fatfs/libfatfs.a
+[109/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/conversions/esp_jpg_decode.c.obj
+[110/187] Linking C static library esp-idf/cmock/libcmock.a
+[111/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/linenoise/linenoise.c.obj
+[112/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/conversions/to_bmp.c.obj
+[113/187] Building CXX object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/conversions/to_jpg.cpp.obj
+[114/187] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[115/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/driver/sensor.c.obj
+[116/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/driver/sccb.c.obj
+[117/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/driver/esp_camera.c.obj
+[118/187] Linking C static library esp-idf/spiffs/libspiffs.a
+[119/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_rex.c.obj
+[120/187] Building C object esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/argtable3.c.obj
+[121/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/ov7670.c.obj
+[122/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/driver/cam_hal.c.obj
+[123/187] Linking C static library esp-idf/console/libconsole.a
+[124/187] Linking C static library esp-idf/protocomm/libprotocomm.a
+[125/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/ov7725.c.obj
+[126/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/gc0308.c.obj
+[127/187] Linking C static library esp-idf/esp_local_ctrl/libesp_local_ctrl.a
+[128/187] Linking C static library esp-idf/wifi_provisioning/libwifi_provisioning.a
+[129/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/gc032a.c.obj
+[130/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/bf3005.c.obj
+[131/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/bf20a6.c.obj
+[132/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/nt99141.c.obj
+[133/187] Building CXX object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/conversions/jpge.cpp.obj
+[134/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/ov2640.c.obj
+[135/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/sc031gs.c.obj
+[136/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/sc101iot.c.obj
+[137/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/sc030iot.c.obj
+[138/187] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidd.c.obj
+[139/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/ov3660.c.obj
+[140/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/sensors/ov5640.c.obj
+[141/187] Building C object esp-idf/esp32-camera2/CMakeFiles/__idf_esp32-camera2.dir/target/esp32s3/ll_cam.c.obj
+[142/187] Building C object esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/host_file_io.c.obj
+[143/187] Performing build step for 'bootloader'
+[1/1] cd /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/bootloader/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin
+Bootloader binary size 0x57a0 bytes. 0x2860 bytes (32%) free.
+[144/187] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hid_common.c.obj
+[145/187] No install step for 'bootloader'
+[146/187] Building C object esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/port/port_uart.c.obj
+[147/187] Linking C static library esp-idf/esp32-camera2/libesp32-camera2.a
+[148/187] Completed 'bootloader'
+[149/187] Building C object esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/app_trace_util.c.obj
+[150/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/core/api/error_reporter.cc.obj
+[151/187] Building C object esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/app_trace.c.obj
+[152/187] Linking C static library esp-idf/app_trace/libapp_trace.a
+[153/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/micro/arena_allocator/recording_single_arena_buffer_allocator.cc.obj
+[154/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/core/c/common.cc.obj
+[155/187] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidh.c.obj
+[156/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/core/api/tensor_utils.cc.obj
+[157/187] Linking C static library esp-idf/esp_hid/libesp_hid.a
+[158/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/kernels/internal/portable_tensor_utils.cc.obj
+[159/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/kernels/internal/common.cc.obj
+[160/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/kernels/internal/tensor_ctypes.cc.obj
+[161/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/kernels/internal/tensor_utils.cc.obj
+[162/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/kernels/internal/quantization_util.cc.obj
+[163/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/kernels/internal/reference/comparisons.cc.obj
+[164/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/kernels/kernel_util.cc.obj
+[165/187] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/driver/cam_hal.c.obj
+[166/187] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/esp_jpg_decode.c.obj
+[167/187] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/driver/esp_camera.c.obj
+[168/187] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/to_bmp.c.obj
+[169/187] Building CXX object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/to_jpg.cpp.obj
+[170/187] Building C object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/yuv.c.obj
+[171/187] Building CXX object esp-idf/espressif__esp32-camera/CMakeFiles/__idf_espressif__esp32-camera.dir/conversions/jpge.cpp.obj
+[172/187] Linking C static library esp-idf/espressif__esp32-camera/libespressif__esp32-camera.a
+[173/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/kernels/internal/reference/portable_tensor_utils.cc.obj
+[174/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/micro/arena_allocator/non_persistent_arena_buffer_allocator.cc.obj
+[175/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/micro/arena_allocator/persistent_arena_buffer_allocator.cc.obj
+[176/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/micro/arena_allocator/single_arena_buffer_allocator.cc.obj
+[177/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/schema/schema_utils.cc.obj
+[178/187] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main_functions.cc.obj
+In file included from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/micro/tflite_bridge/flatbuffer_conversions_bridge.h:19,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/micro/micro_allocator.h:26,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.h:26,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:23:
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h: In member function 'T* tflite::BuiltinDataAllocator::AllocatePOD()':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h:46:24: warning: 'template<class _Tp> struct std::is_pod' is deprecated: use is_standard_layout && is_trivial instead [-Wdeprecated-declarations]
+   46 |     static_assert(std::is_pod<T>::value, "Builtin data structure must be POD.");
+      |                        ^~~~~~
+In file included from /Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/bits/stl_pair.h:60,
+                 from /Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/utility:69,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/core/c/common.h:1448,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/tensorflow/lite/c/common.h:31,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/detection_responder.h:22,
+                 from /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:18:
+/Users/saket/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/xtensa-esp32s3-elf/include/c++/12.2.0/type_traits:757:5: note: declared here
+  757 |     is_pod
+      |     ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'esp_err_t camera_handler(httpd_req_t*)':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:138:28: warning: unused variable 'jchunk' [-Wunused-variable]
+  138 |             jpg_chunking_t jchunk = {req, 0};
+      |                            ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:117:12: warning: unused variable 'fb_len' [-Wunused-variable]
+  117 |     size_t fb_len = 0;
+      |            ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:118:13: warning: unused variable 'fr_str' [-Wunused-variable]
+  118 |     int64_t fr_str = esp_timer_get_time();
+      |             ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:157:13: warning: unused variable 'fr_end' [-Wunused-variable]
+  157 |     int64_t fr_end = esp_timer_get_time();
+      |             ^~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void wifi_event_handler(void*, esp_event_base_t, int32_t, void*)':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:166:39: warning: unused variable 'event' [-Wunused-variable]
+  166 |         wifi_event_ap_staconnected_t* event = (wifi_event_ap_staconnected_t*) event_data;
+      |                                       ^~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:169:42: warning: unused variable 'event' [-Wunused-variable]
+  169 |         wifi_event_ap_stadisconnected_t* event = (wifi_event_ap_stadisconnected_t*) event_data;
+      |                                          ^~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void setup()':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::ssid_hidden' [-Wmissing-field-initializers]
+  253 |     };
+      |     ^
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::beacon_interval' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::pairwise_cipher' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::ftm_responder' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::pmf_cfg' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:253:5: warning: missing initializer for member 'wifi_ap_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void loop()':
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:429:7: warning: unused variable 'x_cordi' [-Wunused-variable]
+  429 |   int x_cordi = 48;
+      |       ^~~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:430:7: warning: unused variable 'y_cordi' [-Wunused-variable]
+  430 |   int y_cordi = 48;
+      |       ^~~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:432:8: warning: unused variable 'possible_arrow' [-Wunused-variable]
+  432 |   bool possible_arrow = false;
+      |        ^~~~~~~~~~~~~~
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc: At global scope:
+/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/main/main_functions.cc:76:15: warning: 'size_t {anonymous}::jpg_encode_stream(void*, size_t, const void*, size_t)' defined but not used [-Wunused-function]
+   76 | static size_t jpg_encode_stream(void * arg, size_t index, const void* data, size_t len){
+      |               ^~~~~~~~~~~~~~~~~
+[179/187] Building CXX object esp-idf/esp-tflite-micro/CMakeFiles/__idf_esp-tflite-micro.dir/tensorflow/lite/core/api/flatbuffer_conversions.cc.obj
+[180/187] Linking C static library esp-idf/esp-tflite-micro/libesp-tflite-micro.a
+[181/187] Linking C static library esp-idf/main/libmain.a
+[182/187] Generating ld/sections.ld
+[183/187] Building C object CMakeFiles/person_detection.elf.dir/project_elf_src_esp32s3.c.obj
+[184/187] Linking CXX executable person_detection.elf
+[185/187] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+[186/187] cd /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/esp-idf/esptool_py && /Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python /Users/saket/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/partition_table/partition-table.bin /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+person_detection.bin binary size 0x1d3300 bytes. Smallest app partition is 0x3a0000 bytes. 0x1ccd00 bytes (50%) free.
+[186/187] cd /Users/saket/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -D IDF_PATH=/Users/saket/esp/esp-idf -D "SERIAL_TOOL=/Users/saket/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/Users/saket/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/build -P /Users/saket/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem1401 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 person_detection.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev3
+Serial port /dev/cu.usbmodem1401
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 48:27:e2:f0:32:a0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x001e3fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 22432 bytes to 14249...
+Writing at 0x00000000... (100 %)
+Wrote 22432 bytes (14249 compressed) at 0x00000000 in 0.4 seconds (effective 464.9 kbit/s)...
+Hash of data verified.
+Compressed 1913600 bytes to 1252782...
+Writing at 0x00010000... (1 %)
+Writing at 0x00018c03... (2 %)
+Writing at 0x0001d996... (3 %)
+Writing at 0x00026f53... (5 %)
+Writing at 0x0002b38c... (6 %)
+Writing at 0x0002f87d... (7 %)
+Writing at 0x00033d66... (9 %)
+Writing at 0x00038195... (10 %)
+Writing at 0x0003c59c... (11 %)
+Writing at 0x00040a0e... (12 %)
+Writing at 0x00044c60... (14 %)
+Writing at 0x00049216... (15 %)
+Writing at 0x0004d5ae... (16 %)
+Writing at 0x00051a92... (18 %)
+Writing at 0x00055f1b... (19 %)
+Writing at 0x0005a191... (20 %)
+Writing at 0x0005e622... (22 %)
+Writing at 0x00062ac2... (23 %)
+Writing at 0x00066f3a... (24 %)
+Writing at 0x0006b2aa... (25 %)
+Writing at 0x0006f58d... (27 %)
+Writing at 0x000738f8... (28 %)
+Writing at 0x00077c30... (29 %)
+Writing at 0x0007bf48... (31 %)
+Writing at 0x0008025d... (32 %)
+Writing at 0x000845eb... (33 %)
+Writing at 0x00088a8d... (35 %)
+Writing at 0x0008d3c0... (36 %)
+Writing at 0x0009888f... (37 %)
+Writing at 0x000a59e0... (38 %)
+Writing at 0x000b2f8f... (40 %)
+Writing at 0x000c0056... (41 %)
+Writing at 0x000c8b85... (42 %)
+Writing at 0x000d4b37... (44 %)
+Writing at 0x000db5fb... (45 %)
+Writing at 0x000e1958... (46 %)
+Writing at 0x000f2c3a... (48 %)
+Writing at 0x000fd81f... (49 %)
+Writing at 0x00103426... (50 %)
+Writing at 0x00108c1d... (51 %)
+Writing at 0x0010e1b1... (53 %)
+Writing at 0x001132c2... (54 %)
+Writing at 0x00118298... (55 %)
+Writing at 0x0011d4e8... (57 %)
+Writing at 0x001229a0... (58 %)
+Writing at 0x001294b3... (59 %)
+Writing at 0x0012f360... (61 %)
+Writing at 0x00134978... (62 %)
+Writing at 0x00139fd1... (63 %)
+Writing at 0x0013f553... (64 %)
+Writing at 0x0014444b... (66 %)
+Writing at 0x0014966d... (67 %)
+Writing at 0x0014e4b4... (68 %)
+Writing at 0x00153959... (70 %)
+Writing at 0x00158c76... (71 %)
+Writing at 0x0015e364... (72 %)
+Writing at 0x00163deb... (74 %)
+Writing at 0x00168df9... (75 %)
+Writing at 0x0016dda6... (76 %)
+Writing at 0x00172bdf... (77 %)
+Writing at 0x00177ccd... (79 %)
+Writing at 0x0017cba3... (80 %)
+Writing at 0x00181b61... (81 %)
+Writing at 0x001870a6... (83 %)
+Writing at 0x0018c5b2... (84 %)
+Writing at 0x001935e9... (85 %)
+Writing at 0x0019cc38... (87 %)
+Writing at 0x001a4156... (88 %)
+Writing at 0x001ac863... (89 %)
+Writing at 0x001b1f66... (90 %)
+Writing at 0x001b837c... (92 %)
+Writing at 0x001c045c... (93 %)
+Writing at 0x001c867c... (94 %)
+Writing at 0x001cef88... (96 %)
+Writing at 0x001d5ab6... (97 %)
+Writing at 0x001db3d8... (98 %)
+Writing at 0x001e075f... (100 %)
+Wrote 1913600 bytes (1252782 compressed) at 0x00010000 in 13.2 seconds (effective 1159.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 104...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (104 compressed) at 0x00008000 in 0.0 seconds (effective 511.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
