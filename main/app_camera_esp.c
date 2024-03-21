@@ -64,8 +64,8 @@ int app_camera_init() {
   config.pin_pwdn = CAMERA_PIN_PWDN;
   config.pin_reset = CAMERA_PIN_RESET;
   config.xclk_freq_hz = XCLK_FREQ_HZ;
-  config.jpeg_quality = 10;
-  config.fb_count = 3;
+  config.jpeg_quality = 5;
+  config.fb_count = 1;
   config.fb_location = CAMERA_FB_IN_PSRAM;
 #endif // CONFIG_TFLITE_USE_BSP
 

@@ -108,7 +108,16 @@ static uint8_t *tensor_arena_classification;
 
 float A[288];
 bool tostop= false;
-int turn = 0;
+
+//turn decisions
+int right_left_class_threshold = 88;
+int left_right_detections = 0;
+int num_arrow_threshold = 3; // value to be reached to decide if turn to be taken
+int turn_decision = 0 ; // 0 if no turn , -1 is left , 1 is right
+int send_turn_decision = 0; // holds prev turn decision till it sent to the server
+int turn_decisions_sent = 0; // number of turn decisions sent to the server
+long long turn_decision_time = esp_timer_get_time()+10000000; // will be implemented later
+
 
 
 esp_err_t camera_handler(httpd_req_t *req) {
@@ -176,26 +185,17 @@ int FomoDetConfidence =-1, FomoPosX =-1, FomoPosY =-1;
 int classRight = -1; int classLeft = -1;
 turn =1 left, turn =2 right;
 */ 
-int left_right = 0;
-int send_turns =0;
+
+
 esp_err_t mpu_handler(httpd_req_t *req) {
     httpd_resp_set_type(req, "text/csv");
     printf("mpu found ______________\n");
-    //mpu6050_read();
-    int turn =0;
-    if(left_right>=5)
-    turn=1;
-    if(left_right<=-5)
-    turn=2;
-    if(turn!=0)
-    send_turns++;
-    if(send_turns>3)
-    {
-    send_turns=0;
-    left_right=0;
+    turn_decisions_sent++;
+    if(turn_decisions_sent>5){
+      send_turn_decision = 0;
     }
     char resp[512];
-    sprintf(resp, "%d,%d,%d,%d,%d,%d \n",FomoDetConfidence,FomoPosX,FomoPosY,classRight,classLeft,turn);
+    sprintf(resp, "%d,%d,%d,%d,%d,%d \n",FomoDetConfidence,FomoPosX,FomoPosY,classRight,classLeft,send_turn_decision);
     //sprintf(resp, "hellp \n");
     httpd_resp_send(req, resp, HTTPD_RESP_USE_STRLEN);
 
@@ -233,6 +233,15 @@ void storeDetection(int Fomocon, int Fomox, int Fomoy, int classR, int classL){
   classRight = classR;
   classLeft = classL;
 
+}
+
+int max(int a, int b){
+  if(a>b) return a;
+  return b;
+}
+int min(int a, int b){
+  if(a<b) return a;
+  return b;
 }
 
 // The name of this function is important for Arduino compatibility.
@@ -428,39 +437,43 @@ void loop() {
     MicroPrintf("Image capture failed.");
   }
   loopno++;
-  if(loopno%5!=0){
+  if(loopno%3!=0 && left_right_detections==0){
     return;
   }
   loopno = 0;
   // Run the model on this input and make sure it succeeds.
-  if (kTfLiteOk != interpreter->Invoke()) {
-    MicroPrintf("Invoke failed.");
-  }
+  if(left_right_detections==0){
 
-  TfLiteTensor* output = interpreter->output(0);
-  //MicroPrintf("output type %d", (output->bytes));
-  int x_cordi = 48;
-  int y_cordi = 48;
   
-  bool possible_arrow = false;
-  for(int i = 1; i <288  ;i=i+2){
-    int8_t person_score = output->data.uint8[i];
-    float person_score_f =
-      (person_score - output->params.zero_point) * output->params.scale;
-    float person_score_int = (person_score_f)*100;
+    if (kTfLiteOk != interpreter->Invoke()) {
+      MicroPrintf("Invoke failed.");
+    }
+    TfLiteTensor* output = interpreter->output(0);
+    //MicroPrintf("output type %d", (output->bytes));
+    int x_cordi = 48;
+    int y_cordi = 48;
+    
+    bool possible_arrow = false;
+    
+    for(int i = 1; i <288  ;i=i+2){
+      int8_t person_score = output->data.uint8[i];
+      float person_score_f =
+        (person_score - output->params.zero_point) * output->params.scale;
+      float person_score_int = (person_score_f)*100;
 
-    if(i%2==1  &&person_score_int>90){
-      tostop = true;
-      MicroPrintf("arrow detected at %d :%f%%",i,
-              person_score_int);
-      tempFomoDetConfidence = person_score_int;
-      int pos = (i-1)/2;
-      int y = pos/12;
-      int x = pos%12;
-      tempFomoPosX = x;
-      tempFomoPosY = y;
-      Get_cordi(x*8,y*8);
+      if(i%2==1  &&person_score_int>90){
+        tostop = true;
+        MicroPrintf("arrow detected at %d :%f%%",i,
+                person_score_int);
+        tempFomoDetConfidence = person_score_int;
+        int pos = (i-1)/2;
+        int y = pos/12;
+        int x = pos%12;
+        tempFomoPosX = x;
+        tempFomoPosY = y;
+        Get_cordi(x*8,y*8);
 
+      }
     }
   }
   
@@ -479,43 +492,58 @@ void loop() {
       MicroPrintf("Invoke failed.");
     }
 
-    //TfLiteTensor* output_classification = interpreter_classification->output(0);
+    TfLiteTensor* output_classification = interpreter_classification->output(0);
     //MicroPrintf("output classification type %d", (output_classification->bytes));
 
     //r = 2nd pos , l = 0th pos, f = 1/3st pos
     arrow_score_right_int = model_class_output(output_classification ,2);
-    arrow_score_left_int = model_class_output(output_classification ,1);
-    MicroPrintf("r:%f ,f: %f, l : %f",model_class_output(output_classification ,2),arrow_score_left_int,model_class_output(output_classification ,0)); 
-    
-    if(arrow_score_right_int>90||arrow_score_left_int>90){
-      
-      vTaskDelay(500);
+    arrow_score_left_int = model_class_output(output_classification ,0);
+    MicroPrintf("r:%f , l : %f",arrow_score_right_int,arrow_score_left_int);
+
+    //only check arrow values if time since last decision is greater than 3 seconds 
+    long long time_since_last_decision = esp_timer_get_time()-turn_decision_time;
+    MicroPrintf("time: %lld", time_since_last_decision);
+    if(time_since_last_decision>3000000){
+      if(arrow_score_right_int>=right_left_class_threshold||arrow_score_left_int>=right_left_class_threshold){
+        
+        if(arrow_score_right_int>arrow_score_left_int) left_right_detections++;
+        else left_right_detections--;
+        left_right_detections = min(num_arrow_threshold,left_right_detections);
+        left_right_detections = max(-num_arrow_threshold,left_right_detections);
+        MicroPrintf("left_right_detections : %d",left_right_detections);
+        
+        //vTaskDelay(500);
+        
+        
+        if(left_right_detections>= num_arrow_threshold){
+          turn_decision = 1;
+          turn_decision_time = esp_timer_get_time();
+          send_turn_decision = turn_decision;
+          MicroPrintf("Current decision : %d", send_turn_decision);
+          vTaskDelay(200);
+          
+        }
+        else if(left_right_detections<= -num_arrow_threshold){
+          turn_decision = -1;
+          turn_decision_time = esp_timer_get_time();
+          send_turn_decision = turn_decision;
+          MicroPrintf("Current decision : %d", send_turn_decision);
+          vTaskDelay(200);
+        }
+
+
+      }
     }
-    if(arrow_score_left_int>80){
-      left_right++;
-      turn++;
-    }
-    if(arrow_score_right_int>80){
-      left_right--;
-      turn--;
-    }
-    //vTaskDelay(500);
+    else{
+        turn_decision = 0;
+        left_right_detections = 0;
+        MicroPrintf("turn decision time not reached, Current decision : %d", send_turn_decision);
+      }
     
     tempclassRight = arrow_score_right_int;
     tempclassLeft = arrow_score_left_int;
 
-    if(turn>5 || left_right>=5){
-      MicroPrintf(" left");
-      turn = 0;
-      left_right=0;
-      //sleep(1);
-    }
-    else if(turn<-5|| left_right<=-5){
-      MicroPrintf(" right");
-      turn = 0;
-      left_right=0;
-      //sleep(1);
-    }
+    
     //trying ends
     tostop = false;
     //sleep(5);
@@ -526,7 +554,7 @@ void loop() {
   storeDetection(tempFomoDetConfidence,tempFomoPosX,tempFomoPosY,tempclassRight,tempclassLeft);
   // Respond to detection
   RespondToDetection(arrow_score_left_int, arrow_score_right_int);
-  vTaskDelay(10); // to avoid watchdog trigger
+  vTaskDelay(5); // to avoid watchdog trigger
 }
 #endif
 
