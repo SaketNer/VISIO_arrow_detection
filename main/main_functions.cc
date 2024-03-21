@@ -193,6 +193,7 @@ esp_err_t mpu_handler(httpd_req_t *req) {
     turn_decisions_sent++;
     if(turn_decisions_sent>5){
       send_turn_decision = 0;
+      turn_decisions_sent = 0;
     }
     char resp[512];
     sprintf(resp, "%d,%d,%d,%d,%d,%d \n",FomoDetConfidence,FomoPosX,FomoPosY,classRight,classLeft,send_turn_decision);
