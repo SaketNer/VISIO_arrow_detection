@@ -1,0 +1,9 @@
+CMake Error at C:/Espressif/frameworks/esp-idf-v5.1.2/tools/cmake/build.cmake:540 (message):
+  ERROR: The override_path you're using is pointing to directory "C:\" that
+  is not a component.
+
+Call Stack (most recent call first):
+  C:/Espressif/frameworks/esp-idf-v5.1.2/tools/cmake/project.cmake:547 (idf_build_process)
+  CMakeLists.txt:29 (project)
+
+
