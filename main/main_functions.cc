@@ -190,7 +190,7 @@ turn =1 left, turn =2 right;
 esp_err_t mpu_handler(httpd_req_t *req) {
     httpd_resp_set_type(req, "text/csv");
     printf("mpu found ______________\n");
-    turn_decisions_sent++;
+    if(send_turn_decision!=0) turn_decisions_sent++;
     if(turn_decisions_sent>5){
       send_turn_decision = 0;
       turn_decisions_sent = 0;
@@ -525,7 +525,7 @@ void loop() {
           
         }
         else if(left_right_detections<= -num_arrow_threshold){
-          turn_decision = -1;
+          turn_decision = 2;
           turn_decision_time = esp_timer_get_time();
           send_turn_decision = turn_decision;
           MicroPrintf("Current decision : %d", send_turn_decision);

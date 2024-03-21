@@ -1,8 +1,0 @@
-[0/1] Re-running CMake...
--- Building ESP-IDF components for target esp32s3
-NOTICE: Skipping optional dependency: espressif/esp32_s3_eye
-NOTICE: Skipping optional dependency: espressif/esp32_s3_korvo_2
-NOTICE: Skipping optional dependency: espressif/esp32_s2_kaluga_kit
--- Configuring incomplete, errors occurred!
-FAILED: build.ninja 
-/opt/homebrew/Cellar/cmake/3.28.3/bin/cmake --regenerate-during-build -S/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection -B/Users/saket/devlopment/v3-FOMO+CLASSIFICATION-working/esp-tflite-micro/examples/person_detection/build
