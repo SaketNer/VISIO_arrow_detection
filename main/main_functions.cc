@@ -110,10 +110,10 @@ float A[288];
 bool tostop= false;
 
 //turn decisions
-int right_left_class_threshold = 88;
+int right_left_class_threshold = 85;
 int left_right_detections = 0;
-int num_arrow_threshold = 3; // value to be reached to decide if turn to be taken
-int turn_decision = 0 ; // 0 if no turn , -1 is left , 1 is right
+int num_arrow_threshold = 2; // value to be reached to decide if turn to be taken
+int turn_decision = 0 ; // 0 if no turn , 1 is left , 2 is right
 int send_turn_decision = 0; // holds prev turn decision till it sent to the server
 int turn_decisions_sent = 0; // number of turn decisions sent to the server
 long long turn_decision_time = esp_timer_get_time()+10000000; // will be implemented later

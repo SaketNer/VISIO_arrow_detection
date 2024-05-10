@@ -9,20 +9,20 @@ dependencies:
   espressif/esp-tflite-micro:
     component_hash: null
     source:
-      path: /Users/saket/devlopment/visio_user_study/esp-tflite-micro
+      path: C:\SOP\esp-tflite-micro
       type: local
     version: '*'
   espressif__esp32-camera:
     component_hash: null
     source:
-      path: /Users/saket/devlopment/visio_user_study/esp-tflite-micro/examples/person_detection/components/espressif__esp32-camera
+      path: C:\SOP\esp-tflite-micro\examples\person_detection\components\espressif__esp32-camera
       type: local
     version: 2.0.7
   idf:
     component_hash: null
     source:
       type: idf
-    version: 5.1.1
-manifest_hash: eacc1bab778bf56f4957a69f844ba1b5d9b413b066057dc47405bc39cbdc5b76
+    version: 5.1.2
+manifest_hash: 5fedb9d292dde394f031d00c01bbd008e9343ddb3c47b0932a47f14ed2269790
 target: esp32s3
 version: 1.0.0

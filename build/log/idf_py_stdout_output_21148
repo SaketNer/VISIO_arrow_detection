@@ -1,0 +1,78 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\SOP\esp-tflite-micro\examples\person_detection\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/SOP/esp-tflite-micro/examples/person_detection/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5770 bytes. 0x2890 bytes (32%) free.
+[2/7] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main_functions.cc.obj
+In file included from C:/SOP/esp-tflite-micro/tensorflow/lite/micro/tflite_bridge/flatbuffer_conversions_bridge.h:19,
+                 from C:/SOP/esp-tflite-micro/tensorflow/lite/micro/micro_allocator.h:26,
+                 from C:/SOP/esp-tflite-micro/tensorflow/lite/micro/micro_interpreter.h:26,
+                 from C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:23:
+C:/SOP/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h: In member function 'T* tflite::BuiltinDataAllocator::AllocatePOD()':
+C:/SOP/esp-tflite-micro/tensorflow/lite/core/api/flatbuffer_conversions.h:46:24: warning: 'template<class _Tp> struct std::is_pod' is deprecated: use is_standard_layout && is_trivial instead [-Wdeprecated-declarations]
+   46 |     static_assert(std::is_pod<T>::value, "Builtin data structure must be POD.");
+      |                        ^~~~~~
+In file included from c:\espressif\tools\xtensa-esp32s3-elf\esp-12.2.0_20230208\xtensa-esp32s3-elf\xtensa-esp32s3-elf\include\c++\12.2.0\bits\stl_pair.h:60,
+                 from c:\espressif\tools\xtensa-esp32s3-elf\esp-12.2.0_20230208\xtensa-esp32s3-elf\xtensa-esp32s3-elf\include\c++\12.2.0\utility:69,
+                 from C:/SOP/esp-tflite-micro/tensorflow/lite/core/c/common.h:1448,
+                 from C:/SOP/esp-tflite-micro/tensorflow/lite/c/common.h:31,
+                 from C:/SOP/esp-tflite-micro/examples/person_detection/main/detection_responder.h:22,
+                 from C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:18:
+c:\espressif\tools\xtensa-esp32s3-elf\esp-12.2.0_20230208\xtensa-esp32s3-elf\xtensa-esp32s3-elf\include\c++\12.2.0\type_traits:757:5: note: declared here
+  757 |     is_pod
+      |     ^~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'esp_err_t camera_handler(httpd_req_t*)':
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:147:28: warning: unused variable 'jchunk' [-Wunused-variable]
+  147 |             jpg_chunking_t jchunk = {req, 0};
+      |                            ^~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:126:12: warning: unused variable 'fb_len' [-Wunused-variable]
+  126 |     size_t fb_len = 0;
+      |            ^~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:127:13: warning: unused variable 'fr_str' [-Wunused-variable]
+  127 |     int64_t fr_str = esp_timer_get_time();
+      |             ^~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:166:13: warning: unused variable 'fr_end' [-Wunused-variable]
+  166 |     int64_t fr_end = esp_timer_get_time();
+      |             ^~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void wifi_event_handler(void*, esp_event_base_t, int32_t, void*)':
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:175:39: warning: unused variable 'event' [-Wunused-variable]
+  175 |         wifi_event_ap_staconnected_t* event = (wifi_event_ap_staconnected_t*) event_data;
+      |                                       ^~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:178:42: warning: unused variable 'event' [-Wunused-variable]
+  178 |         wifi_event_ap_stadisconnected_t* event = (wifi_event_ap_stadisconnected_t*) event_data;
+      |                                          ^~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void setup()':
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:263:5: warning: missing initializer for member 'wifi_ap_config_t::ssid_hidden' [-Wmissing-field-initializers]
+  263 |     };
+      |     ^
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:263:5: warning: missing initializer for member 'wifi_ap_config_t::beacon_interval' [-Wmissing-field-initializers]
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:263:5: warning: missing initializer for member 'wifi_ap_config_t::pairwise_cipher' [-Wmissing-field-initializers]
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:263:5: warning: missing initializer for member 'wifi_ap_config_t::ftm_responder' [-Wmissing-field-initializers]
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:263:5: warning: missing initializer for member 'wifi_ap_config_t::pmf_cfg' [-Wmissing-field-initializers]
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:263:5: warning: missing initializer for member 'wifi_ap_config_t::sae_pwe_h2e' [-Wmissing-field-initializers]
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc: In function 'void loop()':
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:454:9: warning: unused variable 'x_cordi' [-Wunused-variable]
+  454 |     int x_cordi = 48;
+      |         ^~~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:455:9: warning: unused variable 'y_cordi' [-Wunused-variable]
+  455 |     int y_cordi = 48;
+      |         ^~~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:457:10: warning: unused variable 'possible_arrow' [-Wunused-variable]
+  457 |     bool possible_arrow = false;
+      |          ^~~~~~~~~~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:483:9: warning: unused variable 'arrow_score_far_int' [-Wunused-variable]
+  483 |   float arrow_score_far_int = 0;
+      |         ^~~~~~~~~~~~~~~~~~~
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc: At global scope:
+C:/SOP/esp-tflite-micro/examples/person_detection/main/main_functions.cc:76:15: warning: 'size_t {anonymous}::jpg_encode_stream(void*, size_t, const void*, size_t)' defined but not used [-Wunused-function]
+   76 | static size_t jpg_encode_stream(void * arg, size_t index, const void* data, size_t len){
+      |               ^~~~~~~~~~~~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable person_detection.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/SOP/esp-tflite-micro/examples/person_detection/build/person_detection.bin
+[7/7] cmd.exe /C "cd /D C:\SOP\esp-tflite-micro\examples\person_detection\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/SOP/esp-tflite-micro/examples/person_detection/build/partition_table/partition-table.bin C:/SOP/esp-tflite-micro/examples/person_detection/build/person_detection.bin"
+person_detection.bin binary size 0x1d4e80 bytes. Smallest app partition is 0x3a0000 bytes. 0x1cb180 bytes (49%) free.

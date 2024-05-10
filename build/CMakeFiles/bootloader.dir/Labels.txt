@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/SOP/esp-tflite-micro/examples/person_detection/build/CMakeFiles/bootloader
+C:/SOP/esp-tflite-micro/examples/person_detection/build/CMakeFiles/bootloader.rule
+C:/SOP/esp-tflite-micro/examples/person_detection/build/CMakeFiles/bootloader-complete.rule
+C:/SOP/esp-tflite-micro/examples/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/SOP/esp-tflite-micro/examples/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/SOP/esp-tflite-micro/examples/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/SOP/esp-tflite-micro/examples/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/SOP/esp-tflite-micro/examples/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/SOP/esp-tflite-micro/examples/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/SOP/esp-tflite-micro/examples/person_detection/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

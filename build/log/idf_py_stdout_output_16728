@@ -1,0 +1,960 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400490d9
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x18dc
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3084
+entry 0x403c9934
+[0;32mI (26) boot: ESP-IDF v5.1.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 22 2024 01:26:47[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (48) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 003a0000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3c0e0020 size=e4974h (936308) map[0m
+[0;32mI (246) esp_image: segment 1: paddr=000f499c vaddr=3fc98f00 size=05aa8h ( 23208) load[0m
+[0;32mI (251) esp_image: segment 2: paddr=000fa44c vaddr=40374000 size=05bcch ( 23500) load[0m
+[0;32mI (257) esp_image: segment 3: paddr=00100020 vaddr=42000020 size=d5b28h (875304) map[0m
+[0;32mI (393) esp_image: segment 4: paddr=001d5b50 vaddr=40379bcc size=0f30ch ( 62220) load[0m
+[0;32mI (415) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (415) boot: Disabling RNG early entropy source...[0m
+[0;32mI (426) cpu_start: Multicore app[0m
+[0;32mI (427) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (427) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (430) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (435) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (440) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (446) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (451) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (457) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (463) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (468) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (474) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (480) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (485) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (489) esp_psram: Speed: 80MHz[0m
+[0;32mI (493) cpu_start: Pro cpu up.[0m
+[0;32mI (497) cpu_start: Starting app cpu, entry point is 0x40375778[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (789) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (798) cpu_start: Pro cpu start user code[0m
+[0;32mI (798) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (798) cpu_start: Application information:[0m
+[0;32mI (801) cpu_start: Project name:     person_detection[0m
+[0;32mI (807) cpu_start: App version:      7223d79-dirty[0m
+[0;32mI (812) cpu_start: Compile time:     Mar 22 2024 01:26:37[0m
+[0;32mI (819) cpu_start: ELF file SHA256:  a28dbff56625d9ce...[0m
+[0;32mI (825) cpu_start: ESP-IDF:          v5.1.2[0m
+[0;32mI (829) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (834) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (839) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (844) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (851) heap_init: At 3FCA5DC0 len 00043950 (270 KiB): DRAM[0m
+[0;32mI (857) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (864) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (870) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (878) spi_flash: detected chip: gd[0m
+[0;32mI (882) spi_flash: flash io: qio[0m
+[0;32mI (887) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (893) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (900) app_start: Starting scheduler on CPU0[0m
+[0;32mI (905) app_start: Starting scheduler on CPU1[0m
+[0;32mI (905) main_task: Started on CPU0[0m
+[0;32mI (915) main_task: Calling app_main()[0m
+[0;32mI (935) pp: pp rom version: e7ae62f[0m
+[0;32mI (935) net80211: net80211 rom version: e7ae62f[0m
+I (945) wifi:wifi driver task: 3fcb1bf8, prio:23, stack:6656, core=0
+I (945) wifi:wifi firmware version: 91b9630
+I (945) wifi:wifi certification version: v7.0
+I (945) wifi:config NVS flash: enabled
+I (945) wifi:config nano formating: disabled
+I (955) wifi:Init data frame dynamic rx buffer num: 32
+I (955) wifi:Init static rx mgmt buffer num: 5
+I (955) wifi:Init management short buffer num: 32
+I (965) wifi:Init dynamic tx buffer num: 32
+I (965) wifi:Init tx cache buffer num: 32
+I (975) wifi:Init static tx FG buffer num: 2
+I (975) wifi:Init static rx buffer size: 1600
+I (975) wifi:Init static rx buffer num: 10
+I (985) wifi:Init dynamic rx buffer num: 32
+[0;32mI (985) wifi_init: rx ba win: 6[0m
+[0;32mI (995) wifi_init: tcpip mbox: 32[0m
+[0;32mI (995) wifi_init: udp mbox: 6[0m
+[0;32mI (995) wifi_init: tcp mbox: 6[0m
+[0;32mI (1005) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1005) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1015) wifi_init: tcp mss: 1440[0m
+[0;32mI (1015) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1015) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1025) phy_init: phy_version 620,ec7ec30,Sep  5 2023,13:49:13[0m
+I (1065) wifi:mode : softAP (48:27:e2:f0:32:a1)
+I (1095) wifi:Total power save buffer number: 16
+I (1095) wifi:Init max length of beacon: 752/752
+I (1095) wifi:Init max length of beacon: 752/752
+[0;32mI (1095) VISIO: ESP32 IP:192.168.4.1[0m
+[0;32mI (1095) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+PSRAM size: 8695884 bytes
+PSRAM size: 7995392 bytes
+PSRAM size: 7733248 bytes
+here
+here2
+[0;32mI (1165) s3 ll_cam: DMA Channel=4[0m
+[0;32mI (1165) cam_hal: cam init ok[0m
+[0;32mI (1165) sccb: pin_sda 4 pin_scl 5[0m
+[0;32mI (1165) sccb: sccb_i2c_port=1[0m
+[0;32mI (1185) camera: Detected camera at address=0x30[0m
+[0;32mI (1185) camera: Detected OV2640 camera[0m
+[0;32mI (1185) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (1255) s3 ll_cam: node_size: 3072, nodes_per_line: 1, lines_per_node: 16[0m
+[0;32mI (1255) s3 ll_cam: dma_half_buffer_min:  3072, dma_half_buffer:  9216, lines_per_half_buffer: 48, dma_buffer_size: 27648[0m
+[0;32mI (1265) cam_hal: buffer_size: 27648, half_buffer_size: 9216, node_buffer_size: 3072, node_cnt: 9, total_cnt: 2[0m
+[0;32mI (1275) cam_hal: Allocating 9216 Byte frame buffer in PSRAM[0m
+[0;32mI (1285) cam_hal: cam config ok[0m
+[0;32mI (1285) ov2640: Set PLL: clk_2x: 1, clk_div: 3, pclk_auto: 1, pclk_div: 8[0m
+Camera Initialized
+
+Image Captured
+coverted Image to jpg 1365 
+Image Captured
+coverted Image to jpg 1476 
+Image Captured
+coverted Image to jpg 1451 
+arrow detected at 129 :96.875000%
+arrow detected at 131 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1440 
+r:24.218750 , l : 12.890625
+time: -8924527
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1440
+Image Captured
+coverted Image to jpg 1485 
+Image Captured
+coverted Image to jpg 1466 
+Image Captured
+coverted Image to jpg 1427 
+arrow detected at 153 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1420 
+r:19.140625 , l : 7.031250
+time: -8374951
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1420
+Image Captured
+coverted Image to jpg 1415 
+Image Captured
+coverted Image to jpg 1420 
+Image Captured
+coverted Image to jpg 1411 
+arrow detected at 87 :99.609375%
+arrow detected at 153 :98.828125%
+arrow detected 
+Image Captured
+coverted Image to jpg 1366 
+r:29.296875 , l : 11.328125
+time: -7825525
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1366
+Image Captured
+coverted Image to jpg 1410 
+Image Captured
+coverted Image to jpg 1338 
+Image Captured
+coverted Image to jpg 1329 
+arrow detected at 87 :98.437500%
+arrow detected at 153 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1344 
+r:26.953125 , l : 11.328125
+time: -7275645
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1344
+Image Captured
+coverted Image to jpg 1389 
+Image Captured
+coverted Image to jpg 1364 
+Image Captured
+coverted Image to jpg 1398 
+arrow detected at 61 :96.484375%
+arrow detected at 129 :95.703125%
+arrow detected 
+Image Captured
+coverted Image to jpg 1386 
+r:46.093750 , l : 10.546875
+time: -6725836
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1386
+Image Captured
+coverted Image to jpg 1357 
+Image Captured
+coverted Image to jpg 1328 
+Image Captured
+coverted Image to jpg 1324 
+arrow detected at 151 :99.609375%
+arrow detected at 153 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1342 
+r:28.906250 , l : 26.953125
+time: -6174710
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1342
+Image Captured
+coverted Image to jpg 1347 
+Image Captured
+coverted Image to jpg 1337 
+Image Captured
+coverted Image to jpg 1333 
+arrow detected at 63 :92.968750%
+arrow detected at 153 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1308 
+r:51.171875 , l : 9.765625
+time: -5626219
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1308
+Image Captured
+coverted Image to jpg 1305 
+Image Captured
+coverted Image to jpg 1301 
+Image Captured
+coverted Image to jpg 1310 
+arrow detected at 129 :96.093750%
+arrow detected 
+Image Captured
+coverted Image to jpg 1298 
+r:58.984375 , l : 14.453125
+time: -5077086
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1298
+Image Captured
+coverted Image to jpg 1289 
+Image Captured
+coverted Image to jpg 1304 
+Image Captured
+coverted Image to jpg 1282 
+arrow detected at 65 :91.406250%
+arrow detected at 129 :99.609375%
+arrow detected at 153 :98.046875%
+arrow detected 
+Image Captured
+coverted Image to jpg 1277 
+r:58.593750 , l : 22.656250
+time: -4526071
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1277
+Image Captured
+coverted Image to jpg 1265 
+Image Captured
+coverted Image to jpg 1275 
+Image Captured
+coverted Image to jpg 1240 
+arrow detected at 65 :99.609375%
+arrow detected at 153 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1251 
+r:21.875000 , l : 30.078125
+time: -3977489
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1251
+Image Captured
+coverted Image to jpg 1238 
+Image Captured
+coverted Image to jpg 1226 
+Image Captured
+coverted Image to jpg 1230 
+arrow detected at 65 :99.609375%
+arrow detected at 153 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1227 
+r:33.984375 , l : 38.671875
+time: -3427502
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1227
+Image Captured
+coverted Image to jpg 1207 
+Image Captured
+coverted Image to jpg 1208 
+Image Captured
+coverted Image to jpg 1201 
+arrow detected 
+Image Captured
+coverted Image to jpg 1209 
+r:52.734375 , l : 35.937500
+time: -2878050
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1209
+Image Captured
+coverted Image to jpg 1216 
+Image Captured
+coverted Image to jpg 1219 
+Image Captured
+coverted Image to jpg 1208 
+arrow detected at 153 :95.312500%
+arrow detected 
+Image Captured
+coverted Image to jpg 1206 
+r:57.031250 , l : 34.375000
+time: -2328394
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1206
+Image Captured
+coverted Image to jpg 1212 
+Image Captured
+coverted Image to jpg 1200 
+Image Captured
+coverted Image to jpg 1192 
+arrow detected at 153 :98.437500%
+arrow detected 
+Image Captured
+coverted Image to jpg 1163 
+r:50.781250 , l : 22.265625
+time: -1777929
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1163
+Image Captured
+coverted Image to jpg 1162 
+Image Captured
+coverted Image to jpg 1191 
+Image Captured
+coverted Image to jpg 1177 
+arrow detected at 41 :96.875000%
+arrow detected at 65 :99.218750%
+arrow detected at 153 :90.625000%
+arrow detected at 177 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1187 
+r:58.984375 , l : 22.656250
+time: -1224846
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1187
+Image Captured
+coverted Image to jpg 1183 
+Image Captured
+coverted Image to jpg 1177 
+Image Captured
+coverted Image to jpg 1198 
+arrow detected at 41 :93.750000%
+arrow detected at 153 :99.609375%
+arrow detected 
+Image Captured
+coverted Image to jpg 1208 
+r:79.296875 , l : 10.546875
+time: -678545
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1208
+Image Captured
+coverted Image to jpg 1215 
+Image Captured
+coverted Image to jpg 1202 
+Image Captured
+coverted Image to jpg 1213 
+arrow detected at 153 :98.437500%
+arrow detected 
+Image Captured
+coverted Image to jpg 1223 
+r:64.453125 , l : 25.000000
+time: -128879
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1223
+Image Captured
+coverted Image to jpg 1226 
+Image Captured
+coverted Image to jpg 1225 
+Image Captured
+coverted Image to jpg 1190 
+arrow detected at 43 :94.921875%
+arrow detected at 153 :99.218750%
+arrow detected 
+Image Captured
+coverted Image to jpg 1190 
+r:82.031250 , l : 14.062500
+time: 421166
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1190
+Image Captured
+coverted Image to jpg 1183 
+Image Captured
+coverted Image to jpg 1189 
+Image Captured
+coverted Image to jpg 1204 
+arrow detected 
+Image Captured
+coverted Image to jpg 1186 
+r:50.390625 , l : 47.265625
+time: 970084
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1186
+Image Captured
+coverted Image to jpg 1185 
+Image Captured
+coverted Image to jpg 1181 
+Image Captured
+coverted Image to jpg 1145 
+arrow detected 
+Image Captured
+coverted Image to jpg 1148 
+r:58.984375 , l : 37.890625
+time: 1519942
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1148
+Image Captured
+coverted Image to jpg 1182 
+Image Captured
+coverted Image to jpg 1174 
+Image Captured
+coverted Image to jpg 1169 
+arrow detected 
+Image Captured
+coverted Image to jpg 1193 
+r:47.656250 , l : 50.781250
+time: 2069785
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1193
+Image Captured
+coverted Image to jpg 1206 
+Image Captured
+coverted Image to jpg 1155 
+Image Captured
+coverted Image to jpg 1147 
+arrow detected 
+Image Captured
+coverted Image to jpg 1169 
+r:39.843750 , l : 58.203125
+time: 2619397
+turn decision time not reached, Current decision : 0
+ 
+storing image with buf len 1169
+Image Captured
+coverted Image to jpg 1168 
+Image Captured
+coverted Image to jpg 1144 
+Image Captured
+coverted Image to jpg 1153 
+arrow detected at 177 :93.750000%
+arrow detected 
+Image Captured
+coverted Image to jpg 1157 
+r:19.531250 , l : 78.515625
+time: 3169810
+ 
+storing image with buf len 1157
+Image Captured
+coverted Image to jpg 1168 
+Image Captured
+coverted Image to jpg 1112 
+Image Captured
+coverted Image to jpg 1121 
+arrow detected 
+Image Captured
+coverted Image to jpg 1148 
+r:8.593750 , l : 90.625000
+time: 3718584
+left_right_detections : -1
+ 
+storing image with buf len 1148
+Image Captured
+coverted Image to jpg 1139 
+arrow detected 
+Image Captured
+coverted Image to jpg 1140 
+r:5.859375 , l : 94.140625
+time: 4049051
+left_right_detections : -2
+Current decision : 2
+ 
+storing image with buf len 1140
+Image Captured
+coverted Image to jpg 1152 
+arrow detected 
+Image Captured
+coverted Image to jpg 1204 
+r:3.125000 , l : 96.875000
+time: 2348671
+turn decision time not reached, Current decision : 2
+ 
+storing image with buf len 1204
+Image Captured
+coverted Image to jpg 1197 
+Image Captured
+coverted Image to jpg 1184 
+Image Captured
+coverted Image to jpg 1168 
+arrow detected 
+Image Captured
+coverted Image to jpg 1108 
+r:28.906250 , l : 70.312500
+time: 2918130
+turn decision time not reached, Current decision : 2
+ 
+storing image with buf len 1108
+Image Captured
+coverted Image to jpg 1053 
+Image Captured
+coverted Image to jpg 897 
+Image Captured
+coverted Image to jpg 796 
+arrow detected 
+Image Captured
+coverted Image to jpg 679 
+r:22.656250 , l : 76.171875
+time: 3467399
+ 
+storing image with buf len 679
+Image Captured
+coverted Image to jpg 681 
+Image Captured
+coverted Image to jpg 1030 
+Image Captured
+coverted Image to jpg 1208 
+arrow detected 
+Image Captured
+coverted Image to jpg 1357 
+r:0.390625 , l : 79.687500
+time: 4018202
+ 
+storing image with buf len 1357
+Image Captured
+coverted Image to jpg 1628 
+Image Captured
+coverted Image to jpg 2012 
+Image Captured
+coverted Image to jpg 2238 
+arrow detected 
+Image Captured
+coverted Image to jpg 2340 
+r:1.953125 , l : 64.062500
+time: 4569013
+ 
+storing image with buf len 2340
+Image Captured
+coverted Image to jpg 2541 
+Image Captured
+coverted Image to jpg 2783 
+Image Captured
+coverted Image to jpg 2784 
+arrow detected 
+Image Captured
+coverted Image to jpg 2730 
+r:0.781250 , l : 80.859375
+time: 5119609
+ 
+storing image with buf len 2730
+Image Captured
+coverted Image to jpg 2709 
+Image Captured
+coverted Image to jpg 2515 
+Image Captured
+coverted Image to jpg 2343 
+arrow detected 
+Image Captured
+coverted Image to jpg 2323 
+r:1.562500 , l : 65.234375
+time: 5668646
+ 
+storing image with buf len 2323
+Image Captured
+coverted Image to jpg 2105 
+Image Captured
+coverted Image to jpg 1782 
+Image Captured
+coverted Image to jpg 1831 
+arrow detected 
+Image Captured
+coverted Image to jpg 1767 
+r:1.171875 , l : 97.265625
+time: 6217975
+left_right_detections : -1
+ 
+storing image with buf len 1767
+Image Captured
+coverted Image to jpg 1540 
+arrow detected 
+Image Captured
+coverted Image to jpg 881 
+r:7.421875 , l : 42.578125
+time: 6546664
+ 
+storing image with buf len 881
+Image Captured
+coverted Image to jpg 760 
+arrow detected 
+Image Captured
+coverted Image to jpg 970 
+r:42.968750 , l : 51.953125
+time: 6896486
+ 
+storing image with buf len 970
+Image Captured
+coverted Image to jpg 1162 
+arrow detected 
+Image Captured
+coverted Image to jpg 1240 
+r:13.671875 , l : 55.078125
+time: 7246531
+ 
+storing image with buf len 1240
+Image Captured
+coverted Image to jpg 1422 
+arrow detected 
+Image Captured
+coverted Image to jpg 1513 
+r:3.515625 , l : 54.687500
+time: 7596833
+ 
+storing image with buf len 1513
+Image Captured
+coverted Image to jpg 1373 
+arrow detected 
+Image Captured
+coverted Image to jpg 1861 
+r:12.500000 , l : 83.593750
+time: 7946467
+ 
+storing image with buf len 1861
+Image Captured
+coverted Image to jpg 1643 
+arrow detected 
+Image Captured
+coverted Image to jpg 2116 
+r:1.953125 , l : 45.312500
+time: 8297026
+ 
+storing image with buf len 2116
+Image Captured
+coverted Image to jpg 1673 
+arrow detected 
+Image Captured
+coverted Image to jpg 1530 
+r:7.421875 , l : 63.671875
+time: 8646126
+ 
+storing image with buf len 1530
+Image Captured
+coverted Image to jpg 1318 
+arrow detected 
+Image Captured
+coverted Image to jpg 1361 
+r:26.953125 , l : 69.921875
+time: 8995764
+ 
+storing image with buf len 1361
+Image Captured
+coverted Image to jpg 1261 
+arrow detected 
+Image Captured
+coverted Image to jpg 1658 
+r:0.390625 , l : 97.656250
+time: 9346239
+left_right_detections : -2
+Current decision : 2
+ 
+storing image with buf len 1658
+Image Captured
+coverted Image to jpg 1402 
+arrow detected 
+Image Captured
+coverted Image to jpg 1545 
+r:3.515625 , l : 66.015625
+time: 2348718
+turn decision time not reached, Current decision : 2
+ 
+storing image with buf len 1545
+Image Captured
+coverted Image to jpg 1345 
+Image Captured
+coverted Image to jpg 1196 
+Image Captured
+coverted Image to jpg 1253 
+arrow detected 
+Image Captured
+coverted Image to jpg 1349 
+r:4.687500 , l : 28.125000
+time: 2918280
+turn decision time not reached, Current decision : 2
+ 
+storing image with buf len 1349
+Image Captured
+coverted Image to jpg 1076 
+Image Captured
+coverted Image to jpg 1222 
+Image Captured
+coverted Image to jpg 1420 
+arrow detected 
+Image Captured
+coverted Image to jpg 1512 
+r:23.437500 , l : 64.062500
+time: 3468311
+ 
+storing image with buf len 1512
+Image Captured
+coverted Image to jpg 1331 
+Image Captured
+coverted Image to jpg 1572 
+Image Captured
+coverted Image to jpg 1691 
+arrow detected 
+Image Captured
+coverted Image to jpg 1756 
+r:12.109375 , l : 82.031250
+time: 4018483
+ 
+storing image with buf len 1756
+Image Captured
+coverted Image to jpg 1941 
+Image Captured
+coverted Image to jpg 2074 
+Image Captured
+coverted Image to jpg 2134 
+arrow detected 
+Image Captured
+coverted Image to jpg 2129 
+r:5.859375 , l : 90.234375
+time: 4568549
+left_right_detections : -1
+ 
+storing image with buf len 2129
+Image Captured
+coverted Image to jpg 2033 
+arrow detected 
+Image Captured
+coverted Image to jpg 2099 
+r:12.890625 , l : 82.031250
+time: 4898260
+ 
+storing image with buf len 2099
+Image Captured
+coverted Image to jpg 2145 
+arrow detected 
+Image Captured
+coverted Image to jpg 2224 
+r:5.468750 , l : 91.406250
+time: 5247722
+left_right_detections : -2
+Current decision : 2
+ 
+storing image with buf len 2224
+Image Captured
+coverted Image to jpg 2191 
+arrow detected 
+Image Captured
+coverted Image to jpg 2248 
+r:7.812500 , l : 91.015625
+time: 2348801
+turn decision time not reached, Current decision : 2
+ 
+storing image with buf len 2248
+Image Captured
+coverted Image to jpg 2139 
+Image Captured
+coverted Image to jpg 2013 
+Image Captured
+coverted Image to jpg 2076 
+arrow detected at 207 :93.750000%
+arrow detected 
+Image Captured
+coverted Image to jpg 2102 
+r:8.984375 , l : 88.671875
+time: 2919594
+turn decision time not reached, Current decision : 2
+ 
+storing image with buf len 2102
+Image Captured
+coverted Image to jpg 1968 
+Image Captured
+coverted Image to jpg 1779 
+Image Captured
+coverted Image to jpg 1854 
+arrow detected 
+Image Captured
+coverted Image to jpg 1832 
+r:23.828125 , l : 74.218750
+time: 3468726
+ 
+storing image with buf len 1832
+Image Captured
+coverted Image to jpg 1417 
+Image Captured
+coverted Image to jpg 1314 
+Image Captured
+coverted Image to jpg 1409 
+arrow detected 
+Image Captured
+coverted Image to jpg 1755 
+r:30.468750 , l : 36.718750
+time: 4017677
+ 
+storing image with buf len 1755
+Image Captured
+coverted Image to jpg 1942 
+Image Captured
+coverted Image to jpg 2246 
+Image Captured
+coverted Image to jpg 1765 
+arrow detected 
+Image Captured
+coverted Image to jpg 1671 
+r:4.687500 , l : 5.078125
+time: 4568409
+ 
+storing image with buf len 1671
+Image Captured
+coverted Image to jpg 1617 
+Image Captured
+coverted Image to jpg 1597 
+Image Captured
+coverted Image to jpg 1497 
+arrow detected 
+Image Captured
+coverted Image to jpg 1824 
+r:26.171875 , l : 26.171875
+time: 5119942
+ 
+storing image with buf len 1824
+Image Captured
+coverted Image to jpg 1508 
+Image Captured
+coverted Image to jpg 1128 
+Image Captured
+coverted Image to jpg 955 
+arrow detected 
+Image Captured
+coverted Image to jpg 936 
+r:6.250000 , l : 75.390625
+time: 5666716
+ 
+storing image with buf len 936
+Image Captured
+coverted Image to jpg 889 
+Image Captured
+coverted Image to jpg 1010 
+Image Captured
+coverted Image to jpg 1164 
+arrow detected 
+Image Captured
+coverted Image to jpg 874 
+r:25.000000 , l : 73.046875
+time: 6216451
+ 
+storing image with buf len 874
+Image Captured
+coverted Image to jpg 1111 
+Image Captured
+coverted Image to jpg 1132 
+Image Captured
+coverted Image to jpg 962 
+arrow detected 
+Image Captured
+coverted Image to jpg 812 
+r:23.046875 , l : 71.875000
+time: 6766340
+ 
+storing image with buf len 812
+Image Captured
+coverted Image to jpg 835 
+Image Captured
+coverted Image to jpg 816 
+Image Captured
+coverted Image to jpg 863 
+arrow detected 
+Image Captured
+coverted Image to jpg 906 
+r:39.453125 , l : 53.906250
+time: 7315708
+ 
+storing image with buf len 906
+Image Captured
+coverted Image to jpg 911 
+Image Captured
+coverted Image to jpg 989 
+Image Captured
+coverted Image to jpg 964 
+arrow detected 
+Image Captured
+coverted Image to jpg 936 
+r:22.265625 , l : 73.437500
+time: 7865754
+ 
+storing image with buf len 936
+Image Captured
+coverted Image to jpg 950 
+Image Captured
+coverted Image to jpg 968 
+Image Captured
+coverted Image to jpg 934 
+arrow detected 
+Image Captured
+coverted Image to jpg 935 
+r:33.593750 , l : 63.281250
+time: 8415321
+ 
+storing image with buf len 935
+Image Captured
+coverted Image to jpg 950 
+Image Captured
+coverted Image to jpg 948 
+Image Captured
+coverted Image to jpg 937 
+arrow detected 
+Image Captured
+coverted Image to jpg 948 
+r:32.421875 , l : 61.328125
+time: 8965330
+ 
+storing image with buf len 948
+Image Captured
+coverted Image to jpg 938 
+Image Captured
+coverted Image to jpg 936 
+Image Captured
+coverted Image to jpg 931 
+arrow detected 
+Image Captured
+coverted Image to jpg 913 
+r:30.468750 , l : 64.843750
+time: 9514983
+ 
+storing image with buf len 913
+Image Captured
+coverted Image to jpg 915 
