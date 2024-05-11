@@ -1,0 +1,28 @@
+dependencies:
+  espressif/esp-nn:
+    component_hash: b32869798bdb40dec6bc99caca48cd65d42f8a9f506b9ab9c598a076f891ede9
+    source:
+      pre_release: true
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 1.0.2
+  espressif/esp-tflite-micro:
+    component_hash: null
+    source:
+      path: /Users/saket/devlopment/visio_2/esp-tflite-micro
+      type: local
+    version: '*'
+  espressif__esp32-camera:
+    component_hash: null
+    source:
+      path: /Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/components/espressif__esp32-camera
+      type: local
+    version: 2.0.7
+  idf:
+    component_hash: null
+    source:
+      type: idf
+    version: 5.1.1
+manifest_hash: df076acbfe54ba73c97b7fa55de802f34806f95747d83b81ccb39193b7d37896
+target: esp32s3
+version: 1.0.0

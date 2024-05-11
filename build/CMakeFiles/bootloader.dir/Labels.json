@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/Users/saket/devlopment/visio_2/esp-tflite-micro/examples/delete/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

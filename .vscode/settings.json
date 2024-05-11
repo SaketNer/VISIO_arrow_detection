@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "vector": "cpp"
+    },
+    "idf.adapterTargetName": "esp32s3"
+}
